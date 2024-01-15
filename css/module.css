@@ -1,0 +1,82 @@
+:root{
+    --YE:#fdffc1;
+    --GN:#486245;
+
+    --BB01:#75759c;
+    --BB02:#4a4a6c;
+    --BB03:#494f5a;
+    --BB04:#13134b;
+    
+    --GS01:#fff;
+    --GS02:#eee;
+    --GS03:#bbb;
+    --GS04:#999;
+    --GS05:#666;
+    --GS06:#444;
+    --GS07:#000;
+
+    --sp10: 10px;
+    --sp15: 15px;
+    --sp20: 20px;
+    --sp30: 30px;
+    --sp40: 40px;
+    --sp50: 50px;
+    --sp60: 60px;
+    --sp80: 80px;
+    --sp100: 100px;
+    --sp200: 200px;
+}
+
+[class^='un']{font-family: 'Unna';}
+[class^='ma']{font-family: 'Manrope';}
+[class^='fi']{font-family: 'Fira Sans Extra Condensed';}
+
+[class*='L']{font-weight: 300;}
+[class*='R']{font-weight: 400;}
+[class*='S']{font-weight: 600;}
+
+@media screen and (max-width: 767px){
+    .unR100{font-size: 35px;}
+    .unR60{font-size: 30px;}
+
+    .unR40,
+    .unR30{font-size: 20px;}
+
+    [class^='fi']{font-size: 16px;}
+    
+    .maR20,
+    .maR16{font-size: 12px;}
+    
+    .maS16{font-size: 10px;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+    .unR100{font-size: 60px;}
+    .unR60{font-size: 50px;}
+    .unR40{font-size: 30px;}
+    
+    .unR30,
+    .fiL25{font-size: 25px;}
+    .fiR30{font-size: 24px;}
+
+    .fiR24,
+    .fiL20{font-size: 20px;}
+    
+    [class^='ma']{font-size: 16px;}
+}
+
+@media screen and (min-width: 1280px){
+    .unR100{font-size: 100px;}
+    .unR60{font-size: 60px;}
+    .unR40{font-size: 40px;}
+    
+    [class*='30']{font-size: 30px;}
+    
+    .fiL25{font-size: 25px;}
+    .fiR24{font-size: 24px;}
+
+    [class*='20']{font-size: 20px;}
+    
+    [class*='16']{font-size: 16px;}
+}
+

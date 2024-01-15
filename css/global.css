@@ -1,0 +1,241 @@
+
+header:not(.modeWhite) nav ul li a,
+footer:not(.modeWhite) p{
+    color: var(--BB03);
+    text-shadow: none;
+}
+
+header.modeWhite nav ul li a,
+footer.modeWhite p{
+    color: var(--GS01);    
+    text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.45);
+}
+
+a{
+    text-decoration: none;
+}
+
+footer:not(.modeWhite) ul li:nth-of-type(1) a{background-image: url('../images/icon_sns_facebook.png');}
+footer:not(.modeWhite) ul li:nth-of-type(2) a{background-image: url('../images/icon_sns_twitter.png');}
+footer:not(.modeWhite) ul li:nth-of-type(3) a{background-image: url('../images/icon_sns_instagram.png');}
+footer:not(.modeWhite) ul li:nth-of-type(4) a{background-image: url('../images/icon_sns_linkedin.png');}
+footer:not(.modeWhite) ul li:nth-of-type(5) a{background-image: url('../images/icon_sns_youtube.png');}
+footer:not(.modeWhite) ul li:nth-of-type(6) a{background-image: url('../images/icon_sns_pinterest.png');}
+
+footer.modeWhite ul li:nth-of-type(1) a{background-image: url('../images/icon_sns_facebook_W.png');}
+footer.modeWhite ul li:nth-of-type(2) a{background-image: url('../images/icon_sns_twitter_W.png');}
+footer.modeWhite ul li:nth-of-type(3) a{background-image: url('../images/icon_sns_instagram_W.png');}
+footer.modeWhite ul li:nth-of-type(4) a{background-image: url('../images/icon_sns_linkedin_W.png');}
+footer.modeWhite ul li:nth-of-type(5) a{background-image: url('../images/icon_sns_youtube_W.png');}
+footer.modeWhite ul li:nth-of-type(6) a{background-image: url('../images/icon_sns_pinterest_W.png');}
+
+.indexContainer ul li,
+.indexContainer ul li>div>input[type='button'],
+.fancyBox div,
+.fancyBox div input[type='button'],
+.videoContainer ol li,
+.videoDetailContainer input[type='button'],
+.videoDetailContainer article div a.fiR24,
+.themaDetailContainer div:first-of-type ol li{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px){
+    header{
+        width: 100%;
+        position: fixed; z-index: 1000; top: 0;
+        padding: 30px 0 10px; 
+    }
+    header:not(.modeWhite){
+        background-color: var(--GS01);
+        box-shadow: 0px 10px 10px 5px rgba(255,255,255,1);
+    }
+    header h1{
+        width: 100%; max-width: 30px;
+        margin: 0 auto; padding-bottom: 10px;
+    }
+    header nav{
+        width: 146px; margin: 0 auto;
+    }
+    header nav ul:after{
+        content: ''; display: block; clear: both;
+    }
+    header nav ul li{
+        display: block; float: left; position: relative;
+    }
+    header nav ul li:not(:first-of-type){
+        margin-left: var(--sp15);
+    }
+    header nav ul li.active:before{
+        content: ''; display: block; width: 5px; height: 5px; 
+        position: absolute; top: -3px; left: -8px;
+        clip-path: circle(50.0% at 50% 50%);
+    }
+    header:not(.modeWhite) nav ul li.active:before{
+        background-color: var(--BB03);
+    }
+    header.modeWhite nav ul li.active:before{
+        background-color: var(--GS01);
+    }
+    footer{
+        width: 100%;
+        position: fixed; bottom: 0; z-index: 1000;
+        padding-top: 10px;
+    }
+    footer:not(.modeWhite){
+        background-color: #fff;
+        box-shadow: 0px -10px 10px 5px rgba(255,255,255,1);
+    }
+    footer ul:after{
+        content: ''; display: block; clear: both;
+    }
+    footer ul{
+        width: 195px; margin: 0 auto; padding-bottom: 15px;
+    }
+    footer ul li{
+        display: block; float: left; width: var(--sp20); height: var(--sp20);
+    }
+    footer ul li a{
+        text-indent: -9999px; display: block; line-height: 20px;
+        background-size: contain; background-repeat: no-repeat;
+    }
+    footer ul li:not(:first-of-type){
+        margin-left: var(--sp15);
+    }
+    footer p{
+        padding-bottom: var(--sp30); text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+    header{
+        width: 100%;
+        position: fixed; z-index: 1000; top: 0; padding: 40px 0 10px;
+        box-sizing: border-box;
+    }
+    header:not(.modeWhite){
+        background-color: var(--GS01);
+        box-shadow: 0px 10px 10px 5px rgba(255,255,255,1);
+    }
+    header h1{
+        width: 100%; max-width: 60px;
+        margin: 0 auto; padding-bottom: 20px;
+    }
+    header nav{
+        width: 241.02px; margin: 0 auto;
+    }
+    header nav ul:after{
+        content: ''; display: block; clear: both;
+    }
+    header nav ul li{
+        display: block; float: left; position: relative;
+    }
+    header nav ul li:not(:first-of-type){
+        margin-left: var(--sp30);
+    }
+    header nav ul li.active:before{
+        content: ''; display: block; width: 8px; height: 8px; 
+        position: absolute; top: -5px; left: -12px;
+        clip-path: circle(50.0% at 50% 50%);
+    }
+    header:not(.modeWhite) nav ul li.active:before{
+        background-color: var(--BB03);
+    }
+    header.modeWhite nav ul li.active:before{
+        background-color: var(--GS01);
+    }
+    footer{
+        width: 100%;
+        position: fixed; bottom: 0; z-index: 1000;
+        padding-top: 10px;
+    }
+    footer:not(.modeWhite){
+        background-color: #fff;
+        box-shadow: 0px -10px 10px 5px rgba(255,255,255,1);
+    }
+    footer ul:after{
+        content: ''; display: block; clear: both;
+    }
+    footer ul{
+        padding-bottom: 15px; margin: 0 auto; max-width: 195px;
+    }
+    footer ul li{
+        display: block; float: left; width: var(--sp20); height: var(--sp20);
+    }
+    footer ul li a{
+        text-indent: -9999px; display: block; line-height: 20px;
+        background-size: contain; background-repeat: no-repeat;
+    }
+    footer ul li:not(:first-of-type){
+        margin-left: var(--sp15);
+    }
+    footer p{
+        padding-bottom: 40px; text-align: center;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    header{
+        width: 100%; position: fixed; top: 0; z-index: 1000;
+        padding: var(--sp60) 3.125% 0; box-sizing: border-box;
+    }
+    header::after{
+        content: ''; display: block; clear: both;
+    }
+    header h1{
+        float: left; width: 55px;
+    }
+    header nav{
+        line-height: 50px; float: right; 
+    }
+    header nav ul:after{
+        content: ''; display: block; clear: both;
+    }
+    header nav ul li{
+        display: block; float: left; position: relative;
+    }
+    header nav ul li:not(:first-of-type){
+        margin-left: var(--sp30);
+    }
+    header nav ul li:before{
+        content: ''; display: block; width: 8px; height: 8px; 
+        position: absolute; top: 10px; left: -12px;
+        clip-path: circle(20.0% at 50% 50%); transition: clip-path, background-color ease-out .2s;
+    }
+    header nav ul li.active:before,
+    header nav ul li:hover:before{
+        clip-path: circle(50.0% at 50% 50%);
+    }
+    header:not(.modeWhite) nav ul li.active:before,
+    header:not(.modeWhite) nav ul li:hover:before{
+        background-color: var(--BB03);
+    }
+    header.modeWhite nav ul li.active:before,
+    header.modeWhite nav ul li:hover:before{
+        background-color: var(--GS01);
+    }
+    footer{
+        position: fixed; bottom: 0; right: 3.125%; z-index: 1000;
+        padding-bottom: var(--sp60);
+    }
+    footer:after,
+    footer ul:after{
+        content: ''; display: block; clear: both;
+    }
+    footer ul{
+        float: left; width: 195px;
+    }
+    footer ul li{
+        display: block; float: left; width: var(--sp20); height: var(--sp20);
+    }
+    footer ul li a{
+        text-indent: -9999px; display: block; line-height: 20px;
+        background-size: contain; background-repeat: no-repeat;
+    }
+    footer ul li:not(:first-of-type){
+        margin-left: var(--sp15);
+    }
+    footer p{
+        margin-left: var(--sp20); display: inline;
+    }
+}
