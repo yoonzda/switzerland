@@ -30,7 +30,7 @@ function detailBG(tagH, frontN, targetS, fileExtension){
     var imageName = $(pageTitle).text();
 
     imageName = imageName.replace(' / ','');
-    backgroundIMG = "url('../images/"+frontN+"_"+imageName+fileExtension+"')";
+    backgroundIMG = "url('images/"+frontN+"_"+imageName+fileExtension+"')";
     $(targetS).css('background-image',backgroundIMG);
 }
  
@@ -110,7 +110,7 @@ function themaDetailFunction(){
     for(var i=1; i<4; i++){
         themaS = $('.themaDetailContainer div ul li:nth-of-type('+i+') a').attr('href')+'';
         themaS = themaS.replace(/[^0-9]/g,"");
-        $('.themaDetailContainer div ul li:nth-of-type('+i+')').css('background-image',"url('../images/thumbnail_thema"+themaS+".png");
+        $('.themaDetailContainer div ul li:nth-of-type('+i+')').css('background-image',"url('images/thumbnail_thema"+themaS+".png')");
     }
 
     if(window.matchMedia('(min-width:1280px)').matches){
@@ -421,9 +421,9 @@ function archiveFunction(){
     if(window.matchMedia('(min-width:1280px)').matches){
         for(var i=0; i<tagM.length; i++){
             if(i>8){
-                $(tagM[i]).css('background-image','url("../images/archive'+(i+1)+'.jpg")');
+                $(tagM[i]).css('background-image','url("images/archive'+(i+1)+'.jpg")');
             }else{
-                $(tagM[i]).css('background-image','url("../images/archive0'+(i+1)+'.jpg")');
+                $(tagM[i]).css('background-image','url("images/archive0'+(i+1)+'.jpg")');
             }
         }
         deskArchive();
@@ -435,9 +435,9 @@ function archiveFunction(){
         if(e.matches){
             for(var i=0; i<tagM.length; i++){
                 if(i>8){
-                    $(tagM[i]).css('background-image','url("../images/archive'+(i+1)+'.jpg');
+                    $(tagM[i]).css('background-image','url("images/archive'+(i+1)+'.jpg")');
                 }else{
-                    $(tagM[i]).css('background-image','url("../images/archive0'+(i+1)+'.jpg');
+                    $(tagM[i]).css('background-image','url("images/archive0'+(i+1)+'.jpg")');
                 }
             }
         }else{
