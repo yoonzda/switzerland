@@ -422,9 +422,9 @@ function archiveFunction(){
     if(window.matchMedia('(min-width:1280px)').matches){
         for(var i=0; i<tagM.length; i++){
             if(i>8){
-                $(tagM[i]).css('background-image','url("../images/archive'+(i+1)+'.jpg');
+                $(tagM[i]).css('background-image','url("../images/archive'+(i+1)+'.jpg")');
             }else{
-                $(tagM[i]).css('background-image','url("../images/archive0'+(i+1)+'.jpg');
+                $(tagM[i]).css('background-image','url("../images/archive0'+(i+1)+'.jpg")');
             }
         }
         deskArchive();
