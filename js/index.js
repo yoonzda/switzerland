@@ -39,7 +39,7 @@ function cityBG(){
         // $(cityA[(i-1)]).css('background-image',backgroundIMG);
     // }
 
-    $('.citySlider li').css("background-image","url('../images/city01_after.jpg')");
+    $('.citySlider li').css("background-image","url('/images/city01_after.jpg')");
     
     // $('.citySlider li').css('background-color','red');
  
