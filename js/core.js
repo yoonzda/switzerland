@@ -30,7 +30,7 @@ function detailBG(tagH, frontN, targetS, fileExtension){
     var imageName = $(pageTitle).text();
 
     imageName = imageName.replace(' / ','');
-    backgroundIMG = "url('../images/"+frontN+"_"+imageName+fileExtension;
+    backgroundIMG = "url('../images/"+frontN+"_"+imageName+fileExtension+"')";
     $(targetS).css('background-image',backgroundIMG);
 }
  
