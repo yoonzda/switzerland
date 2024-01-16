@@ -47,7 +47,6 @@ function cityDetailFunction(){
     
     var totalH = window.innerHeight;
     content02PaddingBottom = totalH-(content01+content01PaddingTop+content01PaddingBottom+content02)+10;
-    console.log(totalH-(content01+content01PaddingTop+content01PaddingBottom+content02)+100);
 
     // * scroll 하면 active
     // * image 에 맞게 height 조정
