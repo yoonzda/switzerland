@@ -30,14 +30,15 @@ function cityBG(){
     var backgroundIMG = "";
     var cityA = $('.citySlider li');
 
-    for(var i=1; i<cityA.length+1; i++){
-        if(i<10){
-            backgroundIMG = "url('../images/city0"+i+"_after.jpg')";
-        }else{
-            backgroundIMG = "url('../images/city"+i+"_after.jpg')";
-        }
-        $(cityA[(i-1)]).css('background-image',backgroundIMG);
-    }
+    // for(var i=1; i<cityA.length+1; i++){
+        // if(i<10){
+            // backgroundIMG = "url('../images/city0"+i+"_after.jpg')";
+        // }else{
+            // backgroundIMG = "url('../images/city"+i+"_after.jpg')";
+        // }
+        // $(cityA[(i-1)]).css('background-image',backgroundIMG);
+    // }
+    $('.citySlider li').css('background-image','url("../images/city01_after.jpg")');
 
     setTimeout(() => {
         $('.preinfo').css('display','none');
