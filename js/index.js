@@ -39,8 +39,9 @@ function cityBG(){
         // $(cityA[(i-1)]).css('background-image',backgroundIMG);
     // }
     // $('.citySlider li').css('background-color','red');
-    $('.citySlider li').css("background-image","url(../images/archive01.jpg)");
-
+ 
+    document.querySelector(".citySlider li").style.backgroundImage = "url('../images/archive01.jpg')";
+    
     setTimeout(() => {
         $('.preinfo').css('display','none');
     }, 6000);
