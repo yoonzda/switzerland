@@ -36,21 +36,11 @@ function detailBG(tagH, frontN, targetS, fileExtension){
  
 function cityDetailFunction(){ 
     var contentH = 0;
+    contentH = $('.cityContainer>div:nth-of-type(2)').height();
+    
     $('.cityContainer').css('padding-top',window.innerHeight - $('.cityContainer>div:first-of-type').height()-180);
+    $('.cityContainer>div:last-of-type').css('height',contentH);
 
-    var content01 = $('.cityContainer>div:nth-of-type(1)').height();
-    var content01PaddingTop = parseInt($('.cityContainer>div:nth-of-type(1)').css('padding-top'));
-    var content01PaddingBottom = parseInt($('.cityContainer>div:nth-of-type(1)').css('padding-bottom'));
-    
-    var content02 = $('.cityContainer>div:nth-of-type(2)').height();
-    var content02PaddingBottom = 0;
-    
-    var totalH = window.innerHeight;
-    content02PaddingBottom = totalH-(content01+content01PaddingTop+content01PaddingBottom+content02)+10;
-
-    // * scroll 하면 active
-    // * image 에 맞게 height 조정
-    // * 크기가 큰 tab 에서 scroll 대신 touch로 
     window.addEventListener('wheel', function(e){
         if(e.deltaY>0){
             $('.cityContainer>div:first-of-type').addClass('active');
@@ -63,11 +53,6 @@ function cityDetailFunction(){
             $('.cityContainer').css({
                 'overflow-y' : 'scroll'
             });
-
-            setTimeout(function(){
-                contentH = $('.cityContainer>div:nth-of-type(2)').height();
-                $('.cityContainer>div:last-of-type').css('height',contentH);
-            }, 800);
         }
     },{ once : true});
 
@@ -82,18 +67,7 @@ function cityDetailFunction(){
         $('.cityContainer').css({
             'overflow-y' : 'scroll'
         });
-
-        setTimeout(function(){
-            contentH = $('.cityContainer>div:nth-of-type(2)').height();
-            $('.cityContainer>div:last-of-type').css('height',contentH);
-        }, 800);
     });
-
-    if(content02PaddingBottom>150){
-        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',content02PaddingBottom);
-    }else{
-        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',150);
-    }
 }
 
 function themaDetailFunction(){

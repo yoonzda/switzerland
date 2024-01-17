@@ -1654,8 +1654,7 @@ ul.context li h3,
     .cityContainer>div:first-of-type{
         width: 100%;
         padding: var(--sp100) 0 var(--sp80); box-sizing: border-box;
-        text-align: center; 
-        transition: margin ease-out .5s;
+        text-align: center;
     }
     .cityContainer>div:first-of-type:not(.active){
         color: var(--GS01);
@@ -1689,7 +1688,7 @@ ul.context li h3,
     }
     
     .fancyBox{
-        position: relative; float: left; width: 31.25%; padding-left: 3.125%; box-sizing: border-box;
+        position: relative; float: left; width: 31.25%; padding: 0 3.125% 150px 0; box-sizing: border-box;
     }
     .fancyBox>span{
         display: none;
