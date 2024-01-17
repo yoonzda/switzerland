@@ -1651,6 +1651,9 @@ ul.context li h3,
         background-size: cover; background-repeat: no-repeat; height: 100vh; box-sizing: border-box;
         overflow-y: hidden; overflow-x: hidden;
     }
+    .cityContainer>div{
+        min-height: 100vh; padding: 150px 0;
+    }
     .cityContainer>div div:first-of-type{
         width: 100%;
         padding: var(--sp100) 0 var(--sp80); box-sizing: border-box;
