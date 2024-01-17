@@ -36,11 +36,11 @@ function detailBG(tagH, frontN, targetS, fileExtension){
  
 function cityDetailFunction(){ 
     var contentH = 0;
-    $('.cityContainer').css('padding-top',window.innerHeight - $('.cityContainer>div:first-of-type').height()-180);
+    $('.cityContainer').css('padding-top',window.innerHeight - $('.cityContainer>div div:first-of-type').height()-180);
 
     window.addEventListener('wheel', function(e){
         if(e.deltaY>0){
-            $('.cityContainer>div:first-of-type').addClass('active');
+            $('.cityContainer>div div:first-of-type').addClass('active');
 
             $(".cityContainer").animate({
                 scrollTop : 0,
@@ -52,14 +52,14 @@ function cityDetailFunction(){
             });
 
             setTimeout(function(){
-                contentH = $('.cityContainer>div:nth-of-type(2)').height();
-                $('.cityContainer>div:last-of-type').css('height',contentH);
+                contentH = $('.cityContainer>div div:nth-of-type(2)').height();
+                $('.cityContainer>div div:last-of-type').css('height',contentH);
             }, 800);
         }
     },{ once : true});
 
     $('.cityContainer').on('touchend', function(e){
-        $('.cityContainer>div:first-of-type').addClass('active');
+        $('.cityContainer>div div:first-of-type').addClass('active');
 
         $(".cityContainer").animate({
             scrollTop : 0,
@@ -71,8 +71,8 @@ function cityDetailFunction(){
         });
         
         setTimeout(function(){
-            contentH = $('.cityContainer>div:nth-of-type(2)').height();
-            $('.cityContainer>div:last-of-type').css('height',contentH);
+            contentH = $('.cityContainer>div div:nth-of-type(2)').height();
+            $('.cityContainer>div div:last-of-type').css('height',contentH);
         }, 800);
     });
 }
