@@ -36,10 +36,7 @@ function detailBG(tagH, frontN, targetS, fileExtension){
  
 function cityDetailFunction(){ 
     var contentH = 0;
-    contentH = $('.cityContainer>div:nth-of-type(2)').height();
-    
     $('.cityContainer').css('padding-top',window.innerHeight - $('.cityContainer>div:first-of-type').height()-180);
-    $('.cityContainer>div:last-of-type').css('height',contentH);
 
     window.addEventListener('wheel', function(e){
         if(e.deltaY>0){
@@ -49,10 +46,15 @@ function cityDetailFunction(){
                 scrollTop : 0,
                 padding : 0
             },1000);
-            
+
             $('.cityContainer').css({
                 'overflow-y' : 'scroll'
             });
+
+            setTimeout(function(){
+                contentH = $('.cityContainer>div:nth-of-type(2)').height();
+                $('.cityContainer>div:last-of-type').css('height',contentH);
+            }, 800);
         }
     },{ once : true});
 
@@ -67,6 +69,11 @@ function cityDetailFunction(){
         $('.cityContainer').css({
             'overflow-y' : 'scroll'
         });
+        
+        setTimeout(function(){
+            contentH = $('.cityContainer>div:nth-of-type(2)').height();
+            $('.cityContainer>div:last-of-type').css('height',contentH);
+        }, 800);
     });
 }
 
