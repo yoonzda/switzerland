@@ -38,6 +38,21 @@ function cityDetailFunction(){
     var contentH = 0;
     $('.cityContainer').css('padding-top',window.innerHeight - $('.cityContainer>div:first-of-type').height()-180);
 
+    var content01 = $('.cityContainer>div:nth-of-type(1)').height();
+    var content01PaddingTop = 100;
+    var content01PaddingBottom = 80;
+    
+    var content02 = $('.cityContainer>div:nth-of-type(2)').height();
+    var content02PaddingBottom = 0;
+    
+    var totalH = window.innerHeight;
+    content02PaddingBottom = totalH-(content01+content01PaddingTop+content01PaddingBottom+content02)+10;
+
+    console.log(totalH);
+    console.log(content01);
+    console.log(content01PaddingTop);
+    console.log(content01PaddingBottom);
+
     window.addEventListener('wheel', function(e){
         if(e.deltaY>0){
             $('.cityContainer>div:first-of-type').addClass('active');
@@ -75,6 +90,12 @@ function cityDetailFunction(){
             $('.cityContainer>div:last-of-type').css('height',contentH);
         }, 800);
     });
+    
+    if(content02PaddingBottom>150){
+        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',content02PaddingBottom);
+    }else{
+        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',150);
+    }
 }
 
 function themaDetailFunction(){
