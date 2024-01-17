@@ -1688,7 +1688,7 @@ ul.context li h3,
     }
     
     .fancyBox{
-        position: relative; float: left; width: 31.25%; padding: 0 3.125% 150px 0; box-sizing: border-box;
+        position: relative; float: left; width: 31.25%; padding: 0 0 150px 3.125%; box-sizing: border-box;
     }
     .fancyBox>span{
         display: none;
