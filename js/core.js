@@ -52,6 +52,7 @@ function cityDetailFunction(){
     console.log(content01);
     console.log(content01PaddingTop);
     console.log(content01PaddingBottom);
+    console.log(content02PaddingBottom);
 
     window.addEventListener('wheel', function(e){
         if(e.deltaY>0){
@@ -90,7 +91,7 @@ function cityDetailFunction(){
             $('.cityContainer>div:last-of-type').css('height',contentH);
         }, 800);
     });
-    
+
     if(content02PaddingBottom>150){
         $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',content02PaddingBottom);
     }else{
