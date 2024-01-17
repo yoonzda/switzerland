@@ -48,12 +48,6 @@ function cityDetailFunction(){
     var totalH = window.innerHeight;
     content02PaddingBottom = totalH-(content01+content01PaddingTop+content01PaddingBottom+content02)+10;
 
-    console.log(totalH);
-    console.log(content01);
-    console.log(content01PaddingTop);
-    console.log(content01PaddingBottom);
-    console.log(content02PaddingBottom);
-
     window.addEventListener('wheel', function(e){
         if(e.deltaY>0){
             $('.cityContainer>div:first-of-type').addClass('active');
@@ -92,10 +86,12 @@ function cityDetailFunction(){
         }, 800);
     });
 
-    if(content02PaddingBottom>150){
+    if(content02PaddingBottom<150){
+        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',150);
+    }else if(content02PaddingBottom<300){
         $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',content02PaddingBottom);
     }else{
-        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',150);
+        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',300);
     }
 }
 
