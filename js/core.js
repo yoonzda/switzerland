@@ -88,10 +88,10 @@ function cityDetailFunction(){
 
     if(content02PaddingBottom<150){
         $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',150);
-    }else if(content02PaddingBottom<300){
+    }else if(content02PaddingBottom<240){
         $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',content02PaddingBottom);
     }else{
-        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',300);
+        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',240);
     }
 }
 
