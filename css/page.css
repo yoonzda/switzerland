@@ -46,7 +46,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24,
     color: var(--GS01);
 }
 .fancyBox div input[type='button'],
-.cityContainer>div div:last-of-type .pageControl a,
+.cityContainer>div:last-of-type .pageControl a,
 .videoContainer div.pop.active input[type='button'],
 .themaDetailContainer div ol li:not(.active),
 .themaDetailContainer div ul li a{
@@ -85,8 +85,8 @@ ul.context li h3,
 .indexContainer>div h2,
 .indexContainer ul li.active.clicky.type03>span,
 .indexContainer ul li.clicky>div h3,
-.cityContainer>div div:first-of-type h2,
-.cityContainer>div div:last-of-type .pageControl,
+.cityContainer>div:first-of-type h2,
+.cityContainer>div:last-of-type .pageControl,
 .fancybox__infobar,
 .videoContainer h2,
 .videoContainer div.pop.active h3,
@@ -227,7 +227,7 @@ ul.context li h3,
         line-height: var(--sp40);
     }
 
-    .cityContainer>div div:last-of-type .pageControl:after{
+    .cityContainer>div:last-of-type .pageControl:after{
         content: ''; display: block; clear: both;
     }
 
@@ -398,18 +398,18 @@ ul.context li h3,
     .cityContainer{
         padding: 130px 7.1428% 140px;
     }
-    .cityContainer>div div:first-of-type{
+    .cityContainer>div:first-of-type{
         text-align: center; margin-bottom: var(--sp30);
     }
-    .cityContainer>div div:first-of-type h2{
+    .cityContainer>div:first-of-type h2{
         color: var(--BB02);
     }
-    .cityContainer>div div:first-of-type small{
+    .cityContainer>div:first-of-type small{
         color: var(--BB03); border-bottom: 1px solid var(--GN); 
         display: inline-block; padding: 0 5px 5px;
         margin-bottom: var(--sp15);
     }
-    .cityContainer>div div:first-of-type p{
+    .cityContainer>div:first-of-type p{
         color: var(--BB02); line-height: 18px;
     }
 
@@ -956,17 +956,17 @@ ul.context li h3,
     .cityContainer{
         padding: 200px 10.9375%;
     }
-    .cityContainer>div div:first-of-type{
+    .cityContainer>div:first-of-type{
         text-align: center; margin-bottom: var(--sp60);
     }
-    .cityContainer>div div:first-of-type h2{
+    .cityContainer>div:first-of-type h2{
         color: var(--BB02); margin-bottom: var(--sp10);
     }
-    .cityContainer>div div:first-of-type small{
+    .cityContainer>div:first-of-type small{
         color: var(--BB03); border-bottom: 1px solid var(--GN); 
         display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp20);
     }
-    .cityContainer>div div:first-of-type p{
+    .cityContainer>div:first-of-type p{
         color: var(--BB02); line-height: 26px;
     }
 
@@ -1391,7 +1391,7 @@ ul.context li h3,
     .cityContainer:after{
         content: ''; display: block; clear: both;
     }
-    .cityContainer>div div:last-of-type .pageControl:after{
+    .cityContainer>div:last-of-type .pageControl:after{
         content: ''; display: block; clear: both;
     }
     .videoContainer ol:after{
@@ -1651,42 +1651,39 @@ ul.context li h3,
         background-size: cover; background-repeat: no-repeat; height: 100vh; box-sizing: border-box;
         overflow-y: hidden; overflow-x: hidden;
     }
-    .cityContainer>div{
-        min-height: 100vh; padding: 150px 0;
-    }
-    .cityContainer>div div:first-of-type{
+    .cityContainer>div:first-of-type{
         width: 100%;
         padding: var(--sp100) 0 var(--sp80); box-sizing: border-box;
         text-align: center;
     }
-    .cityContainer>div div:first-of-type:not(.active){
+    .cityContainer>div:first-of-type:not(.active){
         color: var(--GS01);
         text-shadow: 8px 0 13px rgba(0, 0, 0, 0.75);
     }
-    .cityContainer>div div:first-of-type.active{
+    .cityContainer>div:first-of-type.active{
         background-color: var(--GS01);
     }
-    .cityContainer>div div:first-of-type h2{
+    .cityContainer>div:first-of-type h2{
         margin-bottom: var(--sp10);
     }
-    .cityContainer>div div:first-of-type.active h2{
+    .cityContainer>div:first-of-type.active h2{
         color: var(--BB02);
     }
-    .cityContainer>div div:first-of-type small{
+    .cityContainer>div:first-of-type small{
         display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp30);
     }
-    .cityContainer>div div:first-of-type:not(.active) small{
+    .cityContainer>div:first-of-type:not(.active) small{
         border-bottom: 1px solid var(--GS01);
     }
-    .cityContainer>div div:first-of-type.active small{
+    .cityContainer>div:first-of-type.active small{
         color: var(--BB03);
         border-bottom: 1px solid var(--GN);
     }
-    .cityContainer>div div:first-of-type p{
+    .cityContainer>div:first-of-type p{
         width: 52%; min-width: 900px;
         margin: 0 auto; line-height: 30px;
     }
-    .cityContainer>div div:first-of-type.active p{
+    .cityContainer>div:first-of-type.active p{
         color: var(--BB02);
     }
     
@@ -1746,11 +1743,11 @@ ul.context li h3,
         width: var(--sp60); height: var(--sp60);
     }
 
-    .cityContainer>div div:last-of-type{
+    .cityContainer>div:last-of-type{
         float: left; width: 60.9375%; margin-left: 1.5625%; margin-right: 3.125%; 
         position: relative; overflow-y: scroll;
     }
-    .cityContainer>div div:last-of-type ul.context li:last-of-type{
+    .cityContainer>div:last-of-type ul.context li:last-of-type{
         margin-bottom: var(--sp200);
     }
 
