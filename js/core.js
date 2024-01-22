@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    NProgress.start();
     matchAction();
 
     themaDetailFunction();
@@ -10,6 +11,7 @@ $(document).ready(function(){
     
     archiveFunction();
     archiveBG();
+    NProgress.done();
 });
 
 $(window).on('resize orientationchange', function(){
