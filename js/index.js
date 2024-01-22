@@ -1,10 +1,9 @@
-$(document).ready(function(){
-    NProgress.start();
+
+$(window).load(function(){
     cityBG();
     cityBefore();
     actionFunction();
     cityAfter();
-    NProgress.done();
 });
 
 var activeN = 2;
