@@ -209,88 +209,80 @@ var monthOfVideoFile = 12;
 const date = new Date();
 const todayMonth = date.getMonth();
 
-function videoTimeFunction(){
-    var timeData = 0;
-    var monthTabBtn = $('.videoContainer ol li');
+var activeMonth = todayMonth;
+var timeLabel = 1;
+
+function videoFunction(){
     var videoContent = document.querySelector('.videoContainer video');
-    var videoPop = $('.videoContainer div.pop');
-    var timeLabel = 0;
-
-    // cloneTabBtn = monthTabBtn;
-
-    // ? todayMonth 부터 순서대로 data 넣기
-    for(var i=0; i<12; i++){
-        if((monthOfVideoFile-1)+i < 12){
-            $(monthTabBtn[(monthOfVideoFile-1)+i]).attr('data-timeline',i*60);
-        }else{
-            $(monthTabBtn[(monthOfVideoFile-1)+i-12]).attr('data-timeline',i*60);
-        }
-    }
-
-    // ? todayMonth 에 active class 넣기
-    $(monthTabBtn).removeClass('active');
-    $(monthTabBtn[todayMonth]).addClass('active');
-    
-    if(videoContent != null){
-        timeData = parseInt($(monthTabBtn[todayMonth]).attr('data-timeline'));
-        videoContent.currentTime = timeData+0.2;
-
-        videoContent.ontimeupdate = function(){
-            console.log(videoContent.currentTime);
-    
-            //  ? 동영상 시간에 따라 monthTabBtn active
-            for(var i=0; i<12; i++){
-                timeData = parseInt($(monthTabBtn[i]).attr('data-timeline'));
-    
-                if(timeData<=videoContent.currentTime && videoContent.currentTime <timeData+60){
-                    $(monthTabBtn).removeClass('active');
-                    $(monthTabBtn[i]).addClass('active');
-                }
-            }
-    
-            // ? 동영상 시간에 따라 pop active
-            if(parseInt(videoContent.currentTime / 15)<48-(monthOfVideoFile-1)*4){
-                timeLabel = parseInt(videoContent.currentTime / 15)+(monthOfVideoFile-1)*4;
-            }else{
-                timeLabel = parseInt(videoContent.currentTime / 15)+(monthOfVideoFile-1)*4-48;
-            }
-            $(videoPop).removeClass('active');
-            $(videoPop[timeLabel]).addClass('active');
-    
-            if(parseInt(videoContent.currentTime)==timeLabel*15+14){
-                $(videoPop).removeClass('active');
-            }
-        };
-    }
-}
-
-function videoControl(){
-    var timeData = 0;
-    var monthTabBtn = $('.videoContainer ol li');
-    var videoPop = $('.videoContainer div.pop');
-    var videoContent = document.querySelector('.videoContainer video');
+    var btnMonth = $('.videoContainer>ol li');
     var playBtn = '';
     var soundBtn = '';
     var playBtnValue = ['pause_circle', 'play_circle'];
     var soundBtnValue = ['brand_awareness' , 'no_sound'];
+    var videoPop = $('.videoContainer div.pop');
+
+    var testNumb = 0;
+    var testLabel = 0;
+    
+    $(btnMonth[activeMonth]).addClass('active');
+    videoFileChange(activeMonth);
 
     if(videoContent != null){
-        var contentH = videoContent.offsetHeight;
-        var contentT = videoContent.offsetTop;
+        videoContent.ontimeupdate = function(){
+            if(videoContent.currentTime==videoContent.duration){
+                activeMonth+=1;
+                videoFileChange(activeMonth);
+            }
+
+            testNumb = activeMonth*4;
+            testLabel = parseInt(videoContent.currentTime / 15);
+            console.log(activeMonth+'active');
+            console.log(testLabel+'label');
+    
+            $(videoPop).removeClass('active');
+            $(videoPop[testNumb+testLabel]).addClass('active');
+    
+            if(parseInt(videoContent.currentTime)==testLabel*15+14){
+                $(videoPop).removeClass('active');
+            }
+        };
     }
 
-
-    // ? li 를 누르면 해당 li 가 active & data-timeline 으로 동영상 시간 이동 
-    $(monthTabBtn).click(function(e){
-        e.stopPropagation();
-        $(videoPop).removeClass('clicky');
-        $(monthTabBtn).removeClass('active');
+    $(btnMonth).click(function(){
+        $(btnMonth).removeClass('active');
         $(this).addClass('active');
-        timeData = parseInt($(this).attr('data-timeline'));
-        videoContent.currentTime = timeData+0.2;
+        
+        activeMonth = $(this).index();
+
+        videoFileChange(activeMonth);
     });
 
-    // ? 첫번째 button 소리 켜고 끄기 / 처음 상태는 mute
+    $(videoContent).click(function(e){
+        timeLabel = parseInt(videoContent.currentTime / 15)*15;
+
+        if(window.innerWidth/2>e.pageX && !videoContent.paused){
+            if(timeLabel==0){
+                switch(activeMonth){
+                    case 0:
+                        activeMonth=11;
+                        break;
+                    default:
+                        activeMonth-=1;
+                        break;
+                }
+                videoFileChange(activeMonth);
+                return false;
+            }else{
+                moveTime = -14.8;
+            }
+        }else if(!videoContent.paused){
+            moveTime = 15.2;
+        }else{
+            return false
+        }
+        videoContent.currentTime = timeLabel + moveTime;
+    });
+
     $('.videoContainer>div:first-of-type input:first-of-type').click(function(e){
         e.stopPropagation();
         soundBtn = $(this).attr('value');
@@ -303,7 +295,6 @@ function videoControl(){
         }
     });
     
-    // ? 두번째 button 동영상 시작 멈춤 / 처음 상태는 자동재생 (ios)
     $('.videoContainer>div:first-of-type input:last-of-type').click(function(e){
         e.stopPropagation();
         playBtn = $(this).attr('value');
@@ -316,7 +307,6 @@ function videoControl(){
         }
     });
     
-    // ? DESK div circle hover 동영상 시작 멈춤 
     $('.videoContainer>span').mouseover(function(){
         playBtn = $('.videoContainer>div:first-of-type input:last-of-type').attr('value');
         if(playBtn==playBtnValue[0]){
@@ -326,15 +316,19 @@ function videoControl(){
         $('.videoContainer>span').addClass('active');
     });
     $('.videoContainer div.pop').mouseleave(function(){
+        console.log(1);
         if(playBtn==playBtnValue[0]){
             videoContent.play();
         }
         $('.videoContainer div').removeClass('clicky');
         $('.videoContainer>span').removeClass('active');
     });
-
     
-    // ? TAB / MOB 
+    if(videoContent != null){
+        var contentH = videoContent.offsetHeight;
+        var contentT = videoContent.offsetTop;
+    }
+    
     if(window.matchMedia('(max-width:1279px)').matches){
         $('.videoContainer>span').click(function(){
             playBtn = $('.videoContainer>div:first-of-type input:last-of-type').attr('value');
@@ -357,33 +351,31 @@ function videoControl(){
         $('.videoContainer div.pop').css('top',contentT+contentH/2);
         $('.videoContainer>span').css('top',contentT+contentH/2);
     }
+}
 
-    // ? left & right 구분해서 15초 이동하기
-    $(videoContent).click(function(e){
-        var timeLabel = 0;
-        var moveTime = 0;
+function videoFileChange(){
+    var videoFileName = '';
+    var videoContent = document.querySelector('.videoContainer video');
+    var btnMonth = $('.videoContainer>ol li');
+    var monthArray = [];
 
-        timeLabel = parseInt(videoContent.currentTime / 15)*15;
+    for(var i=0; i<12; i++){
+        monthArray[i] = $(btnMonth[i]).text();
+    }
+    
+    if(activeMonth==12){
+        activeMonth=0;
+    }
 
-        if(window.innerWidth/2>e.pageX && !videoContent.paused){
-            if(timeLabel == 0){
-                moveTime = 705.2;
-            }else{
-                moveTime = -14.8;
-            }
-        }else if(!videoContent.paused){
-            if(timeLabel == 705){
-                moveTime = -705;
-            }else{
-                moveTime = 15.2;
-            }
-        }else{
-            return false
-        }
-        videoContent.currentTime = timeLabel + moveTime;
-        $(videoPop).removeClass('active');
-        $('.videoContainer div').removeClass('clicky');
-    });
+    $(btnMonth).removeClass('active');
+    $(btnMonth[activeMonth]).addClass('active');
+
+    videoFileName = 'mp4/video_'+monthArray[activeMonth]+'.mp4';
+    $(videoContent).attr('src',videoFileName);
+    
+    if(timeLabel==0){
+        videoContent.currentTime = 45.2;
+    }
 }
 
 function themaSlider(){
