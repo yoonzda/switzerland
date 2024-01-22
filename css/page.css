@@ -462,7 +462,7 @@ ul.context li h3,
     }
     
     .videoContainer{
-        background-color: var(--GS03);
+        background-color: var(--GS07);
         display: flex; flex-flow: column; justify-content: center;
         height: 100vh;
         padding: 150px 0; box-sizing: border-box;
@@ -1017,7 +1017,7 @@ ul.context li h3,
     }
 
     .videoContainer{
-        background-color: var(--GS03);
+        background-color: var(--GS07);
         display: flex;
         flex-flow: column;
         justify-content: center;
@@ -1753,7 +1753,7 @@ ul.context li h3,
 
     .videoContainer{
         position: relative; height: 100vh; overflow-y: hidden;
-        background-color: var(--GS03);
+        background-color: var(--GS07);
     }
     .videoContainer video{
         position: absolute; width: 100%; top: 50%; left: 0; transform: translate(0,-50%);
