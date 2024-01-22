@@ -5,8 +5,7 @@ $(document).ready(function(){
     videoDetailFunction();
     detailBG('.videoDetailContainer div h2','detailBG','.videoDetailContainer','.png');
 
-    videoTimeFunction();
-    videoControl();
+    videoFunction();
     themaSlider();
     
     archiveFunction();
