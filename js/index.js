@@ -53,11 +53,11 @@ function colorChange(beforeClass,afterClass){
 
 function cityBefore(){
     var cityA = $('.citySlider li');
-    const centerW = $(cityA[activeN]).width();
-    const centerH = $(cityA[activeN]).height();
-    const centerT = (window.innerHeight-centerH)/multiplier;
-    const centerL = (window.innerWidth-centerW)/2;
-    const totalH = centerH + marginTop*5;
+    var centerW = $(cityA[activeN]).width();
+    var centerH = $(cityA[activeN]).height();
+    var centerT = (window.innerHeight-centerH)/multiplier;
+    var centerL = (window.innerWidth-centerW)/2;
+    var totalH = centerH + marginTop*5;
 
     $('.indexContainer div h2').text($(cityA[activeN]).children('span').text());
     $('.indexContainer div>small').text($(cityA[activeN]).children('b').text());
@@ -100,10 +100,10 @@ function actionFunction(){
 
 function cityAfter(){
     var cityA = $('.citySlider li');
-    const centerW = $(cityA[activeN]).width();
-    const centerH = $(cityA[activeN]).height();
-    const centerT = (window.innerHeight-centerH)/multiplier;
-    const centerL = (window.innerWidth-centerW)/2;
+    var centerW = $(cityA[activeN]).width();
+    var centerH = $(cityA[activeN]).height();
+    var centerT = (window.innerHeight-centerH)/multiplier;
+    var centerL = (window.innerWidth-centerW)/2;
 
     $(cityA).click(function(e){
 
