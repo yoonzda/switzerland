@@ -112,6 +112,9 @@ function cityAfter(){
             return false;
         }
 
+        activeN = $(this).index();
+        console.log(activeN);
+
         $(this).addClass('active clicky');
         $('body').on('wheel',function(){
             return false;
@@ -143,6 +146,8 @@ function cityAfter(){
                 left: centerL-(10+centerW)*i
             });
         }
+        $('.indexContainer div h2').text($(cityA[activeN]).children('span').text());
+        $('.indexContainer div>small').text($(cityA[activeN]).children('b').text());
 
         return currentState = 'before';
     });
