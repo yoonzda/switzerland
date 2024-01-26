@@ -108,10 +108,7 @@ function cityAfter(){
 
     $(cityA).click(function(e){
 
-        if(currentState == 'before'){
-            console.log('click posible');
-        }else{
-            console.log('cant click');
+        if(currentState != 'before'){
             return false;
         }
 

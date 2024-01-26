@@ -131,14 +131,11 @@ function themaDetailFunction(){
             for(var i=0; i<tagL.length; i++){
                 for(var j=0; j<i; j++){
                     sumH = sumH + $(tagL[j]).height()+marginL;
-                    console.log("i="+i+'일때 j ='+j+'일때'+sumH);
                 }
                 if($(tagU).scrollTop() > sumH-300 && $(tagU).scrollTop() < sumH + $(tagL[i]).height()){
                     $(tagN).removeClass('active');
                     $(tagN[i]).addClass('active');
                 }
-                console.log("i="+i+'일때 합'+sumH);
-                console.log('최대값'+(sumH + $(tagL[i]).height()+marginL));
                 
                 sumH = 0;
             }
@@ -148,14 +145,11 @@ function themaDetailFunction(){
             for(var i=0; i<tagL.length; i++){
                 for(var j=0; j<i; j++){
                     sumH = sumH + $(tagL[j]).height()+marginL;
-                    console.log("i="+i+'일때 j ='+j+'일때'+sumH);
                 }
                 if($(tagU).scrollTop() > sumH-300 && $(tagU).scrollTop() < sumH + $(tagL[i]).height()){
                     $(tagN).removeClass('active');
                     $(tagN[i]).addClass('active');
                 }
-                console.log("i="+i+'일때 합'+sumH);
-                console.log('최대값'+(sumH + $(tagL[i]).height()+marginL));
                 
                 sumH = 0;
             }
@@ -235,8 +229,6 @@ function videoFunction(){
 
             testNumb = activeMonth*4;
             testLabel = parseInt(videoContent.currentTime / 15);
-            console.log(activeMonth+'active');
-            console.log(testLabel+'label');
     
             $(videoPop).removeClass('active');
             $(videoPop[testNumb+testLabel]).addClass('active');
@@ -315,7 +307,6 @@ function videoFunction(){
         $('.videoContainer>span').addClass('active');
     });
     $('.videoContainer div.pop').mouseleave(function(){
-        console.log(1);
         if(playBtn==playBtnValue[0]){
             videoContent.play();
         }
@@ -477,8 +468,6 @@ function tabArchive(){
     var beforeX = 0;
     
     document.addEventListener('touchstart',function(e){
-        console.log(e.target + 'target');
-        console.log(e.currenttarget+'current');
         beforeX = e.touches[0].pageX;
         return beforeX;
     });
