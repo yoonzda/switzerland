@@ -10,6 +10,8 @@ $(document).ready(function(){
     
     archiveFunction();
     archiveBG();
+
+    snsIconBG();
 });
 
 $(window).on('resize orientationchange', function(){
@@ -533,4 +535,21 @@ function archiveBG(){
     }
 
     $('.archiveContainer').css('background-position',positionData);
+}
+
+function snsIconBG(){
+    var className = $('footer').attr('class');
+    var snsIcon = $('footer ul li a');
+    var snsName = '';
+    var imageName = '';
+
+    for(var i=0; i<snsIcon.length; i++){
+        snsName = $(snsIcon[i]).text();
+        if(className == 'modeWhite'){
+            imageName = 'url("images/icon_sns_'+snsName+'_W.png")';
+        }else{
+            imageName = 'url("images/icon_sns_'+snsName+'.png")';
+        }
+        $(snsIcon[i]).css('background-image',imageName);
+    }
 }
