@@ -4,6 +4,7 @@ $(window).load(function(){
     cityBefore();
     actionFunction();
     cityAfter();
+    snsIconBG('modeDefault');
 });
 
 var activeN = 2;
@@ -50,6 +51,23 @@ function colorChange(beforeClass,afterClass){
     $('footer').removeClass(beforeClass);
     $('header').addClass(afterClass);
     $('footer').addClass(afterClass);
+    snsIconBG(afterClass);
+}
+
+function snsIconBG(className){
+    var snsIcon = $('footer.'+className+' ul li a');
+    var snsName = '';
+    var imageName = '';
+
+    for(var i=0; i<snsIcon.length; i++){
+        snsName = $(snsIcon[i]).text();
+        if(className == 'modeWhite'){
+            imageName = 'url("images/icon_sns_'+snsName+'_W.png")';
+        }else{
+            imageName = 'url("images/icon_sns_'+snsName+'.png")';
+        }
+        $(snsIcon[i]).css('background-image',imageName);
+    }
 }
 
 function cityBefore(){
@@ -120,7 +138,7 @@ function cityAfter(){
             return false;
         });
 
-        colorChange('modeDefalut','modeWhite');
+        colorChange('modeDefault','modeWhite');
         return currentState = 'after';
     });
 
@@ -129,7 +147,7 @@ function cityAfter(){
         $('body').off('wheel');
         $(cityA).removeClass('active clicky');
 
-        colorChange('modeWhite','modeDefalut');
+        colorChange('modeWhite','modeDefault');
         
         for(var i=1; i<29; i++){
             $(cityA[activeN]).addClass('active');
