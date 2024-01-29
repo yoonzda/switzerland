@@ -13,8 +13,7 @@
     font-variation-settings:
     'wght' 400
 }
-.videoDetailContainer article div h2,
-.themaDetailContainer div h2{
+section[class*='Detail'] h2{
     color: var(--BB01);
 }
 ul.context li p,
@@ -22,7 +21,7 @@ ul.context li p,
 .videoDetailContainer p,
 .themaDetailContainer div p,
 .themaContainer>div.unR40,
-.themaContainer>div.unR40 span:not([class*='Page']) a{
+.themaContainer>div.unR40 span a{
     color: var(--BB02);
 }
 .indexContainer>div small,
