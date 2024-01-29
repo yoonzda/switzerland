@@ -741,8 +741,7 @@ section.themaDetailContainer *.unR30{
     }
 
     .archiveContainer ol:last-of-type li ul li b{
-        display: block; margin-bottom: 5px;
-        font-style: italic; color: var(--YE);
+        display: block; margin-bottom: 5px; color: var(--YE);
     }
     .archiveContainer ol:last-of-type li ul li h3{
         margin-bottom: var(--sp10); color: var(--GS02);
@@ -1220,8 +1219,7 @@ section.themaDetailContainer *.unR30{
     }
     .themaContainer>div.unR40{
         position: absolute; right: 6.510%;
-        width: 220px; text-align: center; font-style: italic;
-        margin-top: 50px;
+        width: 220px; text-align: center; margin-top: 50px;
     }
     .themaContainer>div.unR40 span:not([class*='Page']){
         position: absolute; font-size: 40px;
@@ -1318,8 +1316,7 @@ section.themaDetailContainer *.unR30{
     }
 
     .archiveContainer ol:last-of-type li ul li b{
-        display: block; margin-bottom: var(--sp15);
-        font-style: italic; color: var(--YE);
+        display: block; margin-bottom: var(--sp15); color: var(--YE);
     }
     .archiveContainer ol:last-of-type li ul li h3{
         margin-bottom: var(--sp20); color: var(--GS02);
@@ -2078,7 +2075,7 @@ section.themaDetailContainer *.unR30{
         padding: 24vh 4.166% 18vh 6.25%;
     }
     .archiveContainer ol:last-of-type li ul li b{
-        display: block; font-style: italic; color: var(--GS04); 
+        display: block; color: var(--GS04); 
         transition: color ease-out .3s;
         margin-bottom: var(--sp20);
     }
@@ -2086,8 +2083,7 @@ section.themaDetailContainer *.unR30{
         color: var(--YE);
     }
     .archiveContainer ol:last-of-type li ul li h3{
-        white-space: normal; color: var(--GS04); font-style: italic; text-transform: uppercase;
-        /* margin-bottom: var(--sp20); */
+        white-space: normal; color: var(--GS04);
         transition: color ease-out .3s;
         margin-bottom: auto;
     }
@@ -2139,8 +2135,7 @@ section.themaDetailContainer *.unR30{
 
     div.preinfo strong{
         display: block; margin: 0 auto var(--sp20);
-        text-align: center; text-transform: uppercase; font-style: italic;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
     }
     .wrapWave{
         width: 100%; height: 100px; max-width: 280px; margin: 0 auto;
@@ -2207,8 +2202,7 @@ section.themaDetailContainer *.unR30{
     .mobLandscape{
         background-color: var(--GS07);
         position: fixed; z-index: 1002; width: 100vw; height: 100vh;
-        color: var(--GS01); text-transform: uppercase; text-align: center;
-        font-style: italic; line-height: var(--sp40);
+        color: var(--GS01); text-align: center; line-height: var(--sp40);
         display: flex; flex-direction: column; justify-content: center;
     }
 }

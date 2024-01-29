@@ -26,7 +26,7 @@
     --sp100: 100px;
     --sp200: 200px;
 }
-
+.unR40{font-style: italic;}
 [class^='un']{font-family: 'Unna'; text-transform: uppercase;}
 [class^='ma']{font-family: 'Manrope';}
 [class^='fi']{font-family: 'Fira Sans Extra Condensed';}
