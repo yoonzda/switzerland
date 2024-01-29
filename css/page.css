@@ -17,8 +17,7 @@ section[class*='Detail'] h2{
 .themaContainer>div.unR40 span a{
     color: var(--BB02);
 }
-.indexContainer>div small,
-.indexContainer>span{
+.indexContainer *.maS16{
     color: var(--BB03);
 }
 section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24,
