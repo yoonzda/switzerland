@@ -68,9 +68,8 @@ ul.context li h3,
     background-color: transparent; border: none; padding: 0;
 }
 
-section:not(.videoDetailContainer) *[class^='un']:not([class*='30']),
-section.archiveContainer *.unR30,
-section.themaDetailContainer *.unR30{
+*[class^='un']:not([class*='30']),
+section:not(.cityContainer,.videoDetailContainer) *.unR30{
     font-style: italic;
 }
 
