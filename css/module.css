@@ -51,7 +51,7 @@
     
     .maS16{font-size: 10px;}
 
-    p.maR20{line-height: 18px;}
+    [class^='maR']{line-height: 18px;}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px){
@@ -69,6 +69,7 @@
     [class^='ma']{font-size: 16px;}
 
     p.maR20{line-height: 26px;}
+    p.maR16{line-height: 22px}
 }
 
 @media screen and (min-width: 1280px){

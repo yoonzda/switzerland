@@ -357,8 +357,7 @@ section.themaDetailContainer *.unR30{
         animation-delay: 1s; animation-name: type01Line; animation-duration: .5s;
     }
     .indexContainer ul li.clicky>div div p{
-        line-height: 18px; margin-bottom: var(--sp20);
-        white-space: normal;
+        margin-bottom: var(--sp20); white-space: normal;
         padding-top: var(--sp20); text-align: left;
         animation-delay: 1.5s; animation-name: textDown; animation-duration: .8s;
     }
@@ -562,9 +561,6 @@ section.themaDetailContainer *.unR30{
 
     .themaDetailContainer{
         padding: 130px 7.1428% 140px; text-align: center;
-    }
-    .themaDetailContainer p{
-        line-height: 18px;
     }
     .themaDetailContainer div:first-of-type h2{
         margin-bottom: var(--sp15);
@@ -904,8 +900,7 @@ section.themaDetailContainer *.unR30{
         animation-delay: 1s; animation-name: type01Line; animation-duration: .5s;
     }
     .indexContainer ul li.clicky>div div p{
-        line-height: 22px; margin-bottom: var(--sp30);
-        white-space: normal;
+        margin-bottom: var(--sp30); white-space: normal;
         padding-top: var(--sp30); text-align: left;
         animation-delay: 1.5s; animation-name: textDown; animation-duration: .8s;
     }
@@ -1119,9 +1114,6 @@ section.themaDetailContainer *.unR30{
 
     .themaDetailContainer{
         padding: 200px 10.9375%; text-align: center;
-    }
-    .themaDetailContainer p{
-        line-height: 22px;
     }
     .themaDetailContainer div:first-of-type h2{
         margin-bottom: var(--sp20);
@@ -1528,7 +1520,7 @@ section.themaDetailContainer *.unR30{
         position: absolute; text-align: right;
     }
     .indexContainer ul li>div div p{
-        white-space: normal; line-height: 22px; margin-bottom: var(--sp30);
+        white-space: normal; margin-bottom: var(--sp30);
     }
 
     .indexContainer ul li>div *:not(p,div),
@@ -1832,9 +1824,6 @@ section.themaDetailContainer *.unR30{
         height: 100vh;
         padding: 12vh 0; margin: 0 6.25%; box-sizing: border-box;
         text-align: center;
-    }
-    .themaDetailContainer p{
-        line-height: 22px;
     }
     .themaDetailContainer div:first-of-type{
         width: 47.619%;
