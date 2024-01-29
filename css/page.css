@@ -77,24 +77,11 @@ ul.context li h3,
 .videoContainer div.pop.active input[type='button']{
     background-color: transparent; border: none; padding: 0;
 }
-ul.context li h3,
-.indexContainer>span,
-.videoDetailContainer article div h2{
-    text-transform: uppercase;
-}
-.indexContainer>div h2,
-.indexContainer ul li.active.clicky.type03>span,
-.indexContainer ul li.clicky>div h3,
-.cityContainer>div:first-of-type h2,
-.cityContainer>div:last-of-type .pageControl,
-.fancybox__infobar,
-.videoContainer h2,
-.videoContainer div.pop.active h3,
-.themaDetailContainer div h2,
-.themaDetailContainer div ol,
-.themaDetailContainer h3,
-.titleBox h2{
-    text-transform: uppercase; font-style: italic;
+
+section:not(.videoDetailContainer) *[class^='un']:not([class*='30']),
+section.archiveContainer *.unR30,
+section.themaDetailContainer *.unR30{
+    font-style: italic;
 }
 
 @keyframes line{

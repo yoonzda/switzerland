@@ -27,7 +27,7 @@
     --sp200: 200px;
 }
 
-[class^='un']{font-family: 'Unna';}
+[class^='un']{font-family: 'Unna'; text-transform: uppercase;}
 [class^='ma']{font-family: 'Manrope';}
 [class^='fi']{font-family: 'Fira Sans Extra Condensed';}
 
