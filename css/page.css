@@ -2,20 +2,23 @@
 .material-symbols-outlined{font-variation-settings:'FILL' 0,'GRAD' 0,'opsz' 48}
 .material-symbols-outlined:not(.regular){font-variation-settings:'wght' 200}
 .material-symbols-outlined.regular{font-variation-settings:'wght' 400}
+
+section:not(.cityContainer) p.maR20,
+ul.context li p.maR20{
+    color: var(--BB02);
+}
+
 section[class*='Detail'] h2{
     color: var(--BB01);
 }
-ul.context li p,
 .indexContainer>div h2,
-.videoDetailContainer p,
 .themaDetailContainer div p,
 .themaContainer>div.unR40,
 .themaContainer>div.unR40 span a{
     color: var(--BB02);
 }
 .indexContainer>div small,
-.indexContainer>span,
-.videoContainer div.pop.active p{
+.indexContainer>span{
     color: var(--BB03);
 }
 section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24,
@@ -231,12 +234,7 @@ section.themaDetailContainer *.unR30{
     ul.context li h3{
         margin-bottom: var(--sp20); line-height: 26px;
     }
-    ul.context li p,
-    .videoDetailContainer p{
-        line-height: 18px;
-    }
-    ul.context li p:not(:last-of-type),
-    .videoDetailContainer p:not(:last-of-type){
+    ul.context li p:not(:last-of-type){
         margin-bottom: var(--sp20);
     }
 
@@ -384,9 +382,6 @@ section.themaDetailContainer *.unR30{
         display: inline-block; padding: 0 5px 5px;
         margin-bottom: var(--sp15);
     }
-    .cityContainer>div:first-of-type p{
-        color: var(--BB02); line-height: 18px;
-    }
 
     .fancyBox{
         position: relative; margin-bottom: var(--sp30); 
@@ -501,7 +496,7 @@ section.themaDetailContainer *.unR30{
         margin-bottom: var(--sp10);
     }
     .videoContainer div.pop.active p{
-        line-height: 18px; margin-bottom: var(--sp20);
+        margin-bottom: var(--sp20);
     }
     .videoContainer div.pop.active a{
         float: right;
@@ -670,7 +665,7 @@ section.themaDetailContainer *.unR30{
     }
     .themaContainer>div.unR40{
         position: absolute; right: 6.510%;
-        width: 100px; text-align: center; font-style: italic;
+        width: 100px; text-align: center;
         margin-top: var(--sp30);
     }
     .themaContainer>div.unR40 span:not([class*='Page']){
@@ -695,7 +690,6 @@ section.themaDetailContainer *.unR30{
         line-height: 20px;
     }
     .themaContainer .titleBox p{
-        line-height: 18px; color: var(--BB03);
         margin-bottom: var(--sp30);
     }
     .themaContainer .titleBox a{
@@ -751,8 +745,7 @@ section.themaDetailContainer *.unR30{
         font-style: italic; color: var(--YE);
     }
     .archiveContainer ol:last-of-type li ul li h3{
-        margin-bottom: var(--sp10);
-        font-style: italic; text-transform: uppercase; color: var(--GS02);
+        margin-bottom: var(--sp10); color: var(--GS02);
         white-space: normal;
     }
     .archiveContainer ol:last-of-type li ul li img{
@@ -810,12 +803,7 @@ section.themaDetailContainer *.unR30{
     ul.context li h3{
         margin-bottom: var(--sp30);
     }
-    ul.context li p,
-    .videoDetailContainer p{
-        line-height: 26px;
-    }
-    ul.context li p:not(:last-of-type),
-    .videoDetailContainer p:not(:last-of-type){
+    ul.context li p:not(:last-of-type){
         margin-bottom: var(--sp30);
     }
 
@@ -940,9 +928,6 @@ section.themaDetailContainer *.unR30{
     .cityContainer>div:first-of-type small{
         color: var(--BB03); border-bottom: 1px solid var(--GN); 
         display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp20);
-    }
-    .cityContainer>div:first-of-type p{
-        color: var(--BB02); line-height: 26px;
     }
 
     .fancyBox{
@@ -1071,7 +1056,7 @@ section.themaDetailContainer *.unR30{
         margin-bottom: var(--sp20);
     }
     .videoContainer div.pop.active p{
-        line-height: 26px; margin-bottom: var(--sp40);
+        margin-bottom: var(--sp40);
     }
     .videoContainer div.pop.active a{
         float: right;
@@ -1260,7 +1245,6 @@ section.themaDetailContainer *.unR30{
         width: 70%; line-height: 40px;
     }
     .themaContainer .titleBox p{
-        line-height: 26px; color: var(--BB03);
         margin-bottom: var(--sp40);
     }
     .themaContainer .titleBox a{
@@ -1338,8 +1322,7 @@ section.themaDetailContainer *.unR30{
         font-style: italic; color: var(--YE);
     }
     .archiveContainer ol:last-of-type li ul li h3{
-        margin-bottom: var(--sp20);
-        font-style: italic; text-transform: uppercase; color: var(--GS02);
+        margin-bottom: var(--sp20); color: var(--GS02);
         white-space: normal;
     }
     .archiveContainer ol:last-of-type li ul li img{
@@ -1435,12 +1418,7 @@ section.themaDetailContainer *.unR30{
     ul.context li h3{
         margin-bottom: var(--sp40);
     }
-    ul.context li p,
-    .videoDetailContainer p{
-        line-height: 30px;
-    }
-    ul.context li p:not(:last-of-type),
-    .videoDetailContainer p:not(:last-of-type){
+    ul.context li p:not(:last-of-type){
         margin-bottom: var(--sp30);
     }
 
@@ -1655,8 +1633,7 @@ section.themaDetailContainer *.unR30{
         border-bottom: 1px solid var(--GN);
     }
     .cityContainer>div:first-of-type p{
-        width: 52%; min-width: 900px;
-        margin: 0 auto; line-height: 30px;
+        width: 52%; min-width: 900px; margin: 0 auto;
     }
     .cityContainer>div:first-of-type.active p{
         color: var(--BB02);
@@ -1793,7 +1770,7 @@ section.themaDetailContainer *.unR30{
         margin-bottom: var(--sp30);
     }
     .videoContainer div.pop.active p{
-        line-height: 30px; margin-bottom: var(--sp50);
+        margin-bottom: var(--sp50);
     }
     .videoContainer div.pop.active a{
         float: right;
@@ -1976,7 +1953,7 @@ section.themaDetailContainer *.unR30{
     }
     .themaContainer>div.unR40{
         position: absolute; right: 3.125%; bottom: 17.111vh;
-        width: 220px; text-align: center; font-style: italic;
+        width: 220px; text-align: center;
     }
     .themaContainer>div.unR40 span:not([class*='Page']){
         position: absolute; font-size: 40px;
@@ -1995,7 +1972,6 @@ section.themaDetailContainer *.unR30{
         color: var(--BB01); margin-bottom: var(--sp30);
     }
     .themaContainer .titleBox p{
-        line-height: var(--sp30); color: var(--BB03);
         margin-bottom: var(--sp40);
     }
     .themaContainer .titleBox a{
