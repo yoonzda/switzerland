@@ -1967,7 +1967,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     }
     .archiveContainer ol.fiR30{
         position: fixed; top: 140px; right: 3.125%; z-index: 100;
-        /* width: 851px;  */ width: 50%; min-width: 860px;
+        width: 50%; min-width: 860px;
         height: var(--sp30); padding-right: var(--sp30); box-sizing: border-box;
         background-position: right center; background-repeat: no-repeat;
         
