@@ -2009,6 +2009,18 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .archiveContainer ol.fiR30:not(.clicky) li.active{
         z-index: 1000;
     }
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(1){right: 96.004%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(2){right: 88.131%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(3){right: 79.670%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(4){right: 71.445%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(5){right: 62.632%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(6){right: 54.876%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(7){right: 47.826%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(8){right: 39.365%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(9){right: 31.022%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(10){right: 23.031%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(11){right: 14.688%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(12){right: 6.580%;}
 
     .archiveContainer ol:last-of-type{
         white-space: nowrap;
