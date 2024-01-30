@@ -69,14 +69,11 @@ ol.fiR30 li,
         background-color: #fff;
         box-shadow: 0px -10px 10px 5px rgba(255,255,255,1);
     }
-    footer ul:after{
-        content: ''; display: block; clear: both;
-    }
     footer ul{
-        width: 195px; margin: 0 auto; padding-bottom: 15px;
+        padding-bottom: 15px; text-align: center; font-size: 0;
     }
     footer ul li{
-        display: block; float: left; width: var(--sp20); height: var(--sp20);
+        display: inline-block; width: var(--sp20); height: var(--sp20);
     }
     footer ul li a{
         text-indent: -9999px; display: block; line-height: 20px;
@@ -136,14 +133,11 @@ ol.fiR30 li,
         background-color: #fff;
         box-shadow: 0px -10px 10px 5px rgba(255,255,255,1);
     }
-    footer ul:after{
-        content: ''; display: block; clear: both;
-    }
     footer ul{
-        padding-bottom: 15px; margin: 0 auto; max-width: 195px;
+        padding-bottom: 15px; text-align: center; font-size: 0;
     }
     footer ul li{
-        display: block; float: left; width: var(--sp20); height: var(--sp20);
+        display: inline-block; width: var(--sp20); height: var(--sp20);
     }
     footer ul li a{
         text-indent: -9999px; display: block; line-height: 20px;
