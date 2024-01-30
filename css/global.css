@@ -103,9 +103,6 @@ ol.fiR30 li,
     header nav{
         text-align: center;
     }
-    header nav ul:after{
-        content: ''; display: block; clear: both;
-    }
     header nav ul li{
         position: relative; display: inline-block;
     }
