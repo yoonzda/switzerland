@@ -15,11 +15,11 @@ a{
     text-decoration: none;
 }
 
+ol.fiR30 li,
 .indexContainer ul li,
 .indexContainer ul li>div>input[type='button'],
 .fancyBox div,
 .fancyBox div input[type='button'],
-.videoContainer ol li,
 .videoDetailContainer input[type='button'],
 .videoDetailContainer article div a.fiR24,
 .themaDetailContainer div:first-of-type ol li{

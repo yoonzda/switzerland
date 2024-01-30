@@ -279,7 +279,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         display: flex; width: 90%; justify-content: space-between; max-width: 400px;
     }
     ol.fiR30 li{
-        display: inline-block; cursor: pointer; font-size: 14px;
+        display: inline-block; font-size: 14px;
     }
     ol.fiR30 li.active{
         color: var(--GS01);
@@ -1274,7 +1274,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         position: fixed; top: 200px; width: 660px; transform: translate(-50%,0); left: 50%;
     }
     .archiveContainer ol.fiR30 li{
-        display: inline-block; cursor: pointer;
+        display: inline-block;
     }
     .archiveContainer ol.fiR30 li:not(:first-of-type){
         margin-left: 25px;
@@ -1967,9 +1967,10 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     }
     .archiveContainer ol.fiR30{
         position: fixed; top: 140px; right: 3.125%; z-index: 100;
-        width: 851px; height: var(--sp30); padding-right: var(--sp30); box-sizing: border-box;
+        /* width: 851px;  */ width: 50%; min-width: 860px;
+        height: var(--sp30); padding-right: var(--sp30); box-sizing: border-box;
         background-position: right center; background-repeat: no-repeat;
-        cursor: pointer;
+        
     }
     .archiveContainer ol.fiR30::after{
         content: ''; background-image: url('../images/icon_leftDouble_white.svg');
@@ -1978,13 +1979,16 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         background-position: center;
         background-repeat: no-repeat;
         transition: transform ease-out .5s;
+        cursor: pointer;
     }
     .archiveContainer ol.fiR30.clicky:after{
         transform: rotate(180deg);
     }
     .archiveContainer ol.fiR30 li{
-        display: block; position: absolute;
+        display: inline; 
+        position: absolute;
         transition-property: right, opacity, color; transition-timing-function: ease-out; transition-duration: .5s;
+        cursor: pointer;
     }
     .archiveContainer ol.fiR30 li:not(:first-of-type){
         margin-left: var(--sp30);
@@ -1997,7 +2001,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         color: var(--GS01);
     }
     .archiveContainer ol.fiR30:not(.clicky) li{
-        right: 6.580%;
+        right: 60px;
     }
     .archiveContainer ol.fiR30:not(.clicky) li:not(.active){
         opacity: 0;
@@ -2005,7 +2009,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .archiveContainer ol.fiR30:not(.clicky) li.active{
         z-index: 1000;
     }
-    .archiveContainer ol.fiR30.clicky li:nth-of-type(1){right: 96.004%;}
+    /* .archiveContainer ol.fiR30.clicky li:nth-of-type(1){right: 96.004%;}
     .archiveContainer ol.fiR30.clicky li:nth-of-type(2){right: 88.131%;}
     .archiveContainer ol.fiR30.clicky li:nth-of-type(3){right: 79.670%;}
     .archiveContainer ol.fiR30.clicky li:nth-of-type(4){right: 71.445%;}
@@ -2016,7 +2020,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .archiveContainer ol.fiR30.clicky li:nth-of-type(9){right: 31.022%;}
     .archiveContainer ol.fiR30.clicky li:nth-of-type(10){right: 23.031%;}
     .archiveContainer ol.fiR30.clicky li:nth-of-type(11){right: 14.688%;}
-    .archiveContainer ol.fiR30.clicky li:nth-of-type(12){right: 6.580%;}
+    .archiveContainer ol.fiR30.clicky li:nth-of-type(12){right: 6.580%;} */
     
     .archiveContainer ol:last-of-type{
         white-space: nowrap;

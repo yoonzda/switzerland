@@ -12,6 +12,7 @@ $(document).ready(function(){
     archiveBG();
 
     snsIconBG();
+    foldOpen();
 });
 
 $(window).on('resize orientationchange', function(){
@@ -397,6 +398,7 @@ function themaSlider(){
 var currentBoxNumb = 0;
 var activeNumb = 1;
 var beforeClass = '';
+var toggeStauts = true;
 
 function archiveFunction(){
     var tagM = $('.archiveContainer ol:last-of-type>li');
@@ -436,12 +438,28 @@ function deskArchive(){
 
     var tagM = $('.archiveContainer ol:last-of-type>li');
     $('.archiveContainer ol.fiR30').click(function(){
-        $(this).toggleClass('clicky');
+        if(toggeStauts==true){
+            $(this).removeClass('clicky');
+            foldClose();
+            toggeStauts = !toggeStauts;
+        }else{
+            $(this).addClass('clicky');
+            foldOpen();
+            toggeStauts = !toggeStauts;
+        }
     });
 
     $('.archiveContainer ol.fiR30 li').click(function(e){
         e.stopPropagation();
-        $(this).parent('ol').toggleClass('clicky');
+        if(toggeStauts==true){
+            $(this).parent('ol').removeClass('clicky');
+            foldClose();
+            toggeStauts = !toggeStauts;
+        }else{
+            $(this).parent('ol').addClass('clicky');
+            foldOpen();
+            toggeStauts = !toggeStauts;
+        }
         oldI = $('.archiveContainer ol.fiR30 li.active').index();
         newI = $(this).index();
         
@@ -552,4 +570,33 @@ function snsIconBG(){
         }
         $(snsIcon[i]).css('background-image',imageName);
     }
+}
+
+function foldOpen(){
+    var archiveButton = $('.archiveContainer ol.fiR30 li');
+    // var textWidth = [35.56, 39.28, 43.03, 38.95, 45.42, 36.39, 29.25, 42, 41.77, 38.17, 43.63, 41.38];
+    // var textWidth = [36, 40, 44, 39, 46, 37, 30, 43, 42, 39, 44, 42];
+    var textWidth = [36, 39, 40, 44, 38, 30, 40, 42, 36, 42, 39, 40];
+    var rightValue = 0;
+
+    for(var i=11; i>=0; i--){
+        if(i!=11){
+            rightValue += 30;
+        }
+        rightValue += textWidth[i];
+        $(archiveButton[i]).css('right',rightValue);
+
+        // rightValue += $(archiveButton[i]).innerWidth();
+        // console.log($(archiveButton[i]).innerWidth());
+        // console.log(textWidth[i]);
+        // console.log(rightValue);
+    }
+}
+
+function foldClose(){
+    var archiveButton = $('.archiveContainer ol.fiR30 li');
+    var textWidth = [34, 37, 42, 40, 45, 36, 30, 42, 41, 38, 42, 40];
+    var rightValue = 0;
+
+    $(archiveButton).css('right',textWidth[11]);
 }
