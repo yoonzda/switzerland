@@ -1,8 +1,4 @@
-
-header:not(.modeWhite) nav ul li a,
-footer:not(.modeWhite) p{
-    text-shadow: none;
-}
+header:not(.modeWhite) nav ul li a,footer:not(.modeWhite) p{text-shadow: none;}
 
 header.modeWhite nav ul li a,
 footer.modeWhite p{
@@ -24,7 +20,6 @@ ol.fiR30 li,
     cursor: pointer;
 }
 
-/* ALL USE */
 header{
     width: 100%; position: fixed; top: 0; z-index: 1000; box-sizing: border-box;
 }
@@ -36,18 +31,11 @@ header nav ul li{
 }
 header nav ul li:before{
     content: ''; display: block; position: absolute;
-    clip-path: circle(20.0% at 50% 50%); transition: clip-path, background-color ease-out .2s;
 }
-header nav ul li.active:before,
-header nav ul li:hover:before{
-    clip-path: circle(50.0% at 50% 50%);
-}
-header:not(.modeWhite) nav ul li.active:before,
-header:not(.modeWhite) nav ul li:hover:before{
+header:not(.modeWhite) nav ul li.active:before{
     background-color: var(--BB03);
 }
-header.modeWhite nav ul li.active:before,
-header.modeWhite nav ul li:hover:before{
+header.modeWhite nav ul li.active:before{
     background-color: var(--GS01);
 }
 footer{
@@ -68,7 +56,7 @@ footer ul li:not(:first-of-type){
 
 @media screen and (max-width: 767px){
     header{
-        padding: 30px 0 10px; 
+        padding: var(--sp30) 0 var(--sp10);
     }
     header h1{
         max-width: 30px; padding-bottom: var(--sp10);
@@ -86,7 +74,7 @@ footer ul li:not(:first-of-type){
 
 @media screen and (min-width: 768px) and (max-width: 1279px){
     header{
-        padding: 40px 0 10px;
+        padding: var(--sp40) 0 var(--sp10);
     }
     header h1{
         padding-bottom: var(--sp20);
@@ -114,6 +102,17 @@ footer ul li:not(:first-of-type){
     }
     header nav ul li:before{
         width: 8px; height: 8px; top: 10px; left: -12px;
+        clip-path: circle(20.0% at 50% 50%); transition: clip-path, background-color ease-out .2s;
+    }
+    header nav ul li.active:before,
+    header nav ul li:hover:before{
+        clip-path: circle(50.0% at 50% 50%);
+    }
+    header:not(.modeWhite) nav ul li:hover:before{
+        background-color: var(--BB03);
+    }
+    header.modeWhite nav ul li:hover:before{
+        background-color: var(--GS01);
     }
     footer{
         right: 3.125%; padding-bottom: var(--sp60);
@@ -137,7 +136,7 @@ footer ul li:not(:first-of-type){
 
 @media screen and (max-width: 1279px){
     header:not(.modeWhite){
-        background-color: var(--GS01); box-shadow: 0px 10px 10px 5px rgba(255,255,255,1);
+        background-color: var(--GS01); box-shadow: 0px 10px 10px 5px var(--GS01);
     }
     header h1{
         margin: 0 auto; 
@@ -145,11 +144,20 @@ footer ul li:not(:first-of-type){
     header nav{
         text-align: center;
     }
+    header nav ul li:before{
+        clip-path: circle(50.0% at 50% 50%);
+    }
+    header:not(.modeWhite) nav ul li.active:before{
+        background-color: var(--BB03);
+    }
+    header.modeWhite nav ul li.active:before{
+        background-color: var(--GS01);
+    }
     footer{
         width: 100%; padding-top: var(--sp10); text-align: center;
     }
     footer:not(.modeWhite){
-        background-color: var(--GS01); box-shadow: 0px -10px 10px 5px rgba(255,255,255,1);
+        background-color: var(--GS01); box-shadow: 0px -10px 10px 5px var(--GS01);
     }
     footer ul{
         padding-bottom: var(--sp15);
