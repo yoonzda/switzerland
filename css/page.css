@@ -3,11 +3,6 @@
 .material-symbols-outlined:not(.regular){font-variation-settings:'wght' 200}
 .material-symbols-outlined.regular{font-variation-settings:'wght' 400}
 
-section:not(.cityContainer) p.maR20,
-ul.context li p.maR20{
-    color: var(--BB02);
-}
-
 section[class*='thema'] h2,
 section[class*='Detail'] h2{
     color: var(--BB01);
@@ -15,7 +10,9 @@ section[class*='Detail'] h2{
 .indexContainer>div h2,
 .themaDetailContainer div p,
 .themaContainer>div.unR40,
-.themaContainer>div.unR40 span a{
+.themaContainer>div.unR40 span a,
+section:not(.cityContainer) p.maR20,
+ul.context li p.maR20{
     color: var(--BB02);
 }
 .indexContainer *.maS16{
@@ -60,6 +57,9 @@ ul.context li h3,
 .videoDetailContainer .fiR24,
 .themaDetailContainer h3{
     color: var(--GN);
+}
+.videoDetailContainer input[type='button'].clicky{
+    background-color: var(--BB02);
 }
 .indexContainer ul li>div>input[type='button'],
 .videoContainer div:first-of-type input[type='button'],
@@ -411,9 +411,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         clip-path: inset(0 0 50% 0);
     }
     .videoDetailContainer input[type='button'].clicky{
-        position: fixed;
-        background-color: var(--BB02);
-        transform: translateY(-70px) scaleY(-1);
+        position: fixed; transform: translateY(-70px) scaleY(-1);
     }
     .videoDetailContainer article{
         position: absolute; transition: all ease-out 1s;
@@ -966,9 +964,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         clip-path: inset(0 0 50% 0);
     }
     .videoDetailContainer input[type='button'].clicky{
-        position: fixed;
-        background-color: var(--BB02);
-        transform: translateY(-100%) scaleY(-1);
+        position: fixed; transform: translateY(-100%) scaleY(-1);
     }
     .videoDetailContainer article{
         position: absolute; transition: all ease-out 1s;
@@ -1213,7 +1209,9 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 }
 
 @media screen and (min-width: 1280px){
-    
+    .cityContainer>div:first-of-type.active *[class*='R']{
+        color: var(--BB02);
+    }
     .videoContainer ol li:not(.active){
         color: var(--GS04);
     }
@@ -1491,9 +1489,6 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .cityContainer>div:first-of-type.active{
         background-color: var(--GS01);
     }
-    .cityContainer>div:first-of-type.active *[class*='R']{
-        color: var(--BB02);
-    }
     .cityContainer>div:first-of-type h2{
         margin-bottom: var(--sp10);
     }
@@ -1664,7 +1659,6 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         clip-path: inset(0 50% 0 0);
     }
     .videoDetailContainer input[type='button'].clicky{
-        background-color: var(--BB02);
         transform: scaleX(-1);
     }
     .videoDetailContainer article{
