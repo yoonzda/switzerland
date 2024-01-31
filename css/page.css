@@ -271,6 +271,9 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         display: inline-block; padding: 0 5px 5px;
         margin-bottom: var(--sp15);
     }
+    .cityContainer>div:first-of-type p{
+        color: var(--BB02);
+    }
 
     .fancyBox{
         position: relative; margin-bottom: var(--sp30); 
@@ -811,6 +814,9 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .cityContainer>div:first-of-type small{
         color: var(--BB03); border-bottom: 1px solid var(--GN); 
         display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp20);
+    }
+    .cityContainer>div:first-of-type p{
+        color: var(--BB02);
     }
 
     .fancyBox{
@@ -1991,6 +1997,31 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 }
 
 @media screen and (max-width: 1279px){
+    @keyframes fullScreen{
+        100%{
+            opacity: 0;
+            display: none;
+        }
+    }
+    @keyframes movehori{
+        100%{
+            left: 80%;
+        }
+    }
+    @keyframes drift{
+      0%{
+        transform: rotate(0deg) scale(0,0);
+        opacity: 0.8;
+      }
+      40%{
+        transform: rotate(180deg) scale(0.5,0.5);
+        opacity: 0.4;
+      }
+      100%{
+        transform: rotate(360deg) scale(1,1);
+        opacity: 0;
+      }
+    }
     section.indexContainer>div>span{
         display: none;
     }
@@ -2006,12 +2037,6 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         animation-fill-mode: forwards;
         
         color: var(--GS01);
-    }
-    @keyframes fullScreen{
-        100%{
-            opacity: 0;
-            display: none;
-        }
     }
 
     div.preinfo strong{
@@ -2035,11 +2060,6 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         animation-delay: 1s;
         animation-fill-mode: forwards;
     }
-    @keyframes movehori{
-        100%{
-            left: 80%;
-        }
-    }
 
     .wrapWave span{
         width: var(--sp100); height: var(--sp100);
@@ -2060,18 +2080,4 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .wrapWave span:nth-of-type(6){left: 20%; animation-delay: 3.2s;}
     .wrapWave span:nth-of-type(7){left: -2%; animation-delay: 3.5s;}
     
-    @keyframes drift{
-      0%{
-        transform: rotate(0deg) scale(0,0);
-        opacity: 0.8;
-      }
-      40%{
-        transform: rotate(180deg) scale(0.5,0.5);
-        opacity: 0.4;
-      }
-      100%{
-        transform: rotate(360deg) scale(1,1);
-        opacity: 0;
-      }
-    }
 }
