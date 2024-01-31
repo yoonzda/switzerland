@@ -98,8 +98,12 @@ ol.fiR30 li,
         box-shadow: 0px 10px 10px 5px rgba(255,255,255,1);
     }
     header h1{
-        width: 100%; max-width: 55px;
+        max-width: 55px;
+        
         margin: 0 auto; padding-bottom: 20px;
+    }
+    header h1 a{
+        display: block;
     }
     header nav{
         text-align: center;
@@ -111,9 +115,10 @@ ol.fiR30 li,
         margin-left: var(--sp30);
     }
     header nav ul li.active:before{
-        content: ''; display: block; width: 8px; height: 8px; 
-        position: absolute; top: -5px; left: -12px;
+        content: ''; display: block; position: absolute; 
+        
         clip-path: circle(50.0% at 50% 50%);
+        width: 8px; height: 8px; top: -5px; left: -12px;
     }
     header:not(.modeWhite) nav ul li.active:before{
         background-color: var(--BB03);
@@ -151,14 +156,18 @@ ol.fiR30 li,
 
 @media screen and (min-width: 1280px){
     header{
-        width: 100%; position: fixed; top: 0; z-index: 1000;
-        padding: var(--sp60) 3.125% 0; box-sizing: border-box;
+        width: 100%; position: fixed; top: 0; z-index: 1000; box-sizing: border-box;
+        
+        padding: var(--sp60) 3.125% 0; 
     }
     header::after{
         content: ''; display: block; clear: both;
     }
     header h1{
-        float: left; width: 55px;
+        float: left; width: 100%; max-width: 55px;
+    }
+    header h1 a{
+        display: block;
     }
     header nav{
         line-height: 50px; float: right; 
@@ -170,9 +179,10 @@ ol.fiR30 li,
         margin-left: var(--sp30);
     }
     header nav ul li:before{
-        content: ''; display: block; width: 8px; height: 8px; 
-        position: absolute; top: 10px; left: -12px;
+        content: ''; display: block; position: absolute; 
         clip-path: circle(20.0% at 50% 50%); transition: clip-path, background-color ease-out .2s;
+        
+        width: 8px; height: 8px; top: 10px; left: -12px;
     }
     header nav ul li.active:before,
     header nav ul li:hover:before{
@@ -187,22 +197,19 @@ ol.fiR30 li,
         background-color: var(--GS01);
     }
     footer{
-        position: fixed; bottom: 0; right: 3.125%; z-index: 1000;
-        padding-bottom: var(--sp60);
-    }
-    footer:after,
-    footer ul:after{
-        content: ''; display: block; clear: both;
+        position: fixed; bottom: 0; z-index: 1000;
+        
+        right: 3.125%; padding-bottom: var(--sp60);
     }
     footer ul{
-        float: left; width: 195px;
+        display: inline-block; font-size: 0; vertical-align: bottom;
     }
     footer ul li{
-        display: block; float: left; width: var(--sp20); height: var(--sp20);
+        width: var(--sp20); height: var(--sp20);
+        display: inline-block;
     }
     footer ul li a{
-        text-indent: -9999px; display: block; line-height: 20px;
-        background-size: contain; background-repeat: no-repeat;
+        text-indent: -9999px; display: block; line-height: 20px; background-size: contain; background-repeat: no-repeat;
     }
     footer ul li:not(:first-of-type){
         margin-left: var(--sp15);
