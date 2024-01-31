@@ -8,6 +8,7 @@ ul.context li p.maR20{
     color: var(--BB02);
 }
 
+section[class*='thema'] h2,
 section[class*='Detail'] h2{
     color: var(--BB01);
 }
@@ -571,8 +572,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         margin: 0 3.611%;
     }
     .themaContainer .titleBox h2{
-        color: var(--BB01); margin-bottom: var(--sp20);
-        line-height: 20px;
+        margin-bottom: var(--sp20); line-height: 20px;
     }
     .themaContainer .titleBox p{
         margin-bottom: var(--sp30);
@@ -1120,8 +1120,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         margin: 0 3.611%;
     }
     .themaContainer .titleBox h2{
-        color: var(--BB01); margin-bottom: var(--sp30);
-        width: 70%; line-height: 40px;
+        width: 70%; line-height: 40px; margin-bottom: var(--sp30);
     }
     .themaContainer .titleBox p{
         margin-bottom: var(--sp40);
@@ -1844,7 +1843,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         padding: var(--sp80) 0;
     }
     .themaContainer .titleBox h2{
-        color: var(--BB01); margin-bottom: var(--sp30);
+        margin-bottom: var(--sp30);
     }
     .themaContainer .titleBox p{
         margin-bottom: var(--sp40);
