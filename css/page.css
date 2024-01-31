@@ -633,7 +633,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         width: 100%; margin-bottom: var(--sp20);
     }
     .archiveContainer ol:last-of-type li ul li a{
-        display: block; color: var(--BB04); background-color: var(--GS01);
+        display: block; background-color: var(--GS01);
         width: 127px; line-height: 30px; text-align: center; border-radius: 5px;
         width: 50%; min-width: 100px; float: right;
     }
@@ -1201,7 +1201,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         width: 100%; margin-bottom: var(--sp30);
     }
     .archiveContainer ol:last-of-type li ul li a{
-        display: block; color: var(--BB04); background-color: var(--GS01);
+        display: block;
         width: 127px; line-height: 30px; text-align: center; border-radius: 5px;
     }
     .archiveContainer .pageControl{
@@ -1215,6 +1215,12 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     }
     .cityContainer>div:first-of-type.active small{
         color: var(--BB03);
+    }
+    .archiveContainer ol:last-of-type li ul li:hover a{
+        color: var(--BB04);
+    }
+    .archiveContainer ol:last-of-type li ul li:hover a{
+        background-color: var(--GS01);
     }
     .videoContainer ol li:not(.active){
         color: var(--GS04);
@@ -1977,9 +1983,6 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         text-align: center; border-radius: 5px; color: var(--GS04); background-color: transparent;
         transition: color, background-color ease-out .3s;
     }
-    .archiveContainer ol:last-of-type li ul li:hover a{
-        background-color: var(--GS01); color: var(--BB04);
-    }
 }
 
 @media screen and (max-width: 1279px){
@@ -1988,6 +1991,12 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     }
     .cityContainer>div:first-of-type small{
         color: var(--BB03);
+    }
+    .archiveContainer ol:last-of-type li ul li a{
+        color: var(--BB04);
+    }
+    .archiveContainer ol:last-of-type li ul li a{
+        background-color: var(--GS01);
     }
 
     section.indexContainer>div>span{
