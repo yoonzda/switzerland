@@ -128,6 +128,15 @@ footer ul li:not(:first-of-type){
     }
 }
 
+@media screen and (min-width: 768px){
+    header h1{
+        max-width: 55px;
+    }
+    header nav ul li:not(:first-of-type){
+        margin-left: var(--sp30);
+    }
+}
+
 @media screen and (max-width: 1279px){
     header:not(.modeWhite){
         background-color: var(--GS01); box-shadow: 0px 10px 10px 5px rgba(255,255,255,1);
@@ -149,11 +158,20 @@ footer ul li:not(:first-of-type){
     }
 }
 
-@media screen and (min-width: 768px){
-    header h1{
-        max-width: 55px;
+@media screen and (max-width: 1279px) and (orientation: landscape){
+    body>*:not(.mobLandscape){
+        display: none;
     }
-    header nav ul li:not(:first-of-type){
-        margin-left: var(--sp30);
+    .mobLandscape{
+        background-color: var(--GS07);
+        position: fixed; z-index: 1002; width: 100vw; height: 100vh;
+        color: var(--GS01); text-align: center; line-height: var(--sp40);
+        display: flex; flex-direction: column; justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1279px) and (orientation: portrait){
+    .mobLandscape{
+        display: none;
     }
 }

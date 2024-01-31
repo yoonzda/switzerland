@@ -2079,21 +2079,3 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
       }
     }
 }
-
-@media screen and (max-width: 1279px) and (orientation: landscape){
-    body>*:not(.mobLandscape){
-        display: none;
-    }
-    .mobLandscape{
-        background-color: var(--GS07);
-        position: fixed; z-index: 1002; width: 100vw; height: 100vh;
-        color: var(--GS01); text-align: center; line-height: var(--sp40);
-        display: flex; flex-direction: column; justify-content: center;
-    }
-}
-
-@media screen and (max-width: 1279px) and (orientation: portrait){
-    .mobLandscape{
-        display: none;
-    }
-}
