@@ -35,8 +35,6 @@
 [class*='R']{font-weight: 400;}
 [class*='S']{font-weight: 600;}
 
-.unR40{font-style: italic;}
-
 @media screen and (max-width: 767px){
     .unR100{font-size: 35px;}
     .unR60{font-size: 30px;}
