@@ -24,7 +24,10 @@ section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24,
 .themaDetailContainer div ul li:hover a{
     color: var(--BB04);
 }
+header.modeWhite nav ul li a,
+footer.modeWhite p,
 div.preinfo,
+.mobLandscape,
 section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24,
 .indexContainer ul li>div *,
 .videoContainer h2,
@@ -92,6 +95,11 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 
 @keyframes circleMagneticTop{0%{bottom: 30px;}100%{bottom: 55px;}}
 @keyframes circleMagneticBottom{0%{bottom: 0;}100%{bottom: -25px;}}
+
+.fancybox__container {
+    --fancybox-bg: rgba(0, 0, 0, 0.7);
+    --fancybox-color: var(--GS01);
+}
 
 @media screen and (max-width: 767px){
     div.preinfo strong{
@@ -280,10 +288,6 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     }
     .fancyBox div img{
         width: 100%;
-    }
-    .fancybox__container {
-        --fancybox-bg: rgba(0, 0, 0, 0.7);
-        --fancybox-color: var(--GS01);
     }
     .fancybox__toolbar {
         --f-button-width: var(--sp30);
@@ -816,10 +820,6 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .fancyBox div input[type='button']{
         position: absolute; top: 0; right: 0; z-index: 100; padding: 15px;
         font-size: 50px; background-color: transparent; border: none;
-    }
-    .fancybox__container {
-        --fancybox-bg: rgba(0, 0, 0, 0.7);
-        --fancybox-color: var(--GS01);
     }
     .fancybox__toolbar {
         --f-button-width: var(--sp60);
@@ -1535,10 +1535,6 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .fancyBox div input[type='button']{
         position: absolute; top: 0; right: 0; z-index: 100; padding: 15px;
         font-size: 50px; background-color: transparent; border: none; transition: color 0.2s ease-out;
-    }
-    .fancybox__container {
-        --fancybox-bg: rgba(0, 0, 0, 0.7);
-        --fancybox-color: var(--GS01);
     }
     .fancybox__toolbar {
         --f-button-width: var(--sp60);
