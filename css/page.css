@@ -634,7 +634,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         width: 100%; margin-bottom: var(--sp20);
     }
     .archiveContainer ol:last-of-type li ul li a{
-        display: block; background-color: var(--GS01);
+        display: block;
         width: 127px; line-height: 30px; text-align: center; border-radius: 5px;
         width: 50%; min-width: 100px; float: right;
     }
