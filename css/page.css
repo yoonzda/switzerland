@@ -63,6 +63,10 @@ ul.context li h3,
 .themaDetailContainer h3{
     color: var(--GN);
 }
+.videoDetailContainer input[type='button'],
+.videoContainer div.pop.active{
+    background-color: var(--GS01);
+}
 .videoDetailContainer input[type='button'].clicky{
     background-color: var(--BB02);
 }
@@ -355,7 +359,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .videoContainer div.pop.active{
         width: 85.714%; min-width: 240px; padding: var(--sp40) var(--sp20) var(--sp20); box-sizing: border-box;
         position: absolute; z-index: 10; left: 50%; top: 50%; transform: translate(-50%,-50%);
-        background-color: var(--GS01);
         clip-path: circle(0.0% at 50% 50%); transition: clip-path ease-out .6s;
     }
     .videoContainer div.pop.active.clicky{
@@ -398,7 +401,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         overflow: visible;
     }
     .videoDetailContainer input[type='button']{
-        background-color: var(--GS01); border: none;
+        border: none;
         width: 60px; height: 60px; border-radius: 30px; font-size: var(--sp20); 
         position: absolute; right: 7.142%; z-index: 1000;
         padding: 0 0 30px 0; box-sizing: border-box;
@@ -885,8 +888,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
     .videoContainer div.pop.active{
         width: 60.546%; padding: var(--sp80) var(--sp50) var(--sp50); box-sizing: border-box;
-        position: absolute; z-index: 1; left: 50%; transform: translate(-50%,-50%);
-        background-color: var(--GS01); transition: clip-path ease-out .6s;
+        position: absolute; z-index: 1; left: 50%; transform: translate(-50%,-50%); transition: clip-path ease-out .6s;
     }
     .videoContainer div.pop.active:not(.clicky){
         clip-path: circle(0.0% at 50% 50%);
@@ -929,7 +931,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         overflow: visible;
     }
     .videoDetailContainer input[type='button']{
-        background-color: var(--GS01); border: none;
+        border: none;
         width: 120px; height: 120px; border-radius: 60px;
         font-size: var(--sp40); z-index: 1000;
         position: absolute; right: 10.9375%;
@@ -1183,10 +1185,12 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .archiveContainer ol:last-of-type li ul li:hover a{
         background-color: var(--GS01);
     }
-    .videoContainer ol li:not(.active){
+    
+    ol.fiR30 li:not(.active){
         color: var(--GS04);
     }
-    .videoContainer ol li.active{
+    ol.fiR30 li:hover,
+    ol.fiR30 li.active{
         color: var(--GS01);
     }
     
@@ -1552,9 +1556,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         float: left; display: block; transition: color ease-in-out .28s;
         text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.45);
     }
-    .videoContainer ol li:hover{
-        color: var(--GS01);
-    }
     .videoContainer ol li:not(:first-of-type){
         margin-left: var(--sp30);
     }
@@ -1581,9 +1582,9 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         display: none;
     }
     .videoContainer div.pop.active{
-        width: 610px; padding: var(--sp100) var(--sp60); box-sizing: border-box; background-color: var(--GS01);
+        width: 610px; padding: var(--sp100) var(--sp60); box-sizing: border-box;
         position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100;
-        transition: clip-path ease-out .6s; clip-path: circle(0.0% at 50% 50%); 
+        transition: clip-path ease-out .6s; clip-path: circle(0.0% at 50% 50%);
     }
     .videoContainer span.active~div.pop.active{
         clip-path: circle(72.0% at 50% 50%);
@@ -1614,7 +1615,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         background-repeat: no-repeat;
     }
     .videoDetailContainer input[type='button']{
-        background-color: var(--GS01); border: none;
+        border: none;
         position: absolute; top: 14vh; left: -60px; z-index: 1000;
         width: 120px; height: 120px; font-size: var(--sp40); padding: 0 60px 0 0; border-radius: 60px;
         transform: scaleX(1);
@@ -1835,13 +1836,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
     .archiveContainer ol.fiR30 li:not(:first-of-type){
         margin-left: var(--sp30);
-    }
-    .archiveContainer ol.fiR30 li:not(.active){
-        color: var(--GS04);
-    }
-    .archiveContainer ol.fiR30 li:hover,
-    .archiveContainer ol.fiR30 li.active{
-        color: var(--GS01);
     }
     .archiveContainer ol.fiR30:not(.clicky) li{
         right: 60px;
