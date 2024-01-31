@@ -100,6 +100,12 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     --fancybox-bg: rgba(0, 0, 0, 0.7);
     --fancybox-color: var(--GS01);
 }
+section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24:before{
+    border-color: var(--GS07);
+}
+section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
+    border-color: var(--GS01);
+}
 
 @media screen and (max-width: 767px){
     div.preinfo strong{
@@ -1262,11 +1268,9 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     section:not([class*='Detail'],[class^='archive']) a.fiR24:hover span{
         transition-delay: 0.6s; opacity: 1; 
     }
-    section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24:before,
     section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24:after{
         border-color: var(--GS07);
     }
-    section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before,
     section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:after{
         border-color: var(--GS01);
     }
