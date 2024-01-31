@@ -264,16 +264,10 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .cityContainer>div:first-of-type{
         text-align: center; margin-bottom: var(--sp30);
     }
-    .cityContainer>div:first-of-type h2{
-        color: var(--BB02);
-    }
     .cityContainer>div:first-of-type small{
         color: var(--BB03); border-bottom: 1px solid var(--GN); 
         display: inline-block; padding: 0 5px 5px;
         margin-bottom: var(--sp15);
-    }
-    .cityContainer>div:first-of-type p{
-        color: var(--BB02);
     }
 
     .fancyBox{
@@ -810,14 +804,11 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         text-align: center; margin-bottom: var(--sp60);
     }
     .cityContainer>div:first-of-type h2{
-        color: var(--BB02); margin-bottom: var(--sp10);
+        margin-bottom: var(--sp10);
     }
     .cityContainer>div:first-of-type small{
         color: var(--BB03); border-bottom: 1px solid var(--GN); 
         display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp20);
-    }
-    .cityContainer>div:first-of-type p{
-        color: var(--BB02);
     }
 
     .fancyBox{
@@ -1998,6 +1989,10 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 }
 
 @media screen and (max-width: 1279px){
+    .cityContainer>div:first-of-type *[class*='R']{
+        color: var(--BB02);
+    }
+
     section.indexContainer>div>span{
         display: none;
     }
