@@ -7,7 +7,7 @@ footer:not(.modeWhite) p{
 
 header.modeWhite nav ul li a,
 footer.modeWhite p{
-    color: var(--GS01);    
+    color: var(--GS01);
     text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.45);
 }
 
