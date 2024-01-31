@@ -116,7 +116,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 @keyframes circleMagneticTop{0%{bottom: 30px;}100%{bottom: 55px;}}
 @keyframes circleMagneticBottom{0%{bottom: 0;}100%{bottom: -25px;}}
 
-.fancybox__container {
+.fancybox__container{
     --fancybox-bg: rgba(0, 0, 0, 0.7);
     --fancybox-color: var(--GS01);
 }
@@ -134,6 +134,12 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 
     .cityContainer>div:last-of-type .pageControl::after{
         content: ''; display: block; clear: both;
+    }
+    .videoContainer div:first-of-type::after{
+        content: ''; display: block; clear: both;
+    }
+    .themaContainer .titleBox::after{
+        content: ''; display: block; clear: both; 
     }
 
     section:not([class*='Detail'],[class^='archive']) a.fiR24{
@@ -349,9 +355,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .videoContainer div:first-of-type{
         order: 1; z-index: 1;
         text-align: center;
-    }
-    .videoContainer div:first-of-type::after{
-        content: ''; display: block; clear: both;
     }
     .videoContainer div:first-of-type input[type='button']{
         font-size: var(--sp30);
@@ -579,9 +582,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .themaContainer .titleBox a{
         float: right;
     }
-    .themaContainer .titleBox::after{
-        content: ''; display: block; clear: both; 
-    }
 
     .archiveContainer{
         width: 100vw; height: 100vh; overflow: hidden;
@@ -645,6 +645,19 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         line-height: var(--sp50);
     }
 
+    .themaDetailContainer div:last-of-type ul::after{
+        content: ''; display: block; clear: both;
+    }
+    .pageControl::after{
+        content: ''; display: block; clear: both;
+    }
+    .videoContainer div:first-of-type::after{
+        content: ''; display: block; clear: both;
+    }
+    .themaContainer .titleBox::after{
+        content: ''; display: block; clear: both;
+    }
+
     section.videoContainer ol.fiR30{
         margin: 0 auto var(--sp30);
     }
@@ -653,13 +666,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     ol.fiR30{
         max-width: 660px;
-    }
-    
-    .themaDetailContainer div:last-of-type ul::after{
-        content: ''; display: block; clear: both;
-    }
-    .pageControl::after{
-        content: ''; display: block; clear: both;
     }
 
     section:not([class*='Detail'],[class^='archive']) a.fiR24{
@@ -864,9 +870,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .videoContainer div:first-of-type{
         order: 1; z-index: 1;
         text-align: center;
-    }
-    .videoContainer div:first-of-type::after{
-        content: ''; display: block; clear: both;
     }
     .videoContainer div:first-of-type input[type='button']{
         font-size: var(--sp50);
@@ -1091,9 +1094,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .themaContainer .titleBox a{
         float: right;
     }
-    .themaContainer .titleBox::after{
-        content: ''; display: block; clear: both;
-    }
 
     .archiveContainer{
         height: 100vh; 
@@ -1162,6 +1162,25 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 }
 
 @media screen and (min-width: 1280px){
+    .cityContainer::after{
+        content: ''; display: block; clear: both;
+    }
+    .cityContainer>div:last-of-type .pageControl::after{
+        content: ''; display: block; clear: both;
+    }
+    .videoContainer ol::after{
+        content: ''; display: block; clear: both;
+    }
+    .videoDetailContainer article ol::after{
+        content: ''; display: block; clear: both;
+    }
+    .themaDetailContainer div:last-of-type ul::after{
+        content: ''; display: block; clear: both;
+    }
+    .archiveContainer ol:last-of-type>li ul::after{
+        content: ''; display: block; clear: both;
+    }
+
     .cityContainer>div:first-of-type.active *[class*='R']{
         color: var(--BB02);
     }
@@ -1183,22 +1202,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     ol.fiR30 li:hover{
         color: var(--GS01);
-    }
-    
-    .cityContainer::after{
-        content: ''; display: block; clear: both;
-    }
-    .cityContainer>div:last-of-type .pageControl::after{
-        content: ''; display: block; clear: both;
-    }
-    .videoContainer ol::after{
-        content: ''; display: block; clear: both;
-    }
-    .videoDetailContainer article ol::after{
-        content: ''; display: block; clear: both;
-    }
-    .themaDetailContainer div:last-of-type ul::after{
-        content: ''; display: block; clear: both;
     }
 
     .mui{
@@ -1699,9 +1702,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .themaDetailContainer div:last-of-type h3{
         margin-bottom: var(--sp40);
     }
-    .themaDetailContainer div:last-of-type ul::after{
-        content: ''; display: block; clear: both;
-    }
     .themaDetailContainer div:last-of-type ul li{
         position: relative; border-radius: 50%;
         float: left; display: block; width: 30%; padding-top: 30%;
@@ -1856,9 +1856,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         content: ''; display: block; background-color: rgba(51, 51, 51, 0.5);
         width: 2.083%; height: 100vh;
         position: absolute; top: 0; right: 0;
-    }
-    .archiveContainer ol:last-of-type>li ul::after{
-        content: ''; display: block; clear: both;
     }
     .archiveContainer ol:last-of-type>li ul li{
         float: left;
