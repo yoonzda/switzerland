@@ -67,7 +67,8 @@ ul.context li h3,
 .videoDetailContainer input[type='button'],
 .videoDetailContainer article,
 .videoDetailContainer article div div,
-.videoContainer div.pop.active{
+.videoContainer div.pop.active,
+.themaDetailContainer div:last-of-type ul li a{
     background-color: var(--GS01);
 }
 .videoDetailContainer input[type='button'].clicky{
@@ -490,7 +491,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         margin-bottom: var(--sp30);
     }
     .themaDetailContainer div:last-of-type ul li a{
-        line-height: 35px; width: 85%; background-color: var(--GS01);
+        line-height: 35px; width: 85%;
         transition: all ease-out .2s; box-shadow: 5px 5px 8px rgba(155, 155, 155, 0.2);
         position: absolute; bottom: 0; left: 50%; transform: translate(-50% ,0);
     }
@@ -1019,7 +1020,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         margin-left: 5%;
     }
     .themaDetailContainer div:last-of-type ul li a{
-        line-height: 35px; width: 80%; background-color: var(--GS01);
+        line-height: 35px; width: 80%;
         transition: all ease-out .2s; box-shadow: 5px 5px 8px rgba(155, 155, 155, 0.2);
         position: absolute; bottom: 0; left: 50%; transform: translate(-50% ,0);
     }
@@ -1721,7 +1722,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         margin-left: 5%;
     }
     .themaDetailContainer div:last-of-type ul li a{
-        line-height: var(--sp50); width: 100%; max-width: 180px; background-color: var(--GS01);
+        line-height: var(--sp50); width: 100%; max-width: 180px;
         transition: all ease-out .2s; box-shadow: 5px 5px 8px rgba(155, 155, 155, 0.2);
         position: absolute; bottom: 0; left: 50%; transform: translate(-50% ,0);
     }
