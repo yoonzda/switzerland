@@ -163,7 +163,6 @@ footer ul li:not(:first-of-type){
         display: none;
     }
     .mobLandscape{
-        background-color: var(--GS07);
         position: fixed; z-index: 1002; width: 100vw; height: 100vh;
         text-align: center; line-height: var(--sp40);
         display: flex; flex-direction: column; justify-content: center;

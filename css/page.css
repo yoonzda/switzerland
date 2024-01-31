@@ -82,6 +82,10 @@ ul.context li h3,
 .videoDetailContainer input[type='button'].clicky{
     background-color: var(--BB02);
 }
+.mobLandscape,
+.videoContainer{
+    background-color: var(--GS07);
+}
 .indexContainer ul li>div>input[type='button'],
 .videoContainer div:first-of-type input[type='button'],
 .videoContainer div.pop.active input[type='button']{
@@ -331,10 +335,8 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
     
     .videoContainer{
-        background-color: var(--GS07);
         display: flex; flex-flow: column; justify-content: center;
-        height: 100vh;
-        padding: 150px 0; box-sizing: border-box;
+        height: 100vh; padding: 150px 0; box-sizing: border-box;
     }
     .videoContainer video{
         width: 100%;
@@ -849,12 +851,8 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
 
     .videoContainer{
-        background-color: var(--GS07);
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        height: 100vh;
-        box-sizing: border-box;
+        display: flex; flex-flow: column; justify-content: center;
+        height: 100vh; box-sizing: border-box;
     }
     .videoContainer video{
         width: 100%; margin-bottom: var(--sp20);
@@ -1533,7 +1531,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
 
     .videoContainer{
         position: relative; height: 100vh; overflow-y: hidden;
-        background-color: var(--GS07);
     }
     .videoContainer video{
         position: absolute; width: 100%; top: 50%; left: 0; transform: translate(0,-50%);
