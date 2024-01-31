@@ -73,130 +73,24 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     font-style: italic;
 }
 
-@keyframes line{
-    0%{
-      transform: scaleX(0);
-      background-color: var(--GN);
-    }
-    50%{
-      transform: scaleX(0.5);
-    }
-    100%{
-      transform: scaleX(1);
-      background-color: var(--GN);
-    }
-}
+@keyframes line{0%{transform: scaleX(0); background-color: var(--GN);}50%{transform: scaleX(0.5);}100%{transform: scaleX(1); background-color: var(--GN);}}
 
-@keyframes type01Title{
-    0%{
-        text-indent: -10px;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes type01Line{
-    0%{
-        transform: scaleX(0);
-    }
-    100%{
-        opacity: 1;
-        transform: scaleX(1);
-    }
-}
-@keyframes type02Line{
-    0%{
-        width: 0;
-        text-indent: -100px;
-        color: transparent;
-    }
-    50%{
-        opacity: 1;
-        width: 100%;
-        text-indent: -100px;
-        color: transparent;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes type02Text{
-    0%{
-        right: 5%;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes type03TitleTop{
-    10%{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-        transform:translateY(100%);
-    }
-    95%{
-        transform:translateY(0%);
-    }
-    100%{
-        opacity: 1;
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    }
-}
-@keyframes type03TitleBottom{
-    10%{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-        top: calc(27.777vh + 50px);
-    }
-    100%{
-        opacity: 1;
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        top: calc(27.777vh + 190px);
-    }
-}
-@keyframes textDown{
-    10%{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-        transform:translateY(-5%);
-    }
-    95%{
-        transform:translateY(0);
-    }
-    100%{
-        opacity: 1;
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    }
-}
-@keyframes lastAction{
-    100%{
-        opacity: 1;
-    }
-}
+@keyframes type01Title{0%{text-indent: -10px;}100%{opacity: 1;}}
+@keyframes type01Line{0%{transform: scaleX(0);}100%{opacity: 1; transform: scaleX(1);}}
 
-@keyframes circleFocus{
-    from{
-        transform: translate(-50%,-50%) scale(1);
-    }
-    to{
-        transform: translate(-50%,-50%) scale(0);
-        opacity: 0.3;
-    }
-}
+@keyframes type02Line{0%{width: 0; text-indent: -100px; color: transparent;}50%{opacity: 1; width: 100%; text-indent: -100px; color: transparent;}100%{opacity: 1;}}
+@keyframes type02Text{0%{right: 5%;}100%{opacity: 1;}}
 
-@keyframes circleMagneticTop{
-    0%{
-        bottom: 30px;
-    }
-    100%{
-        bottom: 55px;
-    }
-}
-@keyframes circleMagneticBottom{
-    0%{
-        bottom: 0;
-    }
-    100%{
-        bottom: -25px;
-    }
-}
+@keyframes type03TitleTop{10%{clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); transform:translateY(100%);}95%{transform:translateY(0%);}100%{opacity: 1; clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}}
+@keyframes type03TitleBottom{10%{clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); top: calc(27.777vh + 50px);}100%{opacity: 1; clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); top: calc(27.777vh + 190px);}}
+
+@keyframes textDown{10%{clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); transform:translateY(-5%);}95%{transform:translateY(0);}100%{opacity: 1; clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}}
+@keyframes lastAction{100%{opacity: 1;}}
+
+@keyframes circleFocus{from{transform: translate(-50%,-50%) scale(1);}to{transform: translate(-50%,-50%) scale(0); opacity: 0.3;}}
+
+@keyframes circleMagneticTop{0%{bottom: 30px;}100%{bottom: 55px;}}
+@keyframes circleMagneticBottom{0%{bottom: 0;}100%{bottom: -25px;}}
 
 @media screen and (max-width: 767px){
     div.preinfo strong{
