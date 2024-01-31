@@ -41,13 +41,11 @@
     .unR100{font-size: 35px;}
     .unR60{font-size: 30px;}
 
-    .unR40,
-    .unR30{font-size: 20px;}
+    .unR40,.unR30{font-size: 20px;}
 
     [class^='fi']{font-size: 16px;}
     
-    .maR20,
-    .maR16{font-size: 12px;}
+    .maR20,.maR16{font-size: 12px;}
     
     .maS16{font-size: 10px;}
 
@@ -59,12 +57,10 @@
     .unR60{font-size: 50px;}
     .unR40{font-size: 30px;}
     
-    .unR30,
-    .fiL25{font-size: 25px;}
+    .unR30,.fiL25{font-size: 25px;}
     .fiR30{font-size: 24px;}
 
-    .fiR24,
-    .fiL20{font-size: 20px;}
+    .fiR24,.fiL20{font-size: 20px;}
     
     [class^='ma']{font-size: 16px;}
 
