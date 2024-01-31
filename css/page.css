@@ -76,6 +76,9 @@ ul.context li h3,
 .bx-wrapper .bx-pager.bx-default-pager a.active{
     background-color: var(--GS02);
 }
+.bx-wrapper .bx-pager.bx-default-pager a:hover{
+    background-color: var(--GS03);
+}
 .videoDetailContainer input[type='button'].clicky{
     background-color: var(--BB02);
 }
@@ -543,9 +546,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .bx-wrapper .bx-pager.bx-default-pager a{
         width: 100%; height: 5px; box-sizing: border-box; border-radius: 0; margin: 0;
         transition: background-color ease-out .2s;
-    }
-    .bx-wrapper .bx-pager.bx-default-pager a:hover{
-        background-color: var(--GS03);
     }
     .themaContainer>div.unR40{
         position: absolute; right: 6.510%;
@@ -1062,9 +1062,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .bx-wrapper .bx-pager.bx-default-pager a{
         width: 100%; height: 5px; box-sizing: border-box; border-radius: 0; margin: 0;
         transition: background-color ease-out .2s;
-    }
-    .bx-wrapper .bx-pager.bx-default-pager a:hover{
-        background-color: var(--GS03);
     }
     .themaContainer>div.unR40{
         position: absolute; right: 6.510%;
@@ -1764,9 +1761,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .bx-wrapper .bx-pager.bx-default-pager a{
         width: 100%; height: 5px; box-sizing: border-box; border-radius: 0; margin: 0;
         transition: background-color ease-out .2s;
-    }
-    .bx-wrapper .bx-pager.bx-default-pager a:hover{
-        background-color: var(--GS03);
     }
     .themaContainer>div.unR40{
         position: absolute; right: 3.125%; bottom: 17.111vh;
