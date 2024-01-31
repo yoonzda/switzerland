@@ -25,10 +25,7 @@ section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24,
     color: var(--BB04);
 }
 section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24,
-.indexContainer ul li>div h3,
-.indexContainer ul li>div div p,
-.indexContainer ul li>div>input[type='button'],
-.indexContainer ul li>div div a,
+.indexContainer ul li>div *,
 .videoContainer h2,
 .videoContainer div:first-of-type input[type='button'],
 .videoContainer ol li:hover,
