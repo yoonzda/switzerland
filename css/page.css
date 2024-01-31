@@ -120,10 +120,10 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     --fancybox-bg: rgba(0, 0, 0, 0.7);
     --fancybox-color: var(--GS01);
 }
-section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24:before{
+section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24::before{
     border-color: var(--GS07);
 }
-section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
+section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     border-color: var(--GS01);
 }
 
@@ -132,7 +132,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         line-height: var(--sp40);
     }
 
-    .cityContainer>div:last-of-type .pageControl:after{
+    .cityContainer>div:last-of-type .pageControl::after{
         content: ''; display: block; clear: both;
     }
 
@@ -143,7 +143,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     section:not([class*='Detail'],[class^='archive']) a.fiR24 span{
         display: none;
     }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:before{
+    section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
         content: ''; display: block; width: 36px; height: 36px;
         position: absolute; left: 12px; bottom: 11px;
         border-width: 1px; border-style: solid; border-radius: 18px;
@@ -228,20 +228,20 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         background-size: cover; background-repeat: no-repeat; background-position: center; box-sizing: border-box;
         transition: all ease-out .4s;
     }
-    .indexContainer ul li.active:before{
+    .indexContainer ul li.active::before{
         width: 11.111vw; left: 11.111vw;
         content: ''; display: block; height: 1px; text-align: center;
         position: absolute; top: -15px; 
         animation: line ease-out .4s; animation-delay: .4s; animation-fill-mode: forwards;
     }
-    .indexContainer ul li:after{
+    .indexContainer ul li::after{
         content: ''; display: block; width: 100%; height: 100%;
         transition: all ease-out .3s;
     }
     .indexContainer ul li.active.clicky{
         z-index: 100; left: 0 !important; top: 0 !important; width: 100%; height: 100%; position: fixed; cursor: auto;
     }
-    .indexContainer ul li.active.clicky:after{
+    .indexContainer ul li.active.clicky::after{
         background-color: rgba(0, 0, 0, 0.5);
     }
 
@@ -350,7 +350,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         order: 1; z-index: 1;
         text-align: center;
     }
-    .videoContainer div:first-of-type:after{
+    .videoContainer div:first-of-type::after{
         content: ''; display: block; clear: both;
     }
     .videoContainer div:first-of-type input[type='button']{
@@ -360,13 +360,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         display: block; width: 100px; height: 100px; text-indent: -9999px;
         position: absolute; left: 50%; transform: translate(-50%,-50%); z-index: 1000;
     }
-    .videoContainer>span:after{
+    .videoContainer>span::after{
         content: ''; display: block; width: 60px; height: 60px; 
         border: 4px solid var(--GS01); border-radius: 50px; box-sizing: border-box;
         position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
         animation: circleFocus 1.5s linear infinite;
     }
-    .videoContainer>span.active:after,
+    .videoContainer>span.active::after,
     .videoContainer div.pop:not(.active){
         display: none;
     }
@@ -527,20 +527,20 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .bx-pager.bx-default-pager{
         padding: 0;
     }
-    .bx-pager.bx-default-pager:after{
+    .bx-pager.bx-default-pager::after{
         content: ''; display: block; width: 12.5%; height: 5px;
         background-color: var(--BB01);
         position: absolute; bottom: 0; left: 0;
         transition: left ease-out 1s;
     }
-    .bx-pager.bx-default-pager.page01:after{left: 0;}
-    .bx-pager.bx-default-pager.page02:after{left: 12.5%;}
-    .bx-pager.bx-default-pager.page03:after{left: 25%;}
-    .bx-pager.bx-default-pager.page04:after{left: 37.5%;}
-    .bx-pager.bx-default-pager.page05:after{left: 50%;}
-    .bx-pager.bx-default-pager.page06:after{left: 62.5%;}
-    .bx-pager.bx-default-pager.page07:after{left: 75%;}
-    .bx-pager.bx-default-pager.page08:after{left: 87.5%;}
+    .bx-pager.bx-default-pager.page01::after{left: 0;}
+    .bx-pager.bx-default-pager.page02::after{left: 12.5%;}
+    .bx-pager.bx-default-pager.page03::after{left: 25%;}
+    .bx-pager.bx-default-pager.page04::after{left: 37.5%;}
+    .bx-pager.bx-default-pager.page05::after{left: 50%;}
+    .bx-pager.bx-default-pager.page06::after{left: 62.5%;}
+    .bx-pager.bx-default-pager.page07::after{left: 75%;}
+    .bx-pager.bx-default-pager.page08::after{left: 87.5%;}
 
     .bx-pager-item{
         width: 12.5%;
@@ -579,7 +579,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .themaContainer .titleBox a{
         float: right;
     }
-    .themaContainer .titleBox:after{
+    .themaContainer .titleBox::after{
         content: ''; display: block; clear: both; 
     }
 
@@ -593,7 +593,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         transition: background-position ease 1s;
         position: relative;
     }
-    .archiveContainer:after{
+    .archiveContainer::after{
         content: ''; display: block; width: 100vw; height: 100vh;
         background-color: rgba(51, 51, 51, 0.5);
         position: absolute; top: 0;
@@ -655,10 +655,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         max-width: 660px;
     }
     
-    .themaDetailContainer div:last-of-type ul:after{
+    .themaDetailContainer div:last-of-type ul::after{
         content: ''; display: block; clear: both;
     }
-    .pageControl:after{
+    .pageControl::after{
         content: ''; display: block; clear: both;
     }
 
@@ -669,7 +669,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     section:not([class*='Detail'],[class^='archive']) a.fiR24 span{
         display: none;
     }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:before{
+    section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
         content: ''; display: block; width: 50px; height: 50px;
         position: absolute; left: 18px; bottom: 4px;
         border-width: 1px; border-style: solid;
@@ -741,7 +741,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         background-size: cover; background-repeat: no-repeat; background-position: center; box-sizing: border-box;
         transition: all ease-out .4s;
     }
-    .indexContainer ul li.active:before{
+    .indexContainer ul li.active::before{
         content: ''; display: block; width: 6vw; height: 1px; text-align: center;
         position: absolute; top: -15px; left: 7vw;
         animation: line ease-out .4s; animation-delay: .4s; animation-fill-mode: forwards;
@@ -749,14 +749,14 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .indexContainer ul li.active.clicky{
         z-index: 100; left: 0 !important; top: 0 !important; width: 100%; height: 100%; position: fixed; cursor: auto;
     }
-    .indexContainer ul li:after{
+    .indexContainer ul li::after{
         content: ''; display: block; width: 100%; height: 100%;
         transition: all ease-out .3s;
     }
     .indexContainer ul li.active.clicky{
         z-index: 100; left: 0 !important; top: 0 !important; width: 100%; height: 100%; position: fixed; cursor: auto;
     }
-    .indexContainer ul li.active.clicky:after{
+    .indexContainer ul li.active.clicky::after{
         background-color: rgba(0, 0, 0, 0.5);
     }
 
@@ -865,7 +865,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         order: 1; z-index: 1;
         text-align: center;
     }
-    .videoContainer div:first-of-type:after{
+    .videoContainer div:first-of-type::after{
         content: ''; display: block; clear: both;
     }
     .videoContainer div:first-of-type input[type='button']{
@@ -875,13 +875,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         display: block; width: 100px; height: 100px; text-indent: -9999px;
         position: absolute; left: 50%; transform: translate(-50%,-50%); z-index: 1000;
     }
-    .videoContainer>span:after{
+    .videoContainer>span::after{
         content: ''; display: block; width: 100px; height: 100px; 
         border: 6px solid var(--GS01); border-radius: 50px; box-sizing: border-box;
         position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
         animation: circleFocus 1.5s linear infinite;
     }
-    .videoContainer>span.active:after,
+    .videoContainer>span.active::after,
     .videoContainer div.pop:not(.active){
         display: none;
     }
@@ -1039,20 +1039,20 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .bx-pager.bx-default-pager{
         padding: 0;
     }
-    .bx-pager.bx-default-pager:after{
+    .bx-pager.bx-default-pager::after{
         content: ''; display: block; width: 12.5%; height: 5px;
         background-color: var(--BB01);
         position: absolute; bottom: 0; left: 0;
         transition: left ease-out 1s;
     }
-    .bx-pager.bx-default-pager.page01:after{left: 0;}
-    .bx-pager.bx-default-pager.page02:after{left: 12.5%;}
-    .bx-pager.bx-default-pager.page03:after{left: 25%;}
-    .bx-pager.bx-default-pager.page04:after{left: 37.5%;}
-    .bx-pager.bx-default-pager.page05:after{left: 50%;}
-    .bx-pager.bx-default-pager.page06:after{left: 62.5%;}
-    .bx-pager.bx-default-pager.page07:after{left: 75%;}
-    .bx-pager.bx-default-pager.page08:after{left: 87.5%;}
+    .bx-pager.bx-default-pager.page01::after{left: 0;}
+    .bx-pager.bx-default-pager.page02::after{left: 12.5%;}
+    .bx-pager.bx-default-pager.page03::after{left: 25%;}
+    .bx-pager.bx-default-pager.page04::after{left: 37.5%;}
+    .bx-pager.bx-default-pager.page05::after{left: 50%;}
+    .bx-pager.bx-default-pager.page06::after{left: 62.5%;}
+    .bx-pager.bx-default-pager.page07::after{left: 75%;}
+    .bx-pager.bx-default-pager.page08::after{left: 87.5%;}
 
     .bx-pager-item{
         width: 12.5%;
@@ -1091,7 +1091,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .themaContainer .titleBox a{
         float: right;
     }
-    .themaContainer .titleBox:after{
+    .themaContainer .titleBox::after{
         content: ''; display: block; clear: both;
     }
 
@@ -1111,7 +1111,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         transition: background-position ease 1s;
         position: relative;
     }
-    .archiveContainer:after{
+    .archiveContainer::after{
         content: ''; display: block; width: 100vw; height: 100vh;
         background-color: rgba(51, 51, 51, 0.5);
         position: absolute; top: 0;
@@ -1185,19 +1185,19 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         color: var(--GS01);
     }
     
-    .cityContainer:after{
+    .cityContainer::after{
         content: ''; display: block; clear: both;
     }
-    .cityContainer>div:last-of-type .pageControl:after{
+    .cityContainer>div:last-of-type .pageControl::after{
         content: ''; display: block; clear: both;
     }
-    .videoContainer ol:after{
+    .videoContainer ol::after{
         content: ''; display: block; clear: both;
     }
-    .videoDetailContainer article ol:after{
+    .videoDetailContainer article ol::after{
         content: ''; display: block; clear: both;
     }
-    .themaDetailContainer div:last-of-type ul:after{
+    .themaDetailContainer div:last-of-type ul::after{
         content: ''; display: block; clear: both;
     }
 
@@ -1218,31 +1218,31 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     section:not([class*='Detail'],[class^='archive']) a.fiR24:hover span{
         transition-delay: 0.6s; opacity: 1; 
     }
-    section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24:after{
+    section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24::after{
         border-color: var(--GS07);
     }
-    section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:after{
+    section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::after{
         border-color: var(--GS01);
     }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:before,
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:after{
+    section:not([class*='Detail'],[class^='archive']) a.fiR24::before,
+    section:not([class*='Detail'],[class^='archive']) a.fiR24::after{
         content: ''; display: block; width: 60px; height: 30px; position: absolute; right: 20px; border-style: solid;
     }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover:before,
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover:after{
+    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover::before,
+    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover::after{
         animation-direction: alternate; animation-iteration-count: 2;
         animation-timing-function: cubic-bezier(.17,.67,.58,.91); animation-name: circleMagneticBottom; animation-duration: .3s;
     }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:before{
+    section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
         bottom: 30px; border-radius: 30px 30px 0 0; border-width: 1px 1px 0;
     }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover:before{
+    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover::before{
         animation-name: circleMagneticTop;
     }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:after{
+    section:not([class*='Detail'],[class^='archive']) a.fiR24::after{
         bottom: 0; border-radius: 0 0 30px 30px; border-width: 0 1px 1px;
     }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover:after{
+    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover::after{
         animation-name: circleMagneticBottom;
     }
 
@@ -1333,20 +1333,20 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         background-size: cover; background-repeat: no-repeat; background-position: center; box-sizing: border-box;
         transition: all ease-out .4s;
     }
-    .indexContainer ul li.active:before{
+    .indexContainer ul li.active::before{
         width: 4vw; left: 3vw;
         content: ''; display: block; height: 1px; text-align: center; 
         position: absolute; top: -15px;
         animation: line ease-out .4s; animation-delay: .4s; animation-fill-mode: forwards;
     }
-    .indexContainer ul li:after{
+    .indexContainer ul li::after{
         content: ''; display: block; width: 100%; height: 100%;
         transition: all ease-out .3s;
     }
     .indexContainer ul li.active.clicky{
         z-index: 100; left: 0 !important; top: 0 !important; width: 100%; height: 100%; position: fixed; cursor: auto;
     }
-    .indexContainer ul li.active.clicky:after{
+    .indexContainer ul li.active.clicky::after{
         background-color: rgba(0, 0, 0, 0.5);
     }
     .indexContainer ul li>*:not(div){
@@ -1561,13 +1561,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         display: block; width: 100px; height: 100px; text-indent: -9999px;
         position: relative; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 1000;
     }
-    .videoContainer>span:after{
+    .videoContainer>span::after{
         content: ''; display: block; width: 100px; height: 100px;
         border: 6px solid var(--GS01); border-radius: 50px; box-sizing: border-box;
         position: absolute; top: 50%; left: 50%;
         animation: circleFocus 1.5s linear infinite;
     }
-    .videoContainer>span.active:after,
+    .videoContainer>span.active::after,
     .videoContainer div.pop:not(.active){
         display: none;
     }
@@ -1699,7 +1699,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .themaDetailContainer div:last-of-type h3{
         margin-bottom: var(--sp40);
     }
-    .themaDetailContainer div:last-of-type ul:after{
+    .themaDetailContainer div:last-of-type ul::after{
         content: ''; display: block; clear: both;
     }
     .themaDetailContainer div:last-of-type ul li{
@@ -1737,20 +1737,20 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .bx-pager.bx-default-pager{
         padding: 0;
     }
-    .bx-pager.bx-default-pager:after{
+    .bx-pager.bx-default-pager::after{
         content: ''; display: block; width: 12.5%; height: 5px;
         background-color: var(--BB01);
         position: absolute; bottom: 0; left: 0;
         transition: left ease-out 1s;
     }
-    .bx-pager.bx-default-pager.page01:after{left: 0;}
-    .bx-pager.bx-default-pager.page02:after{left: 12.5%;}
-    .bx-pager.bx-default-pager.page03:after{left: 25%;}
-    .bx-pager.bx-default-pager.page04:after{left: 37.5%;}
-    .bx-pager.bx-default-pager.page05:after{left: 50%;}
-    .bx-pager.bx-default-pager.page06:after{left: 62.5%;}
-    .bx-pager.bx-default-pager.page07:after{left: 75%;}
-    .bx-pager.bx-default-pager.page08:after{left: 87.5%;}
+    .bx-pager.bx-default-pager.page01::after{left: 0;}
+    .bx-pager.bx-default-pager.page02::after{left: 12.5%;}
+    .bx-pager.bx-default-pager.page03::after{left: 25%;}
+    .bx-pager.bx-default-pager.page04::after{left: 37.5%;}
+    .bx-pager.bx-default-pager.page05::after{left: 50%;}
+    .bx-pager.bx-default-pager.page06::after{left: 62.5%;}
+    .bx-pager.bx-default-pager.page07::after{left: 75%;}
+    .bx-pager.bx-default-pager.page08::after{left: 87.5%;}
 
     .bx-pager-item{
         width: 12.5%;
@@ -1805,7 +1805,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         transition: transform ease-out .5s;
         cursor: pointer;
     }
-    .archiveContainer ol.fiR30.clicky:after{
+    .archiveContainer ol.fiR30.clicky::after{
         transform: rotate(180deg);
     }
     .archiveContainer ol.fiR30 li{
@@ -1852,12 +1852,12 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .archiveContainer ol:last-of-type>li:after{
+    .archiveContainer ol:last-of-type>li::after{
         content: ''; display: block; background-color: rgba(51, 51, 51, 0.5);
         width: 2.083%; height: 100vh;
         position: absolute; top: 0; right: 0;
     }
-    .archiveContainer ol:last-of-type>li ul:after{
+    .archiveContainer ol:last-of-type>li ul::after{
         content: ''; display: block; clear: both;
     }
     .archiveContainer ol:last-of-type>li ul li{
@@ -1972,7 +1972,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         width: 100%; height: 100px; max-width: 280px; margin: 0 auto;
         position: relative;
     }
-    .wrapWave:after{
+    .wrapWave::after{
         content: ''; width: var(--sp30); height: var(--sp30); display: block; position: absolute;
         background-image: url('../images/testHand12.svg');
         transform: rotate(-30deg);

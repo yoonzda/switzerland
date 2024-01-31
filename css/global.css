@@ -29,13 +29,13 @@ header h1 a{
 header nav ul li{
     display: inline-block; position: relative;
 }
-header nav ul li:before{
+header nav ul li::before{
     content: ''; display: block; position: absolute;
 }
-header:not(.modeWhite) nav ul li.active:before{
+header:not(.modeWhite) nav ul li.active::before{
     background-color: var(--BB03);
 }
-header.modeWhite nav ul li.active:before{
+header.modeWhite nav ul li.active::before{
     background-color: var(--GS01);
 }
 footer{
@@ -64,7 +64,7 @@ footer ul li:not(:first-of-type){
     header nav ul li:not(:first-of-type){
         margin-left: var(--sp15);
     }
-    header nav ul li.active:before{
+    header nav ul li.active::before{
         width: 5px; height: 5px; top: -3px; left: -8px;
     }
     footer p{
@@ -79,7 +79,7 @@ footer ul li:not(:first-of-type){
     header h1{
         padding-bottom: var(--sp20);
     }
-    header nav ul li.active:before{
+    header nav ul li.active::before{
         width: 8px; height: 8px; top: -5px; left: -12px;
     }
     footer p{
@@ -100,18 +100,18 @@ footer ul li:not(:first-of-type){
     header nav{
         line-height: 50px; float: right; 
     }
-    header nav ul li:before{
+    header nav ul li::before{
         width: 8px; height: 8px; top: 10px; left: -12px;
         clip-path: circle(20.0% at 50% 50%); transition: clip-path, background-color ease-out .2s;
     }
-    header nav ul li.active:before,
-    header nav ul li:hover:before{
+    header nav ul li.active::before,
+    header nav ul li:hover::before{
         clip-path: circle(50.0% at 50% 50%);
     }
-    header:not(.modeWhite) nav ul li:hover:before{
+    header:not(.modeWhite) nav ul li:hover::before{
         background-color: var(--BB03);
     }
-    header.modeWhite nav ul li:hover:before{
+    header.modeWhite nav ul li:hover::before{
         background-color: var(--GS01);
     }
     footer{
@@ -144,7 +144,7 @@ footer ul li:not(:first-of-type){
     header nav{
         text-align: center;
     }
-    header nav ul li:before{
+    header nav ul li::before{
         clip-path: circle(50.0% at 50% 50%);
     }
     footer{
