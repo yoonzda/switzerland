@@ -1,7 +1,6 @@
 
 header:not(.modeWhite) nav ul li a,
 footer:not(.modeWhite) p{
-    color: var(--BB03);
     text-shadow: none;
 }
 
