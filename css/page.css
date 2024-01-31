@@ -1181,6 +1181,9 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .cityContainer>div:first-of-type.active small{
         color: var(--BB03);
     }
+    .archiveContainer ol:last-of-type li ul li *{
+        color: var(--GS04);
+    }
     .archiveContainer ol:last-of-type li ul li:hover a{
         color: var(--BB04);
     }
@@ -1902,7 +1905,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         padding: 24vh 4.166% 18vh 6.25%;
     }
     .archiveContainer ol:last-of-type li ul li b{
-        display: block; color: var(--GS04); 
+        display: block;
         transition: color ease-out .3s;
         margin-bottom: var(--sp20);
     }
@@ -1910,7 +1913,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         color: var(--YE);
     }
     .archiveContainer ol:last-of-type li ul li h3{
-        white-space: normal; color: var(--GS04);
+        white-space: normal;
         transition: color ease-out .3s;
         margin-bottom: auto;
     }
@@ -1928,7 +1931,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     .archiveContainer ol:last-of-type li ul li a{
         width: 170px;
         display: block; line-height: var(--sp40); border: 1px solid var(--GS04);
-        text-align: center; border-radius: 5px; color: var(--GS04); background-color: transparent;
+        text-align: center; border-radius: 5px; background-color: transparent;
         transition: color, background-color ease-out .3s;
     }
 }
