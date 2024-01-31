@@ -80,6 +80,6 @@
     
     [class*='16']{font-size: 16px;}
 
-    p.maR20{line-height: var(--sp30);}
+    p.maR20{line-height: 30px;}
     p.maR16{line-height: 22px}
 }
