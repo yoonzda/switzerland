@@ -265,9 +265,8 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         text-align: center; margin-bottom: var(--sp30);
     }
     .cityContainer>div:first-of-type small{
-        color: var(--BB03); border-bottom: 1px solid var(--GN); 
         display: inline-block; padding: 0 5px 5px;
-        margin-bottom: var(--sp15);
+        border-bottom: 1px solid var(--GN); margin-bottom: var(--sp15);
     }
 
     .fancyBox{
@@ -805,8 +804,8 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         margin-bottom: var(--sp10);
     }
     .cityContainer>div:first-of-type small{
-        color: var(--BB03); border-bottom: 1px solid var(--GN); 
-        display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp20);
+        display: inline-block; padding: 0 5px 5px; 
+        border-bottom: 1px solid var(--GN); margin-bottom: var(--sp20);
     }
 
     .fancyBox{
@@ -1212,6 +1211,9 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .cityContainer>div:first-of-type.active *[class*='R']{
         color: var(--BB02);
     }
+    .cityContainer>div:first-of-type.active small{
+        color: var(--BB03);
+    }
     .videoContainer ol li:not(.active){
         color: var(--GS04);
     }
@@ -1499,7 +1501,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         border-bottom: 1px solid var(--GS01);
     }
     .cityContainer>div:first-of-type.active small{
-        color: var(--BB03); border-bottom: 1px solid var(--GN);
+        border-bottom: 1px solid var(--GN);
     }
     .cityContainer>div:first-of-type p{
         width: 52%; min-width: 900px; margin: 0 auto;
@@ -1981,6 +1983,9 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 @media screen and (max-width: 1279px){
     .cityContainer>div:first-of-type *[class*='R']{
         color: var(--BB02);
+    }
+    .cityContainer>div:first-of-type small{
+        color: var(--BB03);
     }
 
     section.indexContainer>div>span{
