@@ -28,6 +28,7 @@ header.modeWhite nav ul li a,
 footer.modeWhite p,
 div.preinfo,
 .mobLandscape,
+ol.fiR30 li.active,
 section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24,
 .indexContainer ul li>div *,
 .videoContainer h2,
@@ -64,6 +65,8 @@ ul.context li h3,
     color: var(--GN);
 }
 .videoDetailContainer input[type='button'],
+.videoDetailContainer article,
+.videoDetailContainer article div div,
 .videoContainer div.pop.active{
     background-color: var(--GS01);
 }
@@ -414,7 +417,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
     .videoDetailContainer article{
         position: absolute; transition: all ease-out 1s;
-        background-color: var(--GS01);
         padding: var(--sp40) 7.142% 150px; box-sizing: border-box;
         width: 100%; min-height: calc(100vh - 150px); 
     }
@@ -947,7 +949,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
     .videoDetailContainer article{
         position: absolute; transition: all ease-out 1s;
-        background-color: var(--GS01);
         padding: var(--sp60) 10.9375% 150px;
         min-height: calc(100vh - 150px); box-sizing: border-box;
     }
@@ -1189,8 +1190,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     ol.fiR30 li:not(.active){
         color: var(--GS04);
     }
-    ol.fiR30 li:hover,
-    ol.fiR30 li.active{
+    ol.fiR30 li:hover{
         color: var(--GS01);
     }
     
@@ -1629,7 +1629,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
     .videoDetailContainer article{
         position: absolute; top: 0; width: 100vw; height: 100vh;
-        background-color: var(--GS01);
         padding: 28vh 0 0; box-sizing: border-box;
         transition: left ease 1s;
     }
@@ -1650,8 +1649,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         max-height: 60vh; overflow-y: auto;
     }
     .videoDetailContainer article div div{
-        position: sticky; top: 0; background-color: var(--GS01);
-        margin-bottom: var(--sp80);
+        position: sticky; top: 0; margin-bottom: var(--sp80);
     }
     .videoDetailContainer article div h2{
         padding-bottom: var(--sp20);
@@ -1956,9 +1954,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
     ol.fiR30 li{
         display: inline-block;
-    }
-    ol.fiR30 li.active{
-        color: var(--GS01);
     }
     .archiveContainer ol.fiR30 li:not(.active){
         color: var(--GS03);
