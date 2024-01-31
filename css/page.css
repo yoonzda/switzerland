@@ -1491,11 +1491,11 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     .cityContainer>div:first-of-type.active{
         background-color: var(--GS01);
     }
+    .cityContainer>div:first-of-type.active *[class*='R']{
+        color: var(--BB02);
+    }
     .cityContainer>div:first-of-type h2{
         margin-bottom: var(--sp10);
-    }
-    .cityContainer>div:first-of-type.active h2{
-        color: var(--BB02);
     }
     .cityContainer>div:first-of-type small{
         display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp30);
@@ -1504,14 +1504,10 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
         border-bottom: 1px solid var(--GS01);
     }
     .cityContainer>div:first-of-type.active small{
-        color: var(--BB03);
-        border-bottom: 1px solid var(--GN);
+        color: var(--BB03); border-bottom: 1px solid var(--GN);
     }
     .cityContainer>div:first-of-type p{
         width: 52%; min-width: 900px; margin: 0 auto;
-    }
-    .cityContainer>div:first-of-type.active p{
-        color: var(--BB02);
     }
     
     .fancyBox{
