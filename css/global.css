@@ -26,71 +26,74 @@ ol.fiR30 li,
     cursor: pointer;
 }
 
+/* ALL USE */
+header{
+    width: 100%; position: fixed; top: 0; z-index: 1000; box-sizing: border-box;
+}
+header h1 a{
+    display: block;
+}
+header nav ul li{
+    display: inline-block; position: relative;
+}
+header nav ul li:before{
+    content: ''; display: block; position: absolute;
+    clip-path: circle(20.0% at 50% 50%); transition: clip-path, background-color ease-out .2s;
+}
+header nav ul li.active:before,
+header nav ul li:hover:before{
+    clip-path: circle(50.0% at 50% 50%);
+}
+header:not(.modeWhite) nav ul li.active:before,
+header:not(.modeWhite) nav ul li:hover:before{
+    background-color: var(--BB03);
+}
+header.modeWhite nav ul li.active:before,
+header.modeWhite nav ul li:hover:before{
+    background-color: var(--GS01);
+}
+footer{
+    position: fixed; bottom: 0; z-index: 1000;
+}
+footer ul{
+    font-size: 0;
+}
+footer ul li{
+    width: var(--sp20); height: var(--sp20); display: inline-block;
+}
+footer ul li a{
+    text-indent: -9999px; display: block; line-height: 20px; background-size: contain; background-repeat: no-repeat;
+}
+footer ul li:not(:first-of-type){
+    margin-left: var(--sp15);
+}
+
 @media screen and (max-width: 767px){
     header{
-        width: 100%; position: fixed; top: 0; z-index: 1000; 
-        
         padding: 30px 0 10px; 
     }
     header:not(.modeWhite){
         background-color: var(--GS01); box-shadow: 0px 10px 10px 5px rgba(255,255,255,1);
     }
     header h1{
-        width: 100%; margin: 0 auto; 
-        
         max-width: 30px; padding-bottom: var(--sp10);
-    }
-    header nav{
-        text-align: center;
-    }
-    header nav ul li{
-        display: inline-block; position: relative;
     }
     header nav ul li:not(:first-of-type){
         margin-left: var(--sp15);
     }
     header nav ul li.active:before{
-        content: ''; display: block; position: absolute; clip-path: circle(50.0% at 50% 50%);
-        
         width: 5px; height: 5px; top: -3px; left: -8px;
     }
-    header:not(.modeWhite) nav ul li.active:before{
-        background-color: var(--BB03);
-    }
-    header.modeWhite nav ul li.active:before{
-        background-color: var(--GS01);
-    }
-    footer{
-        position: fixed; bottom: 0; z-index: 1000;
-        
-        width: 100%; padding-top: 10px;
-    }
     footer:not(.modeWhite){
-        background-color: #fff;
-        box-shadow: 0px -10px 10px 5px rgba(255,255,255,1);
-    }
-    footer ul{
-        padding-bottom: 15px; text-align: center; font-size: 0;
-    }
-    footer ul li{
-        display: inline-block; width: var(--sp20); height: var(--sp20);
-    }
-    footer ul li a{
-        text-indent: -9999px; display: block; line-height: 20px;
-        background-size: contain; background-repeat: no-repeat;
-    }
-    footer ul li:not(:first-of-type){
-        margin-left: var(--sp15);
+        background-color: #fff; box-shadow: 0px -10px 10px 5px rgba(255,255,255,1);
     }
     footer p{
-        padding-bottom: var(--sp30); text-align: center;
+        padding-bottom: var(--sp30);
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px){
     header{
-        width: 100%; position: fixed; top: 0; z-index: 1000; box-sizing: border-box;
-
         padding: 40px 0 10px;
     }
     header:not(.modeWhite){
@@ -98,123 +101,67 @@ ol.fiR30 li,
         box-shadow: 0px 10px 10px 5px rgba(255,255,255,1);
     }
     header h1{
-        max-width: 55px;
-        
-        margin: 0 auto; padding-bottom: 20px;
-    }
-    header h1 a{
-        display: block;
-    }
-    header nav{
-        text-align: center;
-    }
-    header nav ul li{
-        display: inline-block; position: relative; 
-    }
-    header nav ul li:not(:first-of-type){
-        margin-left: var(--sp30);
+        padding-bottom: var(--sp20);
     }
     header nav ul li.active:before{
-        content: ''; display: block; position: absolute; 
-        
-        clip-path: circle(50.0% at 50% 50%);
         width: 8px; height: 8px; top: -5px; left: -12px;
-    }
-    header:not(.modeWhite) nav ul li.active:before{
-        background-color: var(--BB03);
-    }
-    header.modeWhite nav ul li.active:before{
-        background-color: var(--GS01);
-    }
-    footer{
-        position: fixed; bottom: 0; z-index: 1000;
-        
-        width: 100%; padding-top: 10px;
     }
     footer:not(.modeWhite){
         background-color: #fff;
         box-shadow: 0px -10px 10px 5px rgba(255,255,255,1);
     }
-    footer ul{
-        padding-bottom: 15px; text-align: center; font-size: 0;
-    }
-    footer ul li{
-        width: var(--sp20); height: var(--sp20);
-        
-        display: inline-block; 
-    }
-    footer ul li a{
-        text-indent: -9999px; display: block; line-height: 20px; background-size: contain; background-repeat: no-repeat;
-    }
-    footer ul li:not(:first-of-type){
-        margin-left: var(--sp15);
-    }
     footer p{
-        padding-bottom: 40px; text-align: center;
+        padding-bottom: var(--sp40);
     }
 }
 
 @media screen and (min-width: 1280px){
     header{
-        width: 100%; position: fixed; top: 0; z-index: 1000; box-sizing: border-box;
-        
         padding: var(--sp60) 3.125% 0; 
     }
     header::after{
         content: ''; display: block; clear: both;
     }
     header h1{
-        float: left; width: 100%; max-width: 55px;
-    }
-    header h1 a{
-        display: block;
+        float: left; width: 100%;
     }
     header nav{
         line-height: 50px; float: right; 
     }
-    header nav ul li{
-        display: inline-block; position: relative;
-    }
-    header nav ul li:not(:first-of-type){
-        margin-left: var(--sp30);
-    }
     header nav ul li:before{
-        content: ''; display: block; position: absolute; 
-        clip-path: circle(20.0% at 50% 50%); transition: clip-path, background-color ease-out .2s;
-        
         width: 8px; height: 8px; top: 10px; left: -12px;
     }
-    header nav ul li.active:before,
-    header nav ul li:hover:before{
-        clip-path: circle(50.0% at 50% 50%);
-    }
-    header:not(.modeWhite) nav ul li.active:before,
-    header:not(.modeWhite) nav ul li:hover:before{
-        background-color: var(--BB03);
-    }
-    header.modeWhite nav ul li.active:before,
-    header.modeWhite nav ul li:hover:before{
-        background-color: var(--GS01);
-    }
     footer{
-        position: fixed; bottom: 0; z-index: 1000;
-        
         right: 3.125%; padding-bottom: var(--sp60);
     }
     footer ul{
-        display: inline-block; font-size: 0; vertical-align: bottom;
-    }
-    footer ul li{
-        width: var(--sp20); height: var(--sp20);
-        display: inline-block;
-    }
-    footer ul li a{
-        text-indent: -9999px; display: block; line-height: 20px; background-size: contain; background-repeat: no-repeat;
-    }
-    footer ul li:not(:first-of-type){
-        margin-left: var(--sp15);
+        display: inline-block; vertical-align: bottom;
     }
     footer p{
         margin-left: var(--sp20); display: inline;
+    }
+}
+
+@media screen and (max-width: 1279px){
+    header h1{
+        margin: 0 auto; 
+    }
+    header nav{
+        text-align: center;
+    }
+    footer{
+        width: 100%; padding-top: var(--sp10); text-align: center;
+    }
+    footer ul{
+        padding-bottom: var(--sp15);
+    }
+}
+
+@media screen and (min-width: 768px){
+    header h1{
+        max-width: 55px;
+    }
+    header nav ul li:not(:first-of-type){
+        margin-left: var(--sp30);
     }
 }
