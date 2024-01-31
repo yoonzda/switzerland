@@ -128,12 +128,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         position: absolute; left: 12px; bottom: 11px;
         border-width: 1px; border-style: solid; border-radius: 18px;
     }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:not(.modeWhite):before{
-        border-color: var(--GS07);
-    }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24.modeWhite:before{
-        border-color: var(--GS01);
-    }
 
     ul.context li{
         display: block; margin-bottom: var(--sp50);
@@ -182,22 +176,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         margin: 0 auto var(--sp20);
     }
     section.archiveContainer ol.fiR30{
-        position: fixed; top: 130px; left: 50%; transform: translate(-50%,0);
+        top: 130px;
     }
     ol.fiR30{
-        display: flex; width: 90%; justify-content: space-between; max-width: 400px;
+        max-width: 400px;
     }
     ol.fiR30 li{
-        display: inline-block; font-size: 14px;
-    }
-    ol.fiR30 li.active{
-        color: var(--GS01);
-    }
-    .archiveContainer ol.fiR30 li:not(.active){
-        color: var(--GS03);
-    }
-    .videoContainer ol li:not(.active){
-        color: var(--GS04);
+        font-size: 14px;
     }
 
     .indexContainer{
@@ -654,11 +639,14 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         line-height: var(--sp50);
     }
 
-    .videoContainer ol li:not(.active){
-        color: var(--GS04);
+    section.videoContainer ol.fiR30{
+        margin: 0 auto var(--sp30);
     }
-    .videoContainer ol li.active{
-        color: var(--GS01);
+    section.archiveContainer ol.fiR30{
+        top: 200px;
+    }
+    ol.fiR30{
+        max-width: 660px;
     }
     
     .themaDetailContainer div:last-of-type ul:after{
@@ -680,12 +668,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
         position: absolute; left: 18px; bottom: 4px;
         border-width: 1px; border-style: solid;
         border-radius: 25px;
-    }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:not(.modeWhite):before{
-        border-color: var(--GS07);
-    }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24.modeWhite:before{
-        border-color: var(--GS01);
     }
 
     ul.context li{
@@ -886,18 +868,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
     .videoContainer div:first-of-type input[type='button']{
         font-size: var(--sp50);
-    }
-    .videoContainer ol{
-        width: 660px; margin: 0 auto 30px;
-    }
-    .videoContainer ol:after{
-        content: ''; display: block; clear: both;
-    }
-    .videoContainer ol li{
-        float: left; display: block;
-    }
-    .videoContainer ol li:not(:first-of-type){
-        margin-left: 25px;
     }
     .videoContainer>span{
         display: block; width: 100px; height: 100px; text-indent: -9999px;
@@ -1160,21 +1130,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
 
     .archiveContainer h2{
         display: none;
-    }
-    .archiveContainer ol.fiR30{
-        position: fixed; top: 200px; width: 660px; transform: translate(-50%,0); left: 50%;
-    }
-    .archiveContainer ol.fiR30 li{
-        display: inline-block;
-    }
-    .archiveContainer ol.fiR30 li:not(:first-of-type){
-        margin-left: 25px;
-    }
-    .archiveContainer ol.fiR30 li:not(.active){
-        color: var(--GS03);
-    }
-    .archiveContainer ol.fiR30 li.active{
-        color: var(--GS01);
     }
     .archiveContainer ol:last-of-type{
         white-space: nowrap; box-sizing: border-box;
@@ -1997,6 +1952,25 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24:before{
     }
     .archiveContainer ol:last-of-type li ul li a{
         background-color: var(--GS01);
+    }
+    
+    section.archiveContainer ol.fiR30{
+        position: fixed; left: 50%; transform: translate(-50%,0);
+    }
+    ol.fiR30{
+        width: 90%; display: flex; justify-content: space-between;
+    }
+    ol.fiR30 li{
+        display: inline-block;
+    }
+    ol.fiR30 li.active{
+        color: var(--GS01);
+    }
+    .archiveContainer ol.fiR30 li:not(.active){
+        color: var(--GS03);
+    }
+    .videoContainer ol.fiR30 li:not(.active){
+        color: var(--GS04);
     }
 
     section.indexContainer>div>span{
