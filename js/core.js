@@ -35,65 +35,18 @@ function detailBG(tagH, frontN, targetS, fileExtension){
     $(targetS).css('background-image',backgroundIMG);
 }
  
-function cityDetailFunction(){ 
-    var contentH = 0;
-    $('.cityContainer').css('padding-top',window.innerHeight - $('.cityContainer>div:first-of-type').height()-180);
-
-    var content01 = $('.cityContainer>div:nth-of-type(1)').height();
-    var content01PaddingTop = 100;
-    var content01PaddingBottom = 80;
-    
-    var content02 = $('.cityContainer>div:nth-of-type(2)').height();
-    var content02PaddingBottom = 0;
-    
-    var totalH = window.innerHeight;
-    content02PaddingBottom = totalH-(content01+content01PaddingTop+content01PaddingBottom+content02)+10;
+function cityDetailFunction(){
+    $('.cityContainer>div').css('top',window.innerHeight - $('.cityContainer div.titleBox').height()-180);
 
     window.addEventListener('wheel', function(e){
         if(e.deltaY>0){
-            $('.cityContainer>div:first-of-type').addClass('active');
-
-            $(".cityContainer").animate({
-                scrollTop : 0,
-                padding : 0
-            },1000);
-
-            $('.cityContainer').css({
-                'overflow-y' : 'scroll'
-            });
-
-            setTimeout(function(){
-                contentH = $('.cityContainer>div:nth-of-type(2)').height();
-                $('.cityContainer>div:last-of-type').css('height',contentH);
-            }, 800);
+            $('.cityContainer>div').addClass('active');
         }
-    },{ once : true});
-
-    $('.cityContainer').on('touchend', function(e){
-        $('.cityContainer>div:first-of-type').addClass('active');
-
-        $(".cityContainer").animate({
-            scrollTop : 0,
-            padding : 0
-        },1000);
-        
-        $('.cityContainer').css({
-            'overflow-y' : 'scroll'
-        });
-        
-        setTimeout(function(){
-            contentH = $('.cityContainer>div:nth-of-type(2)').height();
-            $('.cityContainer>div:last-of-type').css('height',contentH);
-        }, 800);
     });
 
-    if(content02PaddingBottom<150){
-        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',150);
-    }else if(content02PaddingBottom<260){
-        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',content02PaddingBottom);
-    }else{
-        $('.cityContainer>div:nth-of-type(2)').css('padding-bottom',260);
-    }
+    $('.cityContainer').on('touchend', function(e){
+        $('.cityContainer>div').addClass('active');
+    });
 }
 
 function themaDetailFunction(){

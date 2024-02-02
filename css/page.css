@@ -1173,10 +1173,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         content: ''; display: block; clear: both;
     }
 
-    .cityContainer>div:first-of-type.active *[class*='R']{
+    .cityContainer>div.acitve div.titleBox *[class*='R']{
         color: var(--BB02);
     }
-    .cityContainer>div:first-of-type.active small{
+    .cityContainer>div.acitve div.titleBox small{
         color: var(--BB03);
     }
     .archiveContainer ol:last-of-type li ul li *{
@@ -1428,50 +1428,49 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     
     .cityContainer{
-        background-size: cover; background-repeat: no-repeat; height: 100vh; box-sizing: border-box;
-        overflow-y: hidden; overflow-x: hidden;
+        background-size: cover; background-repeat: no-repeat; 
+        height: 100vh; box-sizing: border-box; overflow-y: hidden;
+        position: relative;
     }
-    .cityContainer>div:first-of-type{
-        width: 100%;
-        padding: var(--sp100) 0 var(--sp80); box-sizing: border-box;
-        text-align: center;
+    .cityContainer>div{
+        width: 100%; height: 100vh; position: absolute; transition: top ease-out 1s;
+        display: flex; flex-flow: column;
     }
-    .cityContainer>div:first-of-type:not(.active){
-        color: var(--GS01);
-        text-shadow: 8px 0 13px rgba(0, 0, 0, 0.75);
+    .cityContainer>div.active{
+        background-color: var(--GS01); overflow-y: auto; justify-content: center; top: 0 !important;
     }
-    .cityContainer>div:first-of-type.active{
-        background-color: var(--GS01);
+    .cityContainer div.titleBox{
+        text-align: center; padding: var(--sp100) 0 var(--sp80);
     }
-    .cityContainer>div:first-of-type h2{
+    .cityContainer>div:not(.acitve) div.titleBox{
+        color: var(--GS01); text-shadow: 8px 0 13px rgba(0, 0, 0, 0.75);
+    }
+    .cityContainer div.titleBox h2{
         margin-bottom: var(--sp10);
     }
-    .cityContainer>div:first-of-type small{
+    .cityContainer div.titleBox small{
         display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp30);
     }
-    .cityContainer>div:first-of-type:not(.active) small{
+    .cityContainer>div:not(.acitve) div.titleBox small{
         border-bottom: 1px solid var(--GS01);
     }
-    .cityContainer>div:first-of-type.active small{
+    .cityContainer>div.acitve div.titleBox small{
         border-bottom: 1px solid var(--GN);
     }
-    .cityContainer>div:first-of-type p{
-        width: 52%; min-width: 900px; margin: 0 auto;
+    .cityContainer div.titleBox p{
+        width: 50%; max-width: 900px; margin: 0 auto;
     }
-    
+    .cityContainer div.titleBox+div{
+        position: relative; width: 93.75%; margin: 0 3.125% var(--sp100);
+    }
     .fancyBox{
-        position: relative; float: left; width: 31.25%; padding: 0 0 150px 3.125%; box-sizing: border-box;
+        position: relative; float: left; width: 30%;
     }
     .fancyBox>span{
         display: none;
     }
     .fancyBox div{
         position: relative;
-    }
-    .fancyBox::before{
-        content: ''; display: block; width: 100vw; height: 100%; 
-        background-color: var(--GS01);
-        position: absolute; top: 0; left: 0;
     }
     .fancyBox div img{
         width: 100%;
@@ -1511,11 +1510,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         width: var(--sp60); height: var(--sp60);
     }
 
-    .cityContainer>div:last-of-type{
-        float: left; width: 60.9375%; margin-left: 1.5625%; margin-right: 3.125%; 
-        position: relative; overflow-y: scroll;
+    .cityContainer div.contentBox{
+        position: absolute; overflow-y: scroll; height: 100%; width: 68%; right: 0;
     }
-    .cityContainer>div:last-of-type ul.context li:last-of-type{
+    .cityContainer div.contentBox ul.context li:last-of-type{
         margin-bottom: var(--sp200);
     }
 
