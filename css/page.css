@@ -257,7 +257,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .indexContainer ul li.clicky>div{
         display: flex; flex-flow: column; justify-content: center;
         position: absolute; height: 100%; width: 100%; box-sizing: border-box; 
-        padding: 0 10%;
+        padding: 0 7%;
     }
     .indexContainer ul li.clicky>div *{
         opacity: 0; animation-fill-mode: forwards;
@@ -283,7 +283,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .cityContainer{
-        padding: 130px 7.1428% 140px;
+        padding: 130px 7% 140px;
     }
     .cityContainer>div:first-of-type{
         text-align: center; margin-bottom: var(--sp30);
@@ -371,7 +371,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         display: none;
     }
     .videoContainer div.pop.active{
-        width: 85.714%; min-width: 240px; padding: var(--sp40) var(--sp20) var(--sp20); box-sizing: border-box;
+        width: 85%; min-width: 240px; padding: var(--sp40) var(--sp20) var(--sp20); box-sizing: border-box;
         position: absolute; z-index: 10; left: 50%; top: 50%; transform: translate(-50%,-50%);
         clip-path: circle(0.0% at 50% 50%); transition: clip-path ease-out .6s;
     }
@@ -417,7 +417,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .videoDetailContainer input[type='button']{
         border: none;
         width: 60px; height: 60px; border-radius: 30px; font-size: var(--sp20); 
-        position: absolute; right: 7.142%; z-index: 1000;
+        position: absolute; right: 7%; z-index: 1000;
         padding: 0 0 30px 0; box-sizing: border-box;
         transform: scaleY(1) translateY(-70px);
         transition: background-color .4s .7s, color .4s .7s, transform .4s .7s;
@@ -428,7 +428,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .videoDetailContainer article{
         position: absolute; transition: all ease-out 1s;
-        padding: var(--sp40) 7.142% 150px; box-sizing: border-box;
+        padding: var(--sp40) 7% 150px; box-sizing: border-box;
         width: 100%; min-height: calc(100vh - 150px); 
     }
     .videoDetailContainer article.active{
@@ -459,7 +459,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .themaDetailContainer{
-        padding: 130px 7.1428% 140px; text-align: center;
+        padding: 130px 7% 140px; text-align: center;
     }
     .themaDetailContainer div:first-of-type h2{
         margin-bottom: var(--sp15);
@@ -507,8 +507,8 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .themaContainer{
-        width: 93.75%;
-        padding: 130px 0; margin: 0 3.571%;
+        width: 93%;
+        padding: 130px 0; margin: 0 3.5%;
         box-sizing: border-box; 
     }
     .bx-wrapper{
@@ -550,7 +550,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         transition: background-color ease-out .2s;
     }
     .themaContainer>div.unR40{
-        position: absolute; right: 6.510%;
+        position: absolute; right: 7%;
         width: 100px; text-align: center; margin-top: var(--sp30);
     }
     .themaContainer>div.unR40 span:not([class*='Page']){
@@ -566,9 +566,9 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         line-height: var(--sp20);
     }
     .themaContainer .titleBox{
-        width: 92.788%;
+        width: 93%;
         padding: var(--sp60) 0 0;
-        margin: 0 3.611%;
+        margin: 0 3.5%;
     }
     .themaContainer .titleBox h2{
         margin-bottom: var(--sp20); line-height: 20px;
