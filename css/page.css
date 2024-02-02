@@ -1173,10 +1173,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         content: ''; display: block; clear: both;
     }
 
-    .cityContainer>div.acitve div.titleBox *[class*='R']{
+    .cityContainer>div.active div.titleBox *[class*='R']{
         color: var(--BB02);
     }
-    .cityContainer>div.acitve div.titleBox small{
+    .cityContainer>div.active div.titleBox small{
         color: var(--BB03);
     }
     .archiveContainer ol:last-of-type li ul li *{
@@ -1442,7 +1442,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .cityContainer div.titleBox{
         text-align: center; padding: var(--sp100) 0 var(--sp80);
     }
-    .cityContainer>div:not(.acitve) div.titleBox{
+    .cityContainer>div:not(.active) div.titleBox{
         color: var(--GS01); text-shadow: 8px 0 13px rgba(0, 0, 0, 0.75);
     }
     .cityContainer div.titleBox h2{
@@ -1451,10 +1451,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .cityContainer div.titleBox small{
         display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp30);
     }
-    .cityContainer>div:not(.acitve) div.titleBox small{
+    .cityContainer>div:not(.active) div.titleBox small{
         border-bottom: 1px solid var(--GS01);
     }
-    .cityContainer>div.acitve div.titleBox small{
+    .cityContainer>div.active div.titleBox small{
         border-bottom: 1px solid var(--GN);
     }
     .cityContainer div.titleBox p{
