@@ -858,6 +858,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 
     .videoContainer{
         display: flex; flex-flow: column; justify-content: center;
+        padding: var(--sp200) 0;
         height: 100vh; box-sizing: border-box;
     }
     .videoContainer video{
@@ -1101,9 +1102,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         overflow: hidden;
         display: flex;
         flex-flow: column;
-        justify-content: start; 
+        justify-content: center; 
         box-sizing: border-box;
-        padding-top: 280px; padding-bottom: 150px;
+        /* padding-top: 280px; padding-bottom: 150px; */
+        padding: var(--sp200) 0;
         background-image: url('../images/archive01_tab.png'), url('../images/archive02_tab.png'), url('../images/archive03_tab.png'), url('../images/archive04_tab.png'), url('../images/archive05_tab.png'), url('../images/archive06_tab.png'), url('../images/archive07_tab.png'), url('../images/archive08_tab.png'), url('../images/archive09_tab.png'), url('../images/archive10_tab.png'), url('../images/archive11_tab.png'), url('../images/archive12_tab.png');
         background-repeat: no-repeat;
         background-size: 100vw 100vh;
