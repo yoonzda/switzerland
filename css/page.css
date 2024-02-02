@@ -645,6 +645,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         line-height: var(--sp50);
     }
 
+    section[class*='Container']:not(.indexContainer){
+        padding: var(--sp200) 0; box-sizing: border-box;
+    }
+
     .themaDetailContainer div:last-of-type ul::after{
         content: ''; display: block; clear: both;
     }
@@ -775,7 +779,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .indexContainer ul li.clicky>div{
         display: flex; flex-flow: column; justify-content: center;
         position: absolute; height: 100%; width: 100%; box-sizing: border-box; 
-        padding: 0 10.416%; 
+        padding: 0 10%;
     }
     .indexContainer ul li.clicky>div *{
         opacity: 0; animation-fill-mode: forwards;
@@ -801,7 +805,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .cityContainer{
-        padding: 200px 10.9375%;
+        margin: 0 10%;
     }
     .cityContainer>div:first-of-type{
         text-align: center; margin-bottom: var(--sp60);
@@ -857,9 +861,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .videoContainer{
-        display: flex; flex-flow: column; justify-content: center;
-        padding: var(--sp200) 0;
-        height: 100vh; box-sizing: border-box;
+        display: flex; flex-flow: column; justify-content: center; height: 100vh; 
     }
     .videoContainer video{
         width: 100%; margin-bottom: var(--sp20);
@@ -924,8 +926,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .videoDetailContainer{
-        position: relative; width: 100vw; height: 100vh;
-        background-size: cover;
+        position: relative; width: 100vw; height: 100vh; background-size: cover;
     }
     .videoDetailContainer:not(.active){
         overflow: hidden;
@@ -937,7 +938,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         border: none;
         width: 120px; height: 120px; border-radius: 60px;
         font-size: var(--sp40); z-index: 1000;
-        position: absolute; right: 10.9375%;
+        position: absolute; right: 10%;
         padding: 0 0 60px 0; box-sizing: border-box;
         transform: scaleY(1) translateY(-100%);
         transition-property: background-color, color, transform;
@@ -950,15 +951,17 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .videoDetailContainer article{
         position: absolute; transition: all ease-out 1s;
-        padding: var(--sp60) 10.9375% 150px;
-        min-height: calc(100vh - 150px); box-sizing: border-box;
-    }
-    .videoDetailContainer article:not(.active) ul,
-    .videoDetailContainer article:not(.active) ol{
-        display: none;
+        padding: var(--sp60) 10% 150px;
+        min-height: calc(100vh - 150px); box-sizing: border-box; width: 100%;
     }
     .videoDetailContainer article.active{
         top: 150px !important;
+    }
+    .videoDetailContainer article:not(.active)>div>*:not(div){
+        opacity: 0;
+    }
+    .videoDetailContainer article>div>*:not(div){
+        transition: opacity ease-out 1s;
     }
     .videoDetailContainer article a.fiR24{
         display: inline-block;
@@ -978,7 +981,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .themaDetailContainer{
-        padding: 200px 10.9375%; text-align: center;
+        margin: 0 10%; text-align: center;
     }
     .themaDetailContainer div:first-of-type h2{
         margin-bottom: var(--sp20);
@@ -1026,9 +1029,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .themaContainer{
-        width: 93.75%;
-        padding: var(--sp200) 0; margin: 0 3.125%;
-        box-sizing: border-box; 
+        width: 93.75%; margin: 0 3.125%;
     }
     .bx-wrapper{
         box-sizing: border-box; margin: 0; box-shadow: none; border: none; 
@@ -1097,21 +1098,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .archiveContainer{
-        height: 100vh; 
-        width: 100vw;
-        overflow: hidden;
-        display: flex;
-        flex-flow: column;
-        justify-content: center; 
-        box-sizing: border-box;
-        /* padding-top: 280px; padding-bottom: 150px; */
-        padding: var(--sp200) 0;
+        width: 100vw; height: 100vh; overflow: hidden; position: relative;
+        display: flex; flex-flow: column; justify-content: center;
         background-image: url('../images/archive01_tab.png'), url('../images/archive02_tab.png'), url('../images/archive03_tab.png'), url('../images/archive04_tab.png'), url('../images/archive05_tab.png'), url('../images/archive06_tab.png'), url('../images/archive07_tab.png'), url('../images/archive08_tab.png'), url('../images/archive09_tab.png'), url('../images/archive10_tab.png'), url('../images/archive11_tab.png'), url('../images/archive12_tab.png');
         background-repeat: no-repeat;
         background-size: 100vw 100vh;
 
         transition: background-position ease 1s;
-        position: relative;
     }
     .archiveContainer::after{
         content: ''; display: block; width: 100vw; height: 100vh;
