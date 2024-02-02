@@ -776,10 +776,9 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         padding: 0 10%; box-sizing: border-box; 
     }
     .indexContainer ul li.clicky>div *{
-        opacity: 0; animation-fill-mode: forwards;
+        opacity: 0; animation-fill-mode: forwards; white-space: normal;
     }
     .indexContainer ul li.clicky>div h3{
-        white-space: normal;
         padding-bottom: var(--sp20);
         animation-delay: .5s; animation-name: type01Title; animation-duration: .8s;
     }
@@ -789,7 +788,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         animation-delay: 1s; animation-name: type01Line; animation-duration: .5s;
     }
     .indexContainer ul li.clicky>div div p{
-        margin-bottom: var(--sp30); white-space: normal;
+        margin-bottom: var(--sp30);
         padding-top: var(--sp30); text-align: left;
         animation-delay: 1.5s; animation-name: textDown; animation-duration: .8s;
     }
