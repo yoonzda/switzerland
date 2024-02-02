@@ -1434,7 +1434,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         display: flex; flex-flow: column;
     }
     .cityContainer>div.active{
-        background-color: var(--GS01); overflow-y: auto; justify-content: center; top: 0 !important;
+        background-color: var(--GS01); overflow-y: auto; justify-content: center; top: 0 !important; box-sizing: border-box;
     }
     .cityContainer div.titleBox{
         text-align: center; padding: var(--sp100) 0 var(--sp80);
@@ -1455,7 +1455,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         border-bottom: 1px solid var(--GN);
     }
     .cityContainer div.titleBox p{
-        width: 50%; max-width: 900px; margin: 0 auto;
+        width: 60%; max-width: 1000px; margin: 0 auto;
     }
     .cityContainer div.titleBox+div{
         position: relative; width: 93.75%; margin: 0 3.125% var(--sp100);
