@@ -106,7 +106,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 @keyframes type02Text{0%{right: 5%;}100%{opacity: 1;}}
 
 @keyframes type03TitleTop{10%{clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); transform:translateY(100%);}95%{transform:translateY(0%);}100%{opacity: 1; clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}}
-@keyframes type03TitleBottom{10%{clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); top: calc(27.777vh + 50px);}100%{opacity: 1; clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); top: calc(27.777vh + 190px);}}
+@keyframes type03TitleBottom{10%{clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); top: calc(28vh + 50px);}100%{opacity: 1; clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); top: calc(28vh + 190px);}}
 
 @keyframes textDown{10%{clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); transform:translateY(-5%);}95%{transform:translateY(0);}100%{opacity: 1; clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}}
 @keyframes lastAction{100%{opacity: 1;}}
@@ -1320,7 +1320,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .indexContainer ul li{
         width: 10vw; height: 24vw; 
-        display: inline-block; position: absolute; top: 30vh; left: 45vw; 
+        display: inline-block; position: absolute; top: 30vh; left: 45vw;
         background-size: cover; background-repeat: no-repeat; background-position: center; box-sizing: border-box;
         transition: all ease-out .4s;
     }
@@ -1346,7 +1346,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .indexContainer ul li.clicky>div{
         display: block;
         position: absolute; width: 100%; height: 100%; 
-        padding: 27.777vh 10%; box-sizing: border-box;
+        padding: 28vh 10%; box-sizing: border-box;
     }
     .indexContainer ul li:not(.type01)>div h3{
         padding-bottom: var(--sp20); margin-bottom: var(--sp30);
@@ -1395,7 +1395,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         animation-delay: .5s; animation-name: type02Line; animation-duration: 1.5s;
     }
     .indexContainer ul li.type02>div div{
-        right: 10.416%;
+        right: 10%;
         animation-delay: 2s; animation-name: type02Text; animation-duration: .5s;
     }
     .indexContainer ul li.type02>div>input[type='button'],
@@ -1412,7 +1412,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         animation-name: type03TitleTop;
     }
     .indexContainer ul li.active.clicky.type03>span{
-        display: block; position: absolute; left: 10.416%; transform: scaleY(-1); color: rgba(255, 255, 255, 0.5);
+        display: block; position: absolute; left: 10%; transform: scaleY(-1); color: rgba(255, 255, 255, 0.5);
         animation-name: type03TitleBottom;
     }
     .indexContainer ul li.type03>div div{
