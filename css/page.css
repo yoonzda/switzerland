@@ -1352,7 +1352,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         padding-bottom: var(--sp20); margin-bottom: var(--sp30);
     }
     .indexContainer ul li:not(.type03)>div div{
-        width: 500px;
+        max-width: 500px;
     }
     .indexContainer ul li>div div{
         position: absolute; text-align: right;
