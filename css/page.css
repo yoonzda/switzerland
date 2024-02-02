@@ -8,7 +8,7 @@ section[class*='Detail'] h2{
     color: var(--BB01);
 }
 .indexContainer>div h2,
-.themaDetailContainer div p,
+.themaDetailContainer p,
 .themaContainer>div.unR40,
 .themaContainer>div.unR40 span a,
 section:not(.cityContainer) p.maR20,
