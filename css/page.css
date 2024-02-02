@@ -1343,15 +1343,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .indexContainer ul li.active.clicky::after{
         background-color: rgba(0, 0, 0, 0.5);
     }
-    .indexContainer ul li>*:not(div){
+    .indexContainer ul li>*{
         display: none;
     }
-    .indexContainer ul li:not(.active.clicky)>div{
-        display: none;
-    }
-    .indexContainer ul li>div{
-        position: absolute; width: 100%; height: 100%; box-sizing: border-box;
-        padding: 27.777vh 10.416%;
+    .indexContainer ul li.clicky>div{
+        display: block;
+        position: absolute; width: 100%; height: 100%; 
+        padding: 27.777vh 10%; box-sizing: border-box;
     }
     .indexContainer ul li:not(.type01)>div h3{
         padding-bottom: var(--sp20); margin-bottom: var(--sp30);
