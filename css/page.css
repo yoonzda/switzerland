@@ -251,16 +251,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         background-color: rgba(0, 0, 0, 0.5);
     }
 
-    .indexContainer ul li>*:not(div){
-        display: none;
-    }
-    .indexContainer ul li:not(.active.clicky)>div{
+    .indexContainer ul li>*{
         display: none;
     }
     .indexContainer ul li.clicky>div{
         display: flex; flex-flow: column; justify-content: center;
         position: absolute; height: 100%; width: 100%; box-sizing: border-box; 
-        padding: 0 10.416%; 
+        padding: 0 10%;
     }
     .indexContainer ul li.clicky>div *{
         opacity: 0; animation-fill-mode: forwards;
