@@ -666,7 +666,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         margin: 0 auto var(--sp30);
     }
     section.archiveContainer ol.fiR30{
-        top: 200px;
+        top: var(--sp200);
     }
     ol.fiR30{
         max-width: 660px;
@@ -680,7 +680,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         display: none;
     }
     section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
-        content: ''; display: block; width: 50px; height: 50px;
+        content: ''; display: block; width: var(--sp50); height: var(--sp50);
         position: absolute; left: 18px; bottom: 4px;
         border-width: 1px; border-style: solid;
         border-radius: 25px;
@@ -747,7 +747,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .indexContainer ul li{
         display: inline-block; position: absolute; top: 30vh; left: 45vw;
-        width: 20vw; height: 48.020vw;
+        width: 20vw; height: 48vw;
         background-size: cover; background-repeat: no-repeat; background-position: center; box-sizing: border-box;
         transition: all ease-out .4s;
     }
@@ -763,23 +763,17 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         content: ''; display: block; width: 100%; height: 100%;
         transition: all ease-out .3s;
     }
-    .indexContainer ul li.active.clicky{
-        z-index: 100; left: 0 !important; top: 0 !important; width: 100%; height: 100%; position: fixed; cursor: auto;
-    }
     .indexContainer ul li.active.clicky::after{
         background-color: rgba(0, 0, 0, 0.5);
     }
 
-    .indexContainer ul li>*:not(div){
-        display: none;
-    }
-    .indexContainer ul li:not(.active.clicky)>div{
+    .indexContainer ul li>*{
         display: none;
     }
     .indexContainer ul li.clicky>div{
         display: flex; flex-flow: column; justify-content: center;
-        position: absolute; height: 100%; width: 100%; box-sizing: border-box; 
-        padding: 0 10%;
+        position: absolute; height: 100%; width: 100%; 
+        padding: 0 10%; box-sizing: border-box; 
     }
     .indexContainer ul li.clicky>div *{
         opacity: 0; animation-fill-mode: forwards;
@@ -822,8 +816,8 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         position: relative; margin-bottom: var(--sp60); 
     }
     .fancyBox div input[type='button']{
-        position: absolute; top: 0; right: 0; z-index: 100; padding: 15px;
-        font-size: 50px; background-color: transparent; border: none;
+        position: absolute; top: 0; right: 0; z-index: 100; padding: var(--sp15);
+        font-size: var(--sp50); background-color: transparent; border: none;
     }
     .fancybox__toolbar {
         --f-button-width: var(--sp60);
@@ -864,35 +858,34 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         display: flex; flex-flow: column; justify-content: center; height: 100vh; 
     }
     .videoContainer video{
-        width: 100%; margin-bottom: var(--sp20);
-        order: 1;
+        width: 100%; margin-bottom: var(--sp20); order: 1;
     }
     .videoContainer h2{
         text-align: center; margin-bottom: var(--sp50);
     }
     .videoContainer div:first-of-type{
-        order: 1; z-index: 1;
-        text-align: center;
+        order: 1; z-index: 1; text-align: center;
     }
     .videoContainer div:first-of-type input[type='button']{
         font-size: var(--sp50);
     }
     .videoContainer>span{
-        display: block; width: 100px; height: 100px; text-indent: -9999px;
+        display: block; width: var(--sp100); height: var(--sp100); text-indent: -9999px;
         position: absolute; left: 50%; transform: translate(-50%,-50%); z-index: 1000;
     }
     .videoContainer>span::after{
-        content: ''; display: block; width: 100px; height: 100px; 
-        border: 6px solid var(--GS01); border-radius: 50px; box-sizing: border-box;
+        content: ''; display: block; width: var(--sp100); height: var(--sp100); 
+        border: 6px solid var(--GS01); box-sizing: border-box;
         position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
         animation: circleFocus 1.5s linear infinite;
+        border-radius: 50%; 
     }
     .videoContainer>span.active::after,
     .videoContainer div.pop:not(.active){
         display: none;
     }
     .videoContainer div.pop.active{
-        width: 60.546%; padding: var(--sp80) var(--sp50) var(--sp50); box-sizing: border-box;
+        width: 60%; padding: var(--sp80) var(--sp50) var(--sp50); box-sizing: border-box;
         position: absolute; z-index: 1; left: 50%; transform: translate(-50%,-50%); transition: clip-path ease-out .6s;
     }
     .videoContainer div.pop.active:not(.clicky){
@@ -936,7 +929,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .videoDetailContainer input[type='button']{
         border: none;
-        width: 120px; height: 120px; border-radius: 60px;
+        width: 120px; height: 120px; 
         font-size: var(--sp40); z-index: 1000;
         position: absolute; right: 10%;
         padding: 0 0 60px 0; box-sizing: border-box;
@@ -945,6 +938,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         transition-duration: .4s;
         transition-delay: .7s;
         clip-path: inset(0 0 50% 0);
+        border-radius: 50%;
     }
     .videoDetailContainer input[type='button'].clicky{
         position: fixed; transform: translateY(-100%) scaleY(-1);
@@ -1012,12 +1006,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         margin-bottom: var(--sp30);
     }
     .themaDetailContainer div:last-of-type ul{
-        padding: 0 5.833%;
+        padding: 0 6%;
     }
     .themaDetailContainer div:last-of-type ul li{
-        position: relative; border-radius: 50%;
+        position: relative; 
         float: left; display: block; width: 30%; padding-top: 30%;
         background-size: cover; background-repeat: no-repeat;
+        border-radius: 50%;
     }
     .themaDetailContainer div:last-of-type ul li:not(:first-of-type){
         margin-left: 5%;
@@ -1067,8 +1062,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         transition: background-color ease-out .2s;
     }
     .themaContainer>div.unR40{
-        position: absolute; right: 6.510%;
-        width: 220px; text-align: center; margin-top: 50px;
+        position: absolute; right: 6.736%;
+        width: var(--sp200);
+        /* width: 220px;  */
+        text-align: center; margin-top: 50px;
     }
     .themaContainer>div.unR40 span:not([class*='Page']){
         position: absolute; font-size: 40px;
