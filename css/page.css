@@ -38,7 +38,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24,
     color: var(--GS01);
 }
 .fancyBox div input[type='button'],
-.cityContainer>div:last-of-type .pageControl a,
+.cityContainer .pageControl a,
 .videoContainer div.pop.active input[type='button'],
 .themaDetailContainer div ol li:not(.active),
 .themaDetailContainer div ul li a{
@@ -132,7 +132,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         line-height: var(--sp40);
     }
 
-    .cityContainer>div:last-of-type .pageControl::after{
+    .cityContainer .pageControl::after{
         content: ''; display: block; clear: both;
     }
     .videoContainer div:first-of-type::after{
@@ -285,10 +285,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .cityContainer{
         padding: 130px 7% 140px;
     }
-    .cityContainer>div:first-of-type{
+    .cityContainer div.titleBox{
         text-align: center; margin-bottom: var(--sp30);
     }
-    .cityContainer>div:first-of-type small{
+    .cityContainer div.titleBox small{
         display: inline-block; padding: 0 5px 5px;
         border-bottom: 1px solid var(--GN); margin-bottom: var(--sp15);
     }
@@ -332,9 +332,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .fancybox__toolbar__column.is-right .f-button svg{
         width: var(--sp60); height: var(--sp60);
-    }
-    .cityContainer>div:nth-of-type(2) img{
-        width: 100%;
     }
     
     .videoContainer{
@@ -797,13 +794,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .cityContainer{
         margin: 0 10%;
     }
-    .cityContainer>div:first-of-type{
+    .cityContainer div.titleBox{
         text-align: center; margin-bottom: var(--sp60);
     }
-    .cityContainer>div:first-of-type h2{
+    .cityContainer div.titleBox h2{
         margin-bottom: var(--sp10);
     }
-    .cityContainer>div:first-of-type small{
+    .cityContainer div.titleBox small{
         display: inline-block; padding: 0 5px 5px; 
         border-bottom: 1px solid var(--GN); margin-bottom: var(--sp20);
     }
@@ -846,7 +843,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .fancybox__toolbar__column.is-right .f-button svg{
         width: var(--sp60); height: var(--sp60);
     }
-    .cityContainer>div:nth-of-type(2) img{
+    .fancybox img{
         width: 100%;
     }
 
@@ -1897,10 +1894,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 }
 
 @media screen and (max-width: 1279px){
-    .cityContainer>div:first-of-type *[class*='R']{
+    .cityContainer div.titleBox *[class*='R']{
         color: var(--BB02);
     }
-    .cityContainer>div:first-of-type small{
+    .cityContainer div.titleBox small{
         color: var(--BB03);
     }
     .archiveContainer ol:last-of-type li ul li a{
