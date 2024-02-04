@@ -24,12 +24,9 @@ section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24,
 .themaDetailContainer div ul li:hover a{
     color: var(--BB04);
 }
-header.modeWhite nav ul li a,
-footer.modeWhite p,
-div.preinfo,
-.mobLandscape,
+div.mui,
+.modeWhite *,
 ol.fiR30 li.active,
-section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24,
 .indexContainer ul li>div *,
 .videoContainer h2,
 .videoContainer div:first-of-type input[type='button'],
