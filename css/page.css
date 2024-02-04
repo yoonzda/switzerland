@@ -1148,12 +1148,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         display: none !important; 
     }
 
-    .cityContainer::after{
-        content: ''; display: block; clear: both;
-    }
-    .cityContainer>div:last-of-type .pageControl::after{
-        content: ''; display: block; clear: both;
-    }
     .videoContainer ol::after{
         content: ''; display: block; clear: both;
     }
@@ -1791,7 +1785,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         display: inline; 
         position: absolute;
         transition-property: right, opacity, color; transition-timing-function: ease-out; transition-duration: .5s;
-        cursor: pointer;
     }
     .archiveContainer ol.fiR30 li:not(:first-of-type){
         margin-left: var(--sp30);
