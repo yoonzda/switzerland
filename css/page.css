@@ -113,6 +113,23 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 @keyframes circleMagneticTop{0%{bottom: 30px;}100%{bottom: 55px;}}
 @keyframes circleMagneticBottom{0%{bottom: 0;}100%{bottom: -25px;}}
 
+section:not([class*='Detail'],[class^='archive']) a.fiR24{
+    display: inline-block; line-height: var(--sp60); position: relative;
+}
+section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24::before{
+    border-color: var(--GS07);
+}
+section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
+    border-color: var(--GS01);
+}
+
+ul.context li{
+    display: block;
+}
+ul.context li p{
+    text-align: justify;
+}
+
 .indexContainer ul li.clicky>div>input[type='button']{
     background-image: url('../images/icon_left.svg');
 }
@@ -127,25 +144,9 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
     background-repeat: no-repeat; background-position: right center; background-size: contain;
 }
 
-ul.context li{
-    display: block;
-}
-ul.context li p{
-    text-align: justify;
-}
 .fancybox__container{
     --fancybox-bg: rgba(0, 0, 0, 0.7);
     --fancybox-color: var(--GS01);
-}
-
-section:not([class*='Detail'],[class^='archive']) a.fiR24{
-    display: inline-block; line-height: var(--sp60); position: relative;
-}
-section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24::before{
-    border-color: var(--GS07);
-}
-section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
-    border-color: var(--GS01);
 }
 
 @media screen and (max-width: 767px){
