@@ -182,8 +182,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         background-image: url('../images/icon_right_green.svg');
     }
     .indexContainer ul li>div>input[type='button'],
-    .videoDetailContainer article div>a.fiR24,
-    .videoDetailContainer article ol li a.fiR24{
+    .videoDetailContainer a.fiR24{
         display: inline-block; padding-right: var(--sp20); margin-bottom: var(--sp10);
         background-repeat: no-repeat; background-position: right center; background-size: contain;
     }
@@ -707,8 +706,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         background-image: url('../images/icon_right_green.svg');
     }
     .indexContainer ul li>div>input[type='button'],
-    .videoDetailContainer article div>a.fiR24,
-    .videoDetailContainer article ol li a.fiR24{
+    .videoDetailContainer a.fiR24{
         display: inline-block; padding-right: var(--sp30); margin-bottom: var(--sp20);
         background-repeat: no-repeat; background-position: right center; background-size: contain;
     }
@@ -1176,10 +1174,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         color: var(--GS04);
     }
     .archiveContainer ol:last-of-type li ul li:hover a{
-        color: var(--BB04);
-    }
-    .archiveContainer ol:last-of-type li ul li:hover a{
-        background-color: var(--GS01);
+        color: var(--BB04); background-color: var(--GS01);
     }
     
     ol.fiR30 li:not(.active){
@@ -1212,11 +1207,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     section:not([class*='Detail'],[class^='archive']) a.fiR24::before,
     section:not([class*='Detail'],[class^='archive']) a.fiR24::after{
         content: ''; display: block; width: 60px; height: 30px; position: absolute; right: 20px; border-style: solid;
-    }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover::before,
-    section:not([class*='Detail'],[class^='archive']) a.fiR24:hover::after{
-        animation-direction: alternate; animation-iteration-count: 2;
-        animation-timing-function: cubic-bezier(.17,.67,.58,.91); animation-name: circleMagneticBottom; animation-duration: .3s;
+        animation-timing-function: cubic-bezier(.17,.67,.58,.91); animation-duration: .3s; animation-direction: alternate; animation-iteration-count: 2;
     }
     section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
         bottom: 30px; border-radius: 30px 30px 0 0; border-width: 1px 1px 0;
@@ -1253,13 +1244,11 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .indexContainer ul li>div>input[type='button']{
         display: block;
     }
-    .videoDetailContainer article div a.fiR24,
-    .videoDetailContainer article ol li a.fiR24{
+    .videoDetailContainer a.fiR24{
         display: inline-block;
     }
     .indexContainer ul li>div>input[type='button'],
-    .videoDetailContainer article div a.fiR24,
-    .videoDetailContainer article ol li a.fiR24{
+    .videoDetailContainer a.fiR24{
         padding-right: var(--sp30); margin-bottom: var(--sp20); transition: padding ease-out 0.2s;
         background-repeat: no-repeat; background-position: right center; background-size: contain;
     }
