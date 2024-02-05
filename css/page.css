@@ -113,6 +113,20 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 @keyframes circleMagneticTop{0%{bottom: 30px;}100%{bottom: 55px;}}
 @keyframes circleMagneticBottom{0%{bottom: 0;}100%{bottom: -25px;}}
 
+.indexContainer ul li.clicky>div>input[type='button']{
+    background-image: url('../images/icon_left.svg');
+}
+.videoDetailContainer article div>a.fiR24{
+    background-image: url('../images/icon_left_green.svg');
+}
+.videoDetailContainer article ol li a.fiR24{
+    background-image: url('../images/icon_right_green.svg');
+}
+.indexContainer ul li>div>input[type='button'],
+.videoDetailContainer a.fiR24{
+    background-repeat: no-repeat; background-position: right center; background-size: contain;
+}
+
 ul.context li{
     display: block;
 }
@@ -171,18 +185,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 
     .indexContainer ul li.clicky>div>input[type='button']{ 
         max-width: 90px;
-        background-image: url('../images/icon_left.svg');
-    }
-    .videoDetailContainer article div>a.fiR24{
-        background-image: url('../images/icon_left_green.svg');
-    }
-    .videoDetailContainer article ol li a.fiR24{
-        background-image: url('../images/icon_right_green.svg');
     }
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
-        display: inline-block; padding-right: var(--sp20); margin-bottom: var(--sp10);
-        background-repeat: no-repeat; background-position: right center; background-size: contain;
+        padding-right: var(--sp20); margin-bottom: var(--sp10);
     }
 
     .pageControl{
@@ -286,7 +292,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .cityContainer{
-        /* padding: 130px 7% 140px; */
         margin: 0 7%; 
     }
     .cityContainer div.titleBox{
@@ -404,9 +409,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 
     .videoDetailContainer{
         position: relative; width: 100vw; height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top center;
+        background-size: cover; background-repeat: no-repeat; background-position: top center;
     }
     .videoDetailContainer:not(.active){
         overflow: hidden;
@@ -578,7 +581,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .archiveContainer{
         width: 100vw; height: 100vh; overflow: hidden;
         display: flex; flex-flow: column; justify-content: center;
-        /* background-image: url('../images/archive01_tab.png'), url('../images/archive02_tab.png'), url('../images/archive03_tab.png'), url('../images/archive04_tab.png'), url('../images/archive05_tab.png'), url('../images/archive06_tab.png'), url('../images/archive07_tab.png'), url('../images/archive08_tab.png'), url('../images/archive09_tab.png'), url('../images/archive10_tab.png'), url('../images/archive11_tab.png'), url('../images/archive12_tab.png'); */
         background-repeat: no-repeat; background-size: 100vw 100vh;
         transition: background-position ease 1s;
         position: relative;
@@ -685,18 +687,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 
     .indexContainer ul li.clicky>div>input[type='button']{ 
         max-width: 120px;
-        background-image: url('../images/icon_left.svg');
-    }
-    .videoDetailContainer article div>a.fiR24{
-        background-image: url('../images/icon_left_green.svg');
-    }
-    .videoDetailContainer article ol li a.fiR24{
-        background-image: url('../images/icon_right_green.svg');
-    }
-    .indexContainer ul li>div>input[type='button'],
-    .videoDetailContainer a.fiR24{
-        display: inline-block; padding-right: var(--sp30); margin-bottom: var(--sp20);
-        background-repeat: no-repeat; background-position: right center; background-size: contain;
     }
 
     .pageControl{
@@ -1078,10 +1068,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .archiveContainer{
         width: 100vw; height: 100vh; overflow: hidden; position: relative;
         display: flex; flex-flow: column; justify-content: center;
-        /* background-image: url('../images/archive01_tab.png'), url('../images/archive02_tab.png'), url('../images/archive03_tab.png'), url('../images/archive04_tab.png'), url('../images/archive05_tab.png'), url('../images/archive06_tab.png'), url('../images/archive07_tab.png'), url('../images/archive08_tab.png'), url('../images/archive09_tab.png'), url('../images/archive10_tab.png'), url('../images/archive11_tab.png'), url('../images/archive12_tab.png'); */
-        background-repeat: no-repeat;
-        background-size: 100vw 100vh;
-
+        background-repeat: no-repeat; background-size: 100vw 100vh;
         transition: background-position ease 1s;
     }
     .archiveContainer::after{
@@ -1221,15 +1208,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .indexContainer ul li>div>input[type='button']{
-        background-image: url('../images/icon_left.svg');
-    }
-    .videoDetailContainer article div a.fiR24{
-        background-image: url('../images/icon_left_green.svg');
-    }
-    .videoDetailContainer article ol li a.fiR24{
-        background-image: url('../images/icon_right_green.svg');
-    }
-    .indexContainer ul li>div>input[type='button']{
         display: block;
     }
     .videoDetailContainer a.fiR24{
@@ -1237,8 +1215,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
-        padding-right: var(--sp30); margin-bottom: var(--sp20); transition: padding ease-out 0.2s;
-        background-repeat: no-repeat; background-position: right center; background-size: contain;
+        transition: padding ease-out 0.2s;
     }
     .videoDetailContainer article ol li a.fiR24:hover{
         padding-right: var(--sp40); 
@@ -1854,6 +1831,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 }
 
 @media screen and (max-width: 1279px){
+    section.indexContainer>div>span{
+        display: none;
+    }
+
     .cityContainer div.titleBox *[class*='R']{
         color: var(--BB02);
     }
@@ -1886,8 +1867,9 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         color: var(--GS04);
     }
 
-    section.indexContainer>div>span{
-        display: none;
+    .indexContainer ul li>div>input[type='button'],
+    .videoDetailContainer a.fiR24{
+        display: inline-block; 
     }
 
     @keyframes drift{0%{transform: rotate(0deg) scale(0,0); opacity: 0.8;}40%{transform: rotate(180deg) scale(0.5,0.5); opacity: 0.4;}100%{transform: rotate(360deg) scale(1,1); opacity: 0;}}
@@ -1933,4 +1915,11 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .wrapWave span:nth-of-type(5){left: 40%; animation-delay: 3s;}
     .wrapWave span:nth-of-type(6){left: 20%; animation-delay: 3.2s;}
     .wrapWave span:nth-of-type(7){left: -2%; animation-delay: 3.5s;}
+}
+
+@media screen and (min-width: 768px){
+    .indexContainer ul li>div>input[type='button'],
+    .videoDetailContainer a.fiR24{
+        padding-right: var(--sp30); margin-bottom: var(--sp20);
+    }
 }
