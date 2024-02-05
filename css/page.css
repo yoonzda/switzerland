@@ -134,7 +134,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     div.preinfo strong{
         line-height: var(--sp40);
     }
-    
+
     .themaContainer .titleBox::after{
         content: ''; display: block; clear: both; 
     }
@@ -335,7 +335,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     
     .videoContainer{
         display: flex; flex-flow: column; justify-content: center;
-        height: 100vh; padding: 150px 0; box-sizing: border-box;
+        height: 100vh; padding: 130px 0; box-sizing: border-box;
     }
     .videoContainer video{
         width: 100%;
