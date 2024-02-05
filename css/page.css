@@ -1282,6 +1282,9 @@ ul.context li p{
     .indexContainer ul li.clicky>div{
         display: block; padding-top: 28vh; padding-bottom: 28vh;
     }
+    .indexContainer ul li.clicky>div *{
+        white-space: normal;
+    }
     .indexContainer ul li:not(.type01)>div h3{
         padding-bottom: var(--sp20); margin-bottom: var(--sp30);
     }
@@ -1292,15 +1295,14 @@ ul.context li p{
         position: absolute; text-align: right;
     }
     .indexContainer ul li>div div p{
-        white-space: normal; margin-bottom: var(--sp30);
+        margin-bottom: var(--sp30);
     }
 
     .indexContainer ul li>div *:not(p,div),
     .indexContainer ul li.active.clicky.type03>span,
     .indexContainer ul li:not(.type03)>div div,
     .indexContainer ul li:not(.type02)>div div p{
-        opacity: 0; 
-        animation-fill-mode: forwards;
+        opacity: 0; animation-fill-mode: forwards;
     }
     .indexContainer ul li>div>input[type='button'],
     .indexContainer ul li>div div a{
