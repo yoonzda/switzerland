@@ -274,6 +274,23 @@ ul.context li p{
     .indexContainer ul li.clicky>div{
         display: flex; flex-flow: column; justify-content: center;
     }
+    .indexContainer ul li.clicky>div *{
+        opacity: 0; animation-fill-mode: forwards; white-space: normal;
+    }
+    .indexContainer ul li.clicky>div h3{
+        animation-delay: .5s; animation-name: type01Title; animation-duration: .8s;
+    }
+    .indexContainer ul li.clicky>div div{
+        position: relative; text-align: right; animation-delay: 1s; animation-name: type01Line; animation-duration: .5s;
+        border-style: solid; border-color: rgba(253, 255, 193, 0.5);
+    }
+    .indexContainer ul li.clicky>div div p{
+        animation-delay: 1.5s; animation-name: textDown; animation-duration: .8s; text-align: left;
+    }
+    .indexContainer ul li.clicky>div>input[type='button'],
+    .indexContainer ul li.clicky>div div a{
+        animation-delay: 2.2s; animation-name: lastAction; animation-duration: 1s;
+    }
 
     @keyframes drift{0%{transform: rotate(0deg) scale(0,0); opacity: 0.8;}40%{transform: rotate(180deg) scale(0.5,0.5); opacity: 0.4;}100%{transform: rotate(360deg) scale(1,1); opacity: 0;}}
     @keyframes movehori{100%{left: 80%;}}
@@ -390,27 +407,14 @@ ul.context li p{
     .indexContainer ul li.clicky>div{
         padding: 0 7%;
     }
-    .indexContainer ul li.clicky>div *{
-        opacity: 0; animation-fill-mode: forwards;
-    }
     .indexContainer ul li.clicky>div h3{
-        white-space: normal;
         padding-bottom: var(--sp15);
-        animation-delay: .5s; animation-name: type01Title; animation-duration: .8s;
     }
     .indexContainer ul li.clicky>div div{
-        position: relative; text-align: right;
-        border-top: 3px solid rgba(253, 255, 193, 0.5);
-        animation-delay: 1s; animation-name: type01Line; animation-duration: .5s;
+        border-width: 3px 0 0;
     }
     .indexContainer ul li.clicky>div div p{
-        margin-bottom: var(--sp20); white-space: normal;
-        padding-top: var(--sp20); text-align: left;
-        animation-delay: 1.5s; animation-name: textDown; animation-duration: .8s;
-    }
-    .indexContainer ul li.clicky>div>input[type='button'],
-    .indexContainer ul li.clicky>div div a{
-        animation-delay: 2.2s; animation-name: lastAction; animation-duration: 1s;
+        margin-bottom: var(--sp20); padding-top: var(--sp20);
     }
 
     .cityContainer{
@@ -802,29 +806,14 @@ ul.context li p{
     .indexContainer ul li.active::before{
         width: 6vw; left: 7vw;
     }
-    .indexContainer ul li.clicky>div *{
-        white-space: normal;
-        
-        
-        opacity: 0; animation-fill-mode: forwards; 
-    }
     .indexContainer ul li.clicky>div h3{
         padding-bottom: var(--sp20);
-        animation-delay: .5s; animation-name: type01Title; animation-duration: .8s;
     }
     .indexContainer ul li.clicky>div div{
-        position: relative; text-align: right;
-        border-top: 5px solid rgba(253, 255, 193, 0.5);
-        animation-delay: 1s; animation-name: type01Line; animation-duration: .5s;
+        border-width: 5px 0 0;
     }
     .indexContainer ul li.clicky>div div p{
-        margin-bottom: var(--sp30);
-        padding-top: var(--sp30); text-align: left;
-        animation-delay: 1.5s; animation-name: textDown; animation-duration: .8s;
-    }
-    .indexContainer ul li.clicky>div>input[type='button'],
-    .indexContainer ul li.clicky>div div a{
-        animation-delay: 2.2s; animation-name: lastAction; animation-duration: 1s;
+        margin-bottom: var(--sp30); padding-top: var(--sp30);
     }
 
     .cityContainer{
