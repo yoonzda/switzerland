@@ -134,13 +134,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     div.preinfo strong{
         line-height: var(--sp40);
     }
-
-    .cityContainer .pageControl::after{
-        content: ''; display: block; clear: both;
-    }
-    .videoContainer div:first-of-type::after{
-        content: ''; display: block; clear: both;
-    }
+    
     .themaContainer .titleBox::after{
         content: ''; display: block; clear: both; 
     }
@@ -646,12 +640,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .themaDetailContainer div:last-of-type ul::after{
-        content: ''; display: block; clear: both;
-    }
-    .pageControl::after{
-        content: ''; display: block; clear: both;
-    }
-    .videoContainer div:first-of-type::after{
         content: ''; display: block; clear: both;
     }
     .themaContainer .titleBox::after{
