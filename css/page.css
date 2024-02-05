@@ -137,6 +137,10 @@ ul.context li p{
     --fancybox-bg: rgba(0, 0, 0, 0.7);
     --fancybox-color: var(--GS01);
 }
+
+section:not([class*='Detail'],[class^='archive']) a.fiR24{
+    display: inline-block; line-height: var(--sp60); position: relative;
+}
 section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24::before{
     border-color: var(--GS07);
 }
@@ -157,17 +161,8 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         content: ''; display: block; clear: both; 
     }
 
-    section:not([class*='Detail'],[class^='archive']) a.fiR24{
-        display: inline-block; line-height: 60px; transition: padding-right cubic-bezier(.63,.04,1,.73) .6s;
-        position: relative;
-    }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24 span{
-        display: none;
-    }
     section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
-        content: ''; display: block; width: 36px; height: 36px;
-        position: absolute; left: 12px; bottom: 11px;
-        border-width: 1px; border-style: solid; border-radius: 18px;
+        width: 36px; height: 36px; left: 12px; bottom: 11px; border-radius: 18px;
     }
 
     ul.context{
@@ -658,18 +653,8 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         max-width: 660px;
     }
 
-    section:not([class*='Detail'],[class^='archive']) a.fiR24{
-        display: inline-block; line-height: 60px; transition: padding-right cubic-bezier(.63,.04,1,.73) .6s;
-        position: relative;
-    }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24 span{
-        display: none;
-    }
     section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
-        content: ''; display: block; width: var(--sp50); height: var(--sp50);
-        position: absolute; left: 18px; bottom: 4px;
-        border-width: 1px; border-style: solid;
-        border-radius: 25px;
+        width: var(--sp50); height: var(--sp50); left: 18px; bottom: 4px; border-radius: 25px;
     }
 
     ul.context{
@@ -1160,14 +1145,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     section:not([class*='Detail'],[class^='archive']) a.fiR24{
-        display: inline-block; line-height: 60px; transition: padding-right cubic-bezier(.63,.04,1,.73) .6s;
-        position: relative; 
+        transition: padding-right cubic-bezier(.63,.04,1,.73) .6s;
     }
     section:not([class*='Detail'],[class^='archive']) a.fiR24:hover{
         padding-right: 100px;
     }
     section:not([class*='Detail'],[class^='archive']) a.fiR24 span{
-        display: inline-block; line-height: 60px; vertical-align: bottom;
+        display: inline-block; line-height: var(--sp60); vertical-align: bottom;
         position: absolute; right: 38px; opacity: 0; transition-property: opacity; transition-timing-function: ease-out; transition-duration: .2s;
     }
     section:not([class*='Detail'],[class^='archive']) a.fiR24:hover span{
@@ -1865,6 +1849,13 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .videoContainer ol.fiR30 li:not(.active){
         color: var(--GS04);
+    }
+
+    section:not([class*='Detail'],[class^='archive']) a.fiR24 span{
+        display: none;
+    }
+    section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
+        content: ''; display: block; position: absolute; border-width: 1px; border-style: solid;
     }
 
     .indexContainer ul li>div>input[type='button'],
