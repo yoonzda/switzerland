@@ -1265,9 +1265,6 @@ ul.context li p{
     .indexContainer ul li.clicky>div{
         display: block; padding-top: 28vh; padding-bottom: 28vh;
     }
-    .indexContainer ul li.clicky>div *{
-        white-space: normal;
-    }
     .indexContainer ul li:not(.type01)>div h3{
         padding-bottom: var(--sp20); margin-bottom: var(--sp30);
     }
@@ -1278,7 +1275,7 @@ ul.context li p{
         position: absolute; text-align: right;
     }
     .indexContainer ul li>div div p{
-        margin-bottom: var(--sp30);
+        white-space: normal; margin-bottom: var(--sp30);
     }
 
     .indexContainer ul li>div *:not(p,div),
