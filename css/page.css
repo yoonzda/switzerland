@@ -144,6 +144,19 @@ ul.context li p{
     background-repeat: no-repeat; background-position: right center; background-size: contain;
 }
 
+.pageControl{
+    position: relative; height: var(--sp50);
+}
+.pageControl a{
+    position: absolute; background-repeat: no-repeat; line-height: var(--sp50);
+}
+.pageControl a:first-of-type{
+    left: 0; background-image: url('../images/icon_leftDouble.svg'); background-position: left center;
+}
+.pageControl a:last-of-type{
+    right: 0; background-image: url('../images/icon_rightDouble.svg'); background-position: right center;
+}
+
 .fancybox__container{
     --fancybox-bg: rgba(0, 0, 0, 0.7);
     --fancybox-color: var(--GS01);
@@ -160,6 +173,19 @@ ul.context li p{
 
     .themaContainer .titleBox::after{
         content: ''; display: block; clear: both; 
+    }
+
+    section.videoContainer ol.fiR30{
+        margin: 0 auto var(--sp20);
+    }
+    section.archiveContainer ol.fiR30{
+        top: 130px;
+    }
+    ol.fiR30{
+        max-width: 400px;
+    }
+    ol.fiR30 li{
+        font-size: 14px;
     }
 
     section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
@@ -187,33 +213,14 @@ ul.context li p{
         padding-right: var(--sp20); margin-bottom: var(--sp10);
     }
 
-    .pageControl{
-        position: relative; height: var(--sp50);
-    }
     .pageControl a{
-        position: absolute; background-repeat: no-repeat; background-size: 30px;
-        line-height: var(--sp50);
+        background-size: 30px;
     }
     .pageControl a:first-of-type{
-        padding-left: var(--sp30); background-image: url('../images/icon_leftDouble.svg'); background-position: left center;
-        left: 0;
+        padding-left: var(--sp30); 
     }
     .pageControl a:last-of-type{
-        padding-right: var(--sp30); background-image: url('../images/icon_rightDouble.svg'); background-position: right center;
-        right: 0;
-    }
-
-    section.videoContainer ol.fiR30{
-        margin: 0 auto var(--sp20);
-    }
-    section.archiveContainer ol.fiR30{
-        top: 130px;
-    }
-    ol.fiR30{
-        max-width: 400px;
-    }
-    ol.fiR30 li{
-        font-size: 14px;
+        padding-right: var(--sp30); 
     }
 
     .indexContainer{
@@ -673,21 +680,6 @@ ul.context li p{
 
     .indexContainer ul li.clicky>div>input[type='button']{ 
         max-width: 120px;
-    }
-
-    .pageControl{
-        position: relative; height: var(--sp40);
-    }
-    .pageControl a{
-        position: absolute; background-repeat: no-repeat; line-height: var(--sp50);
-    }
-    .pageControl a:first-of-type{
-        padding-left: var(--sp50); background-image: url('../images/icon_leftDouble.svg'); background-position: left center;
-        left: 0;
-    }
-    .pageControl a:last-of-type{
-        padding-right: var(--sp50); background-image: url('../images/icon_rightDouble.svg'); background-position: right center;
-        right: 0;
     }
 
     .indexContainer{
@@ -1208,21 +1200,6 @@ ul.context li p{
     .indexContainer ul li>div>input[type='button']:hover,
     .videoDetailContainer article div a.fiR24:hover{
         padding-right: var(--sp20);
-    }
-
-    .pageControl{
-        position: relative; height: var(--sp40);
-    }
-    .pageControl a{
-        position: absolute; background-repeat: no-repeat;
-    }
-    .pageControl a:first-of-type{
-        padding-left: var(--sp50); background-image: url('../images/icon_leftDouble.svg'); background-position: left center;
-        left: 0;
-    }
-    .pageControl a:last-of-type{
-        padding-right: var(--sp50); background-image: url('../images/icon_rightDouble.svg'); background-position: right center;
-        right: 0;
     }
 
     .indexContainer{
@@ -1913,5 +1890,12 @@ ul.context li p{
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
         padding-right: var(--sp30); margin-bottom: var(--sp20);
+    }
+
+    .pageControl a:first-of-type{
+        padding-left: var(--sp50);
+    }
+    .pageControl a:last-of-type{
+        padding-right: var(--sp50);
     }
 }
