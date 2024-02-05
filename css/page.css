@@ -193,6 +193,40 @@ ul.context li p{
     position: absolute; height: 100%; width: 100%; box-sizing: border-box; 
 }
 
+.fancyBox{
+    position: relative;
+}
+.fancyBox>span{
+    display: none;
+}
+.fancyBox img{
+    width: 100%;
+}
+.fancyBox div input[type='button']{
+    position: absolute; top: 0; right: 0; z-index: 100; background-color: transparent; border: none; cursor: pointer;
+    transition: color 0.2s ease-out;
+}
+.fancybox__toolbar {
+    --f-button-svg-width: var(--sp50);
+    --f-button-svg-height: var(--sp50);
+    text-shadow: none;
+}
+.fancybox__infobar{
+    padding: 0; text-align: center;
+}
+.fancybox__toolbar__column.is-middle .f-button,
+.fancybox__infobar:not(:first-child):not(:last-child){
+    background-color: transparent;
+}
+.fancybox__toolbar__column.is-right{
+    padding: var(--sp40) 0 0;
+}
+.fancybox__toolbar__column.is-right .f-button{
+    background-color: transparent; position: absolute; right: 3.125%;
+}
+.fancybox__toolbar__column.is-right .f-button svg{
+    width: var(--sp60); height: var(--sp60);
+}
 .fancybox__container{
     --fancybox-bg: rgba(0, 0, 0, 0.7);
     --fancybox-color: var(--GS01);
@@ -216,6 +250,17 @@ ul.context li p{
     }
     .indexContainer ul li.clicky>div{
         padding: 0 10%;
+    }
+    
+    .fancyBox div input[type='button']{
+        font-size: var(--sp50); padding: var(--sp15);
+    }
+    .fancybox__toolbar{
+        --f-button-width: var(--sp60);
+        --f-button-height: var(--sp60);
+    }
+    .fancybox__toolbar__column.is-middle .f-button{
+        align-items: end;
     }
 }
 
@@ -429,44 +474,17 @@ ul.context li p{
     }
 
     .fancyBox{
-        position: relative; margin-bottom: var(--sp30); 
+        margin-bottom: var(--sp30); 
     }
     .fancyBox div input[type='button']{
-        position: absolute; top: 0; right: 0; z-index: 100; padding: var(--sp10);
-        font-size: 30px; background-color: transparent; border: none;
-    }
-    .fancyBox div img{
-        width: 100%;
+        font-size: var(--sp30); padding: var(--sp10);
     }
     .fancybox__toolbar {
         --f-button-width: var(--sp30);
         --f-button-height: var(--sp30);
-        --f-button-svg-width: var(--sp50);
-        --f-button-svg-height: var(--sp50);
-        text-shadow: none;
     }
     .fancybox__toolbar__column.is-middle{
         padding-top: var(--sp100);
-    }
-    .fancybox__toolbar__column.is-middle .f-button{
-        background-color: transparent;
-    } 
-    .fancybox__infobar{
-        padding: 0;
-        text-align: center;
-    }
-    .fancybox__infobar:not(:first-child):not(:last-child){
-        background-color: transparent;
-    }
-    .fancybox__toolbar__column.is-right{
-        padding: var(--sp40) 0 0;
-    }
-    .fancybox__toolbar__column.is-right .f-button{
-        background-color: transparent;
-        position: absolute; right: 3.125%;
-    }
-    .fancybox__toolbar__column.is-right .f-button svg{
-        width: var(--sp60); height: var(--sp60);
     }
     
     .videoContainer{
@@ -831,45 +849,10 @@ ul.context li p{
     }
 
     .fancyBox{
-        position: relative; margin-bottom: var(--sp60); 
-    }
-    .fancyBox div input[type='button']{
-        position: absolute; top: 0; right: 0; z-index: 100; padding: var(--sp15);
-        font-size: var(--sp50); background-color: transparent; border: none;
-    }
-    .fancybox__toolbar {
-        --f-button-width: var(--sp60);
-        --f-button-height: var(--sp60);
-        --f-button-svg-width: var(--sp50);
-        --f-button-svg-height: var(--sp50);
-        text-shadow: none;
+        margin-bottom: var(--sp60); 
     }
     .fancybox__toolbar__column.is-middle{
         padding-top: var(--sp200);
-    }
-    .fancybox__toolbar__column.is-middle .f-button{
-        align-items: end;
-        background-color: transparent;
-    } 
-    .fancybox__infobar{
-        padding: 0;
-        text-align: center;
-    }
-    .fancybox__infobar:not(:first-child):not(:last-child){
-        background-color: transparent;
-    }
-    .fancybox__toolbar__column.is-right{
-        padding: var(--sp40) 0 0;
-    }
-    .fancybox__toolbar__column.is-right .f-button{
-        background-color: transparent;
-        position: absolute; right: 3.125%;
-    }
-    .fancybox__toolbar__column.is-right .f-button svg{
-        width: var(--sp60); height: var(--sp60);
-    }
-    .fancybox img{
-        width: 100%;
     }
 
     .videoContainer{
@@ -1398,51 +1381,12 @@ ul.context li p{
     .cityContainer div.titleBox+div{
         position: relative; width: 93.75%; margin: 0 3.125% var(--sp100);
     }
+
     .fancyBox{
-        position: relative; float: left; width: 30%;
-    }
-    .fancyBox>span{
-        display: none;
-    }
-    .fancyBox div{
-        position: relative;
-    }
-    .fancyBox div img{
-        width: 100%;
-    }
-    .fancyBox div input[type='button']{
-        position: absolute; top: 0; right: 0; z-index: 100; padding: 15px;
-        font-size: 50px; background-color: transparent; border: none; transition: color 0.2s ease-out;
-    }
-    .fancybox__toolbar {
-        --f-button-width: var(--sp60);
-        --f-button-height: var(--sp60);
-        --f-button-svg-width: var(--sp50);
-        --f-button-svg-height: var(--sp50);
-        text-shadow: none;
+        float: left; width: 30%;
     }
     .fancybox__toolbar__column.is-middle{
         padding-top: var(--sp80);
-    }
-    .fancybox__toolbar__column.is-middle .f-button{
-        align-items: end;
-        background-color: transparent;
-    }
-    .fancybox__infobar{
-        padding: 0; text-align: center;
-    }
-    .fancybox__infobar:not(:first-child):not(:last-child){
-        background-color: transparent;
-    }
-    .fancybox__toolbar__column.is-right{
-        padding: var(--sp40) 0 0;
-    }
-    .fancybox__toolbar__column.is-right .f-button{
-        background-color: transparent;
-        position: absolute; right: 3.125%;
-    }
-    .fancybox__toolbar__column.is-right .f-button svg{
-        width: var(--sp60); height: var(--sp60);
     }
 
     .cityContainer div.contentBox{
