@@ -491,16 +491,23 @@ function archiveBG(){
     var positionData = '';
     var addData = '';
 
+    var totalImage = '';
+    var addImage = '';
+
     for(var i=1; i<13; i++){
         if(i==12){
             addData = (i-activeNumb)*100+'vw top';
+            addImage = 'url("images/archive'+i+'_tab.png")';
         }else{
             addData = (i-activeNumb)*100+'vw top,';
+            addImage = 'url("images/archive'+i+'_tab.png"),';
         }
         positionData = positionData + addData;
+        totalImage = totalImage + addImage;
     }
 
     $('.archiveContainer').css('background-position',positionData);
+    $('.archiveContainer').css('background-image',totalImage);
 }
 
 function snsIconBG(){
