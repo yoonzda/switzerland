@@ -198,6 +198,128 @@ ul.context li p{
     --fancybox-color: var(--GS01);
 }
 
+@media screen and (min-width: 768px){
+    .indexContainer ul li>div>input[type='button'],
+    .videoDetailContainer a.fiR24{
+        padding-right: var(--sp30); margin-bottom: var(--sp20);
+    }
+
+    .pageControl a:first-of-type{
+        padding-left: var(--sp50);
+    }
+    .pageControl a:last-of-type{
+        padding-right: var(--sp50);
+    }
+    
+    .indexContainer>div>small{
+        margin-bottom: var(--sp20);
+    }
+    .indexContainer ul li.clicky>div{
+        padding: 0 10%;
+    }
+}
+
+@media screen and (max-width: 1279px){
+    section.indexContainer>div>span{
+        display: none;
+    }
+
+    .cityContainer div.titleBox *[class*='R']{
+        color: var(--BB02);
+    }
+    .cityContainer div.titleBox small{
+        color: var(--BB03);
+    }
+    .archiveContainer ol:last-of-type li ul li a{
+        color: var(--BB04);
+    }
+    .archiveContainer ol:last-of-type li ul li a{
+        background-color: var(--GS01);
+    }
+    .archiveContainer ol:last-of-type li ul li h3{
+        color: var(--GS02);
+    }
+    
+    section.videoContainer ol.fiR30{
+        margin: 0 auto;
+    }
+    section.archiveContainer ol.fiR30{
+        position: fixed; left: 50%; transform: translate(-50%,0);
+    }
+    ol.fiR30{
+        width: 90%; display: flex; justify-content: space-between;
+    }
+    ol.fiR30 li{
+        display: inline-block;
+    }
+    .archiveContainer ol.fiR30 li:not(.active){
+        color: var(--GS03);
+    }
+    .videoContainer ol.fiR30 li:not(.active){
+        color: var(--GS04);
+    }
+
+    section:not([class*='Detail'],[class^='archive']) a.fiR24 span{
+        display: none;
+    }
+    section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
+        content: ''; display: block; position: absolute; border-width: 1px; border-style: solid;
+    }
+
+    .indexContainer ul li>div>input[type='button'],
+    .videoDetailContainer a.fiR24{
+        display: inline-block; 
+    }
+
+    .indexContainer ul li.clicky>div{
+        display: flex; flex-flow: column; justify-content: center;
+    }
+
+    @keyframes drift{0%{transform: rotate(0deg) scale(0,0); opacity: 0.8;}40%{transform: rotate(180deg) scale(0.5,0.5); opacity: 0.4;}100%{transform: rotate(360deg) scale(1,1); opacity: 0;}}
+    @keyframes movehori{100%{left: 80%;}}
+    @keyframes fullScreen{100%{opacity: 0; display: none;}}
+    
+    div.preinfo{
+        display: flex; flex-direction: column; justify-content: center;
+        width: 100vw; height: 100vh;
+        overflow: hidden; background-color: rgba(0, 0, 0, 0.7);
+        position: absolute; z-index: 1001;
+        transition: all ease .5s;
+        animation: fullScreen 0.5s ease 5s forwards;
+    }
+
+    div.preinfo strong{
+        display: block; margin: 0 auto var(--sp20);
+        text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+    }
+    .wrapWave{
+        width: 100%; height: 100px; max-width: 280px; margin: 0 auto;
+        position: relative;
+    }
+    .wrapWave::after{
+        content: ''; width: var(--sp30); height: var(--sp30); display: block; position: absolute;
+        background-image: url('../images/testHand12.svg');
+        transform: rotate(-30deg);
+        background-repeat: no-repeat; left: 15%; top: 45px;
+        animation: movehori 1.4s cubic-bezier(.5,0,.5,1) 1s 2 alternate forwards;
+    }
+
+    .wrapWave span{
+        width: var(--sp100); height: var(--sp100);
+        position: absolute; top: 0px; opacity: 0;
+        border: 2px solid var(--GS03); box-sizing: border-box; border-radius: 48%;
+        animation-name: drift; animation-duration: 2s; animation-timing-function: linear; animation-iteration-count: 1; animation-fill-mode: forwards;
+    }
+
+    .wrapWave span:nth-of-type(1){left: -2%; animation-delay: 1.2s;}
+    .wrapWave span:nth-of-type(2){left: 20%; animation-delay: 1.6s;}
+    .wrapWave span:nth-of-type(3){left: 40%; animation-delay: 1.8s;}
+    .wrapWave span:nth-of-type(4){left: 62%; animation-delay: 2.1s;}
+    .wrapWave span:nth-of-type(5){left: 40%; animation-delay: 3s;}
+    .wrapWave span:nth-of-type(6){left: 20%; animation-delay: 3.2s;}
+    .wrapWave span:nth-of-type(7){left: -2%; animation-delay: 3.5s;}
+}
+
 @media screen and (max-width: 767px){
     div.preinfo strong{
         line-height: var(--sp40);
@@ -1705,127 +1827,5 @@ ul.context li p{
         display: block; line-height: var(--sp40); border: 1px solid var(--GS04);
         text-align: center; border-radius: 5px; background-color: transparent;
         transition: color, background-color ease-out .3s;
-    }
-}
-
-@media screen and (max-width: 1279px){
-    section.indexContainer>div>span{
-        display: none;
-    }
-
-    .cityContainer div.titleBox *[class*='R']{
-        color: var(--BB02);
-    }
-    .cityContainer div.titleBox small{
-        color: var(--BB03);
-    }
-    .archiveContainer ol:last-of-type li ul li a{
-        color: var(--BB04);
-    }
-    .archiveContainer ol:last-of-type li ul li a{
-        background-color: var(--GS01);
-    }
-    .archiveContainer ol:last-of-type li ul li h3{
-        color: var(--GS02);
-    }
-    
-    section.videoContainer ol.fiR30{
-        margin: 0 auto;
-    }
-    section.archiveContainer ol.fiR30{
-        position: fixed; left: 50%; transform: translate(-50%,0);
-    }
-    ol.fiR30{
-        width: 90%; display: flex; justify-content: space-between;
-    }
-    ol.fiR30 li{
-        display: inline-block;
-    }
-    .archiveContainer ol.fiR30 li:not(.active){
-        color: var(--GS03);
-    }
-    .videoContainer ol.fiR30 li:not(.active){
-        color: var(--GS04);
-    }
-
-    section:not([class*='Detail'],[class^='archive']) a.fiR24 span{
-        display: none;
-    }
-    section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
-        content: ''; display: block; position: absolute; border-width: 1px; border-style: solid;
-    }
-
-    .indexContainer ul li>div>input[type='button'],
-    .videoDetailContainer a.fiR24{
-        display: inline-block; 
-    }
-
-    .indexContainer ul li.clicky>div{
-        display: flex; flex-flow: column; justify-content: center;
-    }
-
-    @keyframes drift{0%{transform: rotate(0deg) scale(0,0); opacity: 0.8;}40%{transform: rotate(180deg) scale(0.5,0.5); opacity: 0.4;}100%{transform: rotate(360deg) scale(1,1); opacity: 0;}}
-    @keyframes movehori{100%{left: 80%;}}
-    @keyframes fullScreen{100%{opacity: 0; display: none;}}
-    
-    div.preinfo{
-        display: flex; flex-direction: column; justify-content: center;
-        width: 100vw; height: 100vh;
-        overflow: hidden; background-color: rgba(0, 0, 0, 0.7);
-        position: absolute; z-index: 1001;
-        transition: all ease .5s;
-        animation: fullScreen 0.5s ease 5s forwards;
-    }
-
-    div.preinfo strong{
-        display: block; margin: 0 auto var(--sp20);
-        text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
-    }
-    .wrapWave{
-        width: 100%; height: 100px; max-width: 280px; margin: 0 auto;
-        position: relative;
-    }
-    .wrapWave::after{
-        content: ''; width: var(--sp30); height: var(--sp30); display: block; position: absolute;
-        background-image: url('../images/testHand12.svg');
-        transform: rotate(-30deg);
-        background-repeat: no-repeat; left: 15%; top: 45px;
-        animation: movehori 1.4s cubic-bezier(.5,0,.5,1) 1s 2 alternate forwards;
-    }
-
-    .wrapWave span{
-        width: var(--sp100); height: var(--sp100);
-        position: absolute; top: 0px; opacity: 0;
-        border: 2px solid var(--GS03); box-sizing: border-box; border-radius: 48%;
-        animation-name: drift; animation-duration: 2s; animation-timing-function: linear; animation-iteration-count: 1; animation-fill-mode: forwards;
-    }
-
-    .wrapWave span:nth-of-type(1){left: -2%; animation-delay: 1.2s;}
-    .wrapWave span:nth-of-type(2){left: 20%; animation-delay: 1.6s;}
-    .wrapWave span:nth-of-type(3){left: 40%; animation-delay: 1.8s;}
-    .wrapWave span:nth-of-type(4){left: 62%; animation-delay: 2.1s;}
-    .wrapWave span:nth-of-type(5){left: 40%; animation-delay: 3s;}
-    .wrapWave span:nth-of-type(6){left: 20%; animation-delay: 3.2s;}
-    .wrapWave span:nth-of-type(7){left: -2%; animation-delay: 3.5s;}
-}
-
-@media screen and (min-width: 768px){
-    .indexContainer ul li>div>input[type='button'],
-    .videoDetailContainer a.fiR24{
-        padding-right: var(--sp30); margin-bottom: var(--sp20);
-    }
-
-    .pageControl a:first-of-type{
-        padding-left: var(--sp50);
-    }
-    .pageControl a:last-of-type{
-        padding-right: var(--sp50);
-    }
-    
-    .indexContainer>div>small{
-        margin-bottom: var(--sp20);
-    }
-    .indexContainer ul li.clicky>div{
-        padding: 0 10%;
     }
 }
