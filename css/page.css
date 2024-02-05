@@ -157,6 +157,42 @@ ul.context li p{
     right: 0; background-image: url('../images/icon_rightDouble.svg'); background-position: right center;
 }
 
+.indexContainer{
+    overflow: hidden;
+}
+.indexContainer>div{
+    display: flex; flex-direction: column; justify-content: center; width: 100vw; height: 100vh; position: absolute;
+}
+.indexContainer>div *{
+    display: block; text-align: center;
+}
+.indexContainer ul{
+    position: relative; overflow: hidden; white-space: nowrap; height: 100vh;
+}
+.indexContainer ul li{
+    display: inline-block; position: absolute; transition: all ease-out .4s; top: 30vh; left: 45vw;
+    background-size: cover; background-repeat: no-repeat; background-position: center; box-sizing: border-box;
+}
+.indexContainer ul li.active::before{
+    content: ''; display: block; height: 1px; position: absolute; top: -15px; text-align: center;
+    animation: line ease-out .4s .4s forwards;
+}
+.indexContainer ul li.active.clicky{
+    z-index: 100; left: 0 !important; top: 0 !important; width: 100%; height: 100%; position: fixed; cursor: auto;
+}
+.indexContainer ul li::after{
+    content: ''; display: block; width: 100%; height: 100%; transition: all ease-out .3s;
+}
+.indexContainer ul li.active.clicky::after{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.indexContainer ul li>*{
+    display: none;
+}
+.indexContainer ul li.clicky>div{
+    position: absolute; height: 100%; width: 100%; box-sizing: border-box; 
+}
+
 .fancybox__container{
     --fancybox-bg: rgba(0, 0, 0, 0.7);
     --fancybox-color: var(--GS01);
@@ -220,52 +256,16 @@ ul.context li p{
         padding-right: var(--sp30); 
     }
 
-    .indexContainer{
-        overflow: hidden;
-    }
-    .indexContainer>div{
-        display: flex; flex-direction: column; justify-content: center;
-        width: 100vw; height: 100vh; position: absolute;
-    }
-    .indexContainer>div *{
-        display: block; text-align: center;
-    }
     .indexContainer>div>small{
         margin-bottom: 5px;
     }
-    .indexContainer ul{
-        position: relative; overflow: hidden; white-space: nowrap;
-        height: 100vh;
-    }
     .indexContainer ul li{
         width: 33.333vw; height: 66.666vw;
-        display: inline-block; position: absolute; top: 30vh; left: 45vw;
-        background-size: cover; background-repeat: no-repeat; background-position: center; box-sizing: border-box;
-        transition: all ease-out .4s;
     }
     .indexContainer ul li.active::before{
         width: 11.111vw; left: 11.111vw;
-        content: ''; display: block; height: 1px; text-align: center;
-        position: absolute; top: -15px; 
-        animation: line ease-out .4s; animation-delay: .4s; animation-fill-mode: forwards;
-    }
-    .indexContainer ul li::after{
-        content: ''; display: block; width: 100%; height: 100%;
-        transition: all ease-out .3s;
-    }
-    .indexContainer ul li.active.clicky{
-        z-index: 100; left: 0 !important; top: 0 !important; width: 100%; height: 100%; position: fixed; cursor: auto;
-    }
-    .indexContainer ul li.active.clicky::after{
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .indexContainer ul li>*{
-        display: none;
     }
     .indexContainer ul li.clicky>div{
-        display: flex; flex-flow: column; justify-content: center;
-        position: absolute; height: 100%; width: 100%; box-sizing: border-box; 
         padding: 0 7%;
     }
     .indexContainer ul li.clicky>div *{
@@ -674,55 +674,17 @@ ul.context li p{
         max-width: 120px;
     }
 
-    .indexContainer{
-        overflow: hidden;
-    }
-    .indexContainer>div{
-        display: flex; flex-direction: column; justify-content: center;
-        width: 100vw; height: 100vh; position: absolute;
-    }
-    .indexContainer>div *{
-        display: block; text-align: center;
-    }
-    .indexContainer>div>small{
-        margin-bottom: var(--sp20);
-    }
-    .indexContainer ul{
-        position: relative; overflow: hidden; white-space: nowrap;
-        height: 100vh;
-    }
     .indexContainer ul li{
-        display: inline-block; position: absolute; top: 30vh; left: 45vw;
         width: 20vw; height: 48vw;
-        background-size: cover; background-repeat: no-repeat; background-position: center; box-sizing: border-box;
-        transition: all ease-out .4s;
     }
     .indexContainer ul li.active::before{
-        content: ''; display: block; width: 6vw; height: 1px; text-align: center;
-        position: absolute; top: -15px; left: 7vw;
-        animation: line ease-out .4s; animation-delay: .4s; animation-fill-mode: forwards;
-    }
-    .indexContainer ul li.active.clicky{
-        z-index: 100; left: 0 !important; top: 0 !important; width: 100%; height: 100%; position: fixed; cursor: auto;
-    }
-    .indexContainer ul li::after{
-        content: ''; display: block; width: 100%; height: 100%;
-        transition: all ease-out .3s;
-    }
-    .indexContainer ul li.active.clicky::after{
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .indexContainer ul li>*{
-        display: none;
-    }
-    .indexContainer ul li.clicky>div{
-        display: flex; flex-flow: column; justify-content: center;
-        position: absolute; height: 100%; width: 100%; 
-        padding: 0 10%; box-sizing: border-box; 
+        width: 6vw; left: 7vw;
     }
     .indexContainer ul li.clicky>div *{
-        opacity: 0; animation-fill-mode: forwards; white-space: normal;
+        white-space: normal;
+        
+        
+        opacity: 0; animation-fill-mode: forwards; 
     }
     .indexContainer ul li.clicky>div h3{
         padding-bottom: var(--sp20);
@@ -1194,58 +1156,20 @@ ul.context li p{
         padding-right: var(--sp20);
     }
 
-    .indexContainer{
-        overflow: hidden;
-    }
-    .indexContainer>div{
-        display: flex; flex-direction: column; justify-content: center;
-        width: 100%; height: 100vh; position: absolute;
-    }
-    .indexContainer>div *{
-        display: block; text-align: center; 
-    }
-    .indexContainer>div>small{
-        margin-bottom: var(--sp20);
-    }
     .indexContainer>div>span{
         opacity: 1; transition: opacity ease-out .4s;
     }
     .indexContainer>div>span small{
         margin-top: var(--sp10); font-size: 40px;
     }
-
-    .indexContainer ul{
-        position: relative; height: 100vh; overflow: hidden; white-space: nowrap;
-    }
     .indexContainer ul li{
-        width: 10vw; height: 24vw; 
-        display: inline-block; position: absolute; top: 30vh; left: 45vw;
-        background-size: cover; background-repeat: no-repeat; background-position: center; box-sizing: border-box;
-        transition: all ease-out .4s;
+        width: 10vw; height: 24vw;
     }
     .indexContainer ul li.active::before{
         width: 4vw; left: 3vw;
-        content: ''; display: block; height: 1px; text-align: center; 
-        position: absolute; top: -15px;
-        animation: line ease-out .4s .4s forwards;
-    }
-    .indexContainer ul li::after{
-        content: ''; display: block; width: 100%; height: 100%;
-        transition: all ease-out .3s;
-    }
-    .indexContainer ul li.active.clicky{
-        z-index: 100; left: 0 !important; top: 0 !important; width: 100%; height: 100%; position: fixed; cursor: auto;
-    }
-    .indexContainer ul li.active.clicky::after{
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    .indexContainer ul li>*{
-        display: none;
     }
     .indexContainer ul li.clicky>div{
-        display: block;
-        position: absolute; width: 100%; height: 100%; 
-        padding: 28vh 10%; box-sizing: border-box;
+        display: block; padding-top: 28vh; padding-bottom: 28vh;
     }
     .indexContainer ul li:not(.type01)>div h3{
         padding-bottom: var(--sp20); margin-bottom: var(--sp30);
@@ -1836,6 +1760,10 @@ ul.context li p{
         display: inline-block; 
     }
 
+    .indexContainer ul li.clicky>div{
+        display: flex; flex-flow: column; justify-content: center;
+    }
+
     @keyframes drift{0%{transform: rotate(0deg) scale(0,0); opacity: 0.8;}40%{transform: rotate(180deg) scale(0.5,0.5); opacity: 0.4;}100%{transform: rotate(360deg) scale(1,1); opacity: 0;}}
     @keyframes movehori{100%{left: 80%;}}
     @keyframes fullScreen{100%{opacity: 0; display: none;}}
@@ -1892,5 +1820,12 @@ ul.context li p{
     }
     .pageControl a:last-of-type{
         padding-right: var(--sp50);
+    }
+    
+    .indexContainer>div>small{
+        margin-bottom: var(--sp20);
+    }
+    .indexContainer ul li.clicky>div{
+        padding: 0 10%;
     }
 }
