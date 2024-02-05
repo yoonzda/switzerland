@@ -156,7 +156,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     ul.context li{
-        display: block; margin-bottom: var(--sp50);
+        display: block;
+    }
+    ul.context li:not(:last-of-type){
+        margin-bottom: var(--sp50);
     }
     ul.context li h3{
         margin-bottom: var(--sp20); line-height: 26px;
@@ -183,7 +186,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .pageControl{
-        position: relative; height: 40px;
+        position: relative; height: var(--sp50);
     }
     .pageControl a{
         position: absolute; background-repeat: no-repeat; background-size: 30px;
@@ -678,7 +681,10 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     ul.context li{
-        display: block; margin-bottom: var(--sp60);
+        display: block;
+    }
+    ul.context li:not(:last-of-type){
+        margin-bottom: var(--sp60);
     }
     ul.context li h3{
         margin-bottom: var(--sp30);
@@ -842,6 +848,9 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .fancybox img{
         width: 100%;
+    }
+    .cityContainer div.contentBox ul{
+        margin-bottom: var(--sp60);
     }
 
     .videoContainer{
