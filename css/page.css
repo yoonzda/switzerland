@@ -113,6 +113,9 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 @keyframes circleMagneticTop{0%{bottom: 30px;}100%{bottom: 55px;}}
 @keyframes circleMagneticBottom{0%{bottom: 0;}100%{bottom: -25px;}}
 
+ul.context p{
+    text-align: justify;
+}
 .fancybox__container{
     --fancybox-bg: rgba(0, 0, 0, 0.7);
     --fancybox-color: var(--GS01);
@@ -1317,7 +1320,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         width: 4vw; left: 3vw;
         content: ''; display: block; height: 1px; text-align: center; 
         position: absolute; top: -15px;
-        animation: line ease-out .4s; animation-delay: .4s; animation-fill-mode: forwards;
+        animation: line ease-out .4s .4s forwards;
     }
     .indexContainer ul li::after{
         content: ''; display: block; width: 100%; height: 100%;
@@ -1575,19 +1578,15 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
 
     .videoDetailContainer{
-        width: 100vw; height: 100vh;
-        position: relative; overflow: hidden; 
-        background-size: cover;
-        background-repeat: no-repeat;
+        width: 100vw; height: 100vh; overflow: hidden; 
+        position: relative; background-size: cover; background-repeat: no-repeat;
     }
     .videoDetailContainer input[type='button']{
         border: none;
         position: absolute; top: 14vh; left: -60px; z-index: 1000;
         width: 120px; height: 120px; font-size: var(--sp40); padding: 0 60px 0 0; border-radius: 50%;
         transform: scaleX(1);
-        transition-property: background-color, color, transform;
-        transition-duration: .4s;
-        transition-delay: .7s;
+        transition-property: background-color, color, transform; transition-duration: .4s; transition-delay: .7s;
         clip-path: inset(0 50% 0 0);
     }
     .videoDetailContainer input[type='button'].clicky{
@@ -1606,9 +1605,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .videoDetailContainer article ul{
         margin-bottom: var(--sp100);
-    }
-    .videoDetailContainer article ul p{
-        text-align: justify;
     }
     .videoDetailContainer article>div{
         width: 90%; margin: 0 5%;
@@ -1831,9 +1827,7 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .archiveContainer ol:last-of-type>li ul li{
         float: left;
-        display: flex;
-        flex-flow: column;
-        justify-content: end;
+        display: flex; flex-flow: column; justify-content: end;
         border-right: 1px solid var(--GS04);
         box-sizing: border-box;
         height: 100vh;
