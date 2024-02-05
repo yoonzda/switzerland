@@ -445,9 +445,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     .videoDetailContainer article div h2{
         margin-bottom: var(--sp80);
     }
-    .videoDetailContainer article ul p{
-        text-align: justify;
-    }
     .videoDetailContainer article ol li{
         display: block;
     }
@@ -956,9 +953,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
     }
     .videoDetailContainer article div h2{
         margin-bottom: var(--sp200);
-    }
-    .videoDetailContainer article ul p{
-        text-align: justify;
     }
     .videoDetailContainer article ol li{
         display: block;   
