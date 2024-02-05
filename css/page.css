@@ -113,7 +113,10 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 @keyframes circleMagneticTop{0%{bottom: 30px;}100%{bottom: 55px;}}
 @keyframes circleMagneticBottom{0%{bottom: 0;}100%{bottom: -25px;}}
 
-ul.context p{
+ul.context li{
+    display: block;
+}
+ul.context li p{
     text-align: justify;
 }
 .fancybox__container{
@@ -157,9 +160,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 
     ul.context{
         margin-bottom: var(--sp60);
-    }
-    ul.context li{
-        display: block;
     }
     ul.context li:not(:last-of-type){
         margin-bottom: var(--sp50);
@@ -685,9 +685,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
 
     ul.context{
         margin-bottom: var(--sp80);
-    }
-    ul.context li{
-        display: block;
     }
     ul.context li:not(:last-of-type){
         margin-bottom: var(--sp60);
@@ -1234,9 +1231,6 @@ section:not([class*='Detail'],[class^='archive']) a.modeWhite.fiR24::before{
         animation-name: circleMagneticBottom;
     }
 
-    ul.context li{
-        display: block;
-    }
     ul.context li:not(:last-of-type){
         margin-bottom: var(--sp80);
     }
