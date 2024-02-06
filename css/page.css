@@ -113,7 +113,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 @keyframes circleMagneticBottom{0%{bottom: 0;}100%{bottom: -25px;}}
 
 section:not([class*='Detail'],[class^='archive']) a.fiR24{
-    display: inline-block; line-height: var(--sp60); position: relative;
+    display: block; float: right; position: relative; line-height: var(--sp60);
 }
 section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24::before{
     border-color: var(--GS07);
@@ -259,12 +259,6 @@ ul.context li p{
 }
 .videoContainer div.pop.active.clicky>*{
     opacity: 1;
-}
-.videoContainer div.pop.active a{
-    float: right;
-}
-.themaContainer .titleBox a{
-    float: right;
 }
 .archiveContainer ol:last-of-type li ul li a{
     float: right;
@@ -651,8 +645,11 @@ ul.context li p{
         font-size: 14px;
     }
 
+    section:not([class*='Detail'],[class^='archive']) a.fiR24{
+        max-width: 68px;
+    }
     section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
-        width: 36px; height: 36px; left: 12px; bottom: 11px; border-radius: 18px;
+        width: 36px; height: 36px; left: 14px; bottom: 11px; border-radius: 18px;
     }
 
     ul.context{
@@ -861,6 +858,9 @@ ul.context li p{
         max-width: 660px;
     }
 
+    section:not([class*='Detail'],[class^='archive']) a.fiR24{
+        max-width: 85px;
+    }
     section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
         width: var(--sp50); height: var(--sp50); left: 18px; bottom: 4px; border-radius: 25px;
     }
@@ -1048,7 +1048,7 @@ ul.context li p{
     }
 
     section:not([class*='Detail'],[class^='archive']) a.fiR24{
-        transition: padding-right cubic-bezier(.63,.04,1,.73) .6s;
+        max-width: 102px; transition: padding-right cubic-bezier(.63,.04,1,.73) .6s;
     }
     section:not([class*='Detail'],[class^='archive']) a.fiR24:hover{
         padding-right: 100px;
