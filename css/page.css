@@ -579,34 +579,39 @@ ul.context li p{
     }
     .videoDetailContainer input[type='button']{
         border: none;
-        width: 60px; height: 60px; border-radius: 30px; font-size: var(--sp20); 
-        position: absolute; right: 7%; z-index: 1000;
-        padding: 0 0 30px 0; box-sizing: border-box;
-        transform: scaleY(1) translateY(-70px);
-        transition: background-color .4s .7s, color .4s .7s, transform .4s .7s;
+        border-radius: 50%; 
+        z-index: 1000;
+        box-sizing: border-box;
+        position: absolute; 
         clip-path: inset(0 0 50% 0);
+        transition-property: background-color, color, transform; transition-duration: .4s; transition-delay: .7s;
+
+
+
+        width: 60px; height: 60px; font-size: var(--sp20); padding: 0 0 var(--sp30) 0;
+        right: 7%; transform: scaleY(1) translateY(-70px);
     }
     .videoDetailContainer input[type='button'].clicky{
-        position: fixed; transform: translateY(-70px) scaleY(-1);
+        position: fixed;
+
+        transform: translateY(-70px) scaleY(-1);
     }
     .videoDetailContainer article{
-        position: absolute; transition: all ease-out 1s;
-        padding: var(--sp40) 7% 150px; box-sizing: border-box;
-        width: 100%; min-height: calc(100vh - 150px); 
+        width: 100%; position: absolute; transition: all ease-out 1s; box-sizing: border-box;
+        
+        padding: var(--sp40) 7% 150px;
     }
     .videoDetailContainer article.active{
         top: 90px !important;
     }
     .videoDetailContainer article:not(.active)>div>*:not(div){
         opacity: 0;
+
+
     }
     .videoDetailContainer article>div>*:not(div){
         transition: opacity ease-out 1s;
-    }
-    .videoDetailContainer article
-    .videoDetailContainer article a.fiR24{
-        display: inline-block;
-        margin-bottom: var(--sp30);
+        
     }
     .videoDetailContainer article>div>div{
         margin-bottom: var(--sp80);
@@ -930,10 +935,6 @@ ul.context li p{
     }
     .videoDetailContainer article>div>*:not(div){
         transition: opacity ease-out 1s;
-    }
-    .videoDetailContainer article a.fiR24{
-        display: inline-block;
-        margin-bottom: var(--sp30);
     }
     .videoDetailContainer article>div>div{
         margin-bottom: var(--sp200);
@@ -1371,7 +1372,7 @@ ul.context li p{
         position: relative; overflow-y: hidden;
     }
     .videoContainer video{
-        width: 100%; 
+        width: 100%;
         position: absolute; top: 50%; left: 0; transform: translate(0,-50%);
     }
     .videoContainer h2,
