@@ -1078,7 +1078,7 @@ ul.context li p{
         margin-bottom: var(--sp50);
     }
     ul.context li h3,
-    .themaDetailContainer div:last-of-type h3{
+    .themaDetailContainer div h3{
         margin-bottom: var(--sp40);
     }
     ul.context li p:not(:last-of-type),
@@ -1093,7 +1093,7 @@ ul.context li p{
     .indexContainer ul li.type01>div h3,
     .themaDetailContainer div:first-of-type h2,
     .themaDetailContainer>ul li h3,
-    .themaDetailContainer>ul li figure img,
+    .themaDetailContainer img,
     .archiveContainer ol:last-of-type li ul li b{
         margin-bottom: var(--sp20);
     }
