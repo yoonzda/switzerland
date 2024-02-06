@@ -84,9 +84,8 @@ ul.context li h3,
     background-color: var(--GS07);
 }
 .indexContainer ul li>div>input[type='button'],
-.videoContainer div:first-of-type input[type='button'],
-.videoContainer div.pop.active input[type='button']{
-    background-color: transparent; border: none; padding: 0;
+.videoContainer input[type='button']{
+    background-color: transparent; border: none; padding: 0; cursor: pointer;
 }
 
 *[class^='un']:not([class*='30']),
@@ -494,33 +493,46 @@ ul.context li p{
         width: 100%; order: 1; margin: var(--sp20) 0;
     }
     .videoContainer h2{
-        text-align: center; margin-bottom: var(--sp30);
+        text-align: center; 
+        
+        
+        margin-bottom: var(--sp30);
     }
     .videoContainer div:first-of-type{
-        order: 1; z-index: 1;
-        text-align: center;
+        order: 1; z-index: 1; text-align: center;
     }
     .videoContainer div:first-of-type input[type='button']{
+
+
         font-size: var(--sp30);
     }
     .videoContainer>span{
-        display: block; width: 100px; height: 100px; text-indent: -9999px;
+        display: block; width: var(--sp100); height: var(--sp100); text-indent: -9999px;
         position: absolute; left: 50%; transform: translate(-50%,-50%); z-index: 1000;
     }
     .videoContainer>span::after{
-        content: ''; display: block; width: 60px; height: 60px; 
-        border: 4px solid var(--GS01); border-radius: 50px; box-sizing: border-box;
+        content: ''; display: block; box-sizing: border-box; border-radius: 50%; border-style: solid; border-color: var(--GS01);
         position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
         animation: circleFocus 1.5s linear infinite;
+        
+        
+        
+        width: var(--sp60); height: var(--sp60);
+        border-width: 4px;
     }
     .videoContainer>span.active::after,
     .videoContainer div.pop:not(.active){
         display: none;
     }
     .videoContainer div.pop.active{
-        width: 85%; min-width: 240px; padding: var(--sp40) var(--sp20) var(--sp20); box-sizing: border-box;
-        position: absolute; z-index: 10; left: 50%; top: 50%; transform: translate(-50%,-50%);
-        clip-path: circle(0.0% at 50% 50%); transition: clip-path ease-out .6s;
+        box-sizing: border-box;
+        position: absolute; z-index: 10; left: 50%; transform: translate(-50%,-50%); transition: clip-path ease-out .6s;
+        
+        
+        width: 85%; min-width: 240px; padding: var(--sp40) var(--sp20) var(--sp20); 
+    }
+    .videoContainer div.pop.active:not(.clicky){
+        clip-path: circle(0.0% at 50% 50%); 
     }
     .videoContainer div.pop.active.clicky{
         clip-path: circle(72.0% at 50% 50%);
@@ -535,9 +547,11 @@ ul.context li p{
         opacity: 1;
     }
     .videoContainer div.pop.active input[type='button']{
-        font-size: 24px;
-        position: absolute; top: 15px; right: 15px;
-        cursor: pointer;
+        position: absolute; cursor: pointer;
+        
+        
+        
+        font-size: 24px; top: var(--sp15); right: var(--sp15); 
     }
     .videoContainer div.pop.active h3{
         margin-bottom: var(--sp10);
@@ -547,6 +561,9 @@ ul.context li p{
     }
     .videoContainer div.pop.active a{
         float: right;
+
+
+
     }
 
     .videoDetailContainer{
