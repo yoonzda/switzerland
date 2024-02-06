@@ -9,7 +9,6 @@ $(document).ready(function(){
     themaSlider();
     
     archiveFunction();
-    archiveBG();
 
     snsIconBG();
 });
@@ -366,6 +365,7 @@ function archiveFunction(){
         deskArchive();
     }else{
         tabArchive();
+        archiveBG();
     }
     
     window.matchMedia("(min-width:1280px)").onchange = (e) => {
