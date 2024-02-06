@@ -113,7 +113,7 @@ section:not(.cityContainer,.videoDetailContainer) *.unR30{
 @keyframes circleMagneticBottom{0%{bottom: 0;}100%{bottom: -25px;}}
 
 section:not([class*='Detail'],[class^='archive']) a.fiR24{
-    display: block; float: right; position: relative; line-height: var(--sp60);
+    float: right; position: relative; line-height: var(--sp60);
 }
 section:not([class*='Detail'],[class^='archive']) a:not(.modeWhite).fiR24::before{
     border-color: var(--GS07);
@@ -354,7 +354,7 @@ ul.context li p{
     white-space: normal;
 }
 .archiveContainer ol:last-of-type li ul li a{
-    display: block; text-align: center; border-radius: 5px;
+    text-align: center; border-radius: 5px;
 }
 
 @media screen and (min-width: 768px){
@@ -458,9 +458,8 @@ ul.context li p{
         content: ''; display: block; position: absolute; border-width: 1px; border-style: solid;
     }
 
-    .indexContainer ul li>div>input[type='button'],
-    .videoDetailContainer a.fiR24{
-        display: block; 
+    .indexContainer ul li>div>input[type='button']{
+        display: block;
     }
 
     .indexContainer ul li.clicky>div{
@@ -1107,9 +1106,6 @@ ul.context li p{
     }
 
     .indexContainer ul li>div>input[type='button']{
-        display: block;
-    }
-    .videoDetailContainer a.fiR24{
         display: block;
     }
     .videoDetailContainer article div>a.fiR24{
