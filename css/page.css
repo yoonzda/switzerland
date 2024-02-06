@@ -130,7 +130,7 @@ ul.context li p{
 }
 
 .indexContainer ul li.clicky>div>input[type='button']{
-    background-image: url('../images/icon_left.svg');
+    display: block; background-image: url('../images/icon_left.svg');
 }
 .videoDetailContainer article div>a.fiR24{
     background-image: url('../images/icon_left_green.svg');
@@ -456,10 +456,6 @@ ul.context li p{
     }
     section:not([class*='Detail'],[class^='archive']) a.fiR24::before{
         content: ''; display: block; position: absolute; border-width: 1px; border-style: solid;
-    }
-
-    .indexContainer ul li>div>input[type='button']{
-        display: block;
     }
 
     .indexContainer ul li.clicky>div{
@@ -1105,9 +1101,6 @@ ul.context li p{
         margin-bottom: var(--sp30);
     }
 
-    .indexContainer ul li>div>input[type='button']{
-        display: block;
-    }
     .videoDetailContainer article div>a.fiR24{
         max-width: 124px;
     }
@@ -1119,7 +1112,7 @@ ul.context li p{
         transition: padding ease-out 0.2s;
     }
     .videoDetailContainer article ol li a.fiR24:hover{
-        padding-right: var(--sp40); 
+        padding-right: var(--sp40);
     }
     .indexContainer ul li>div>input[type='button']:hover,
     .videoDetailContainer article div>a.fiR24:hover{
