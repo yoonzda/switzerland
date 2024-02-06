@@ -198,9 +198,6 @@ ul.context li p{
 .fancyBox>span{
     display: none;
 }
-.fancyBox img{
-    width: 100%;
-}
 .fancyBox div input[type='button']{
     position: absolute; top: 0; right: 0; z-index: 100; background-color: transparent; border: none; cursor: pointer;
     transition: color 0.2s ease-out;
@@ -285,9 +282,6 @@ ul.context li p{
 .themaDetailContainer div:first-of-type ol li{
     display: inline-block; border-radius: 50%; transition: all ease-out .25s;
 }
-.themaDetailContainer>ul li figure img{
-    width: 100%;
-}
 .themaDetailContainer div:last-of-type ul li{
     display: block; position: relative; border-radius: 50%;
     background-size: cover; background-repeat: no-repeat;
@@ -305,9 +299,6 @@ ul.context li p{
 }
 .bx-wrapper{
     box-sizing: border-box; margin: 0; box-shadow: none; border: none; 
-}
-.themaSlider li img{
-    width: 100%;
 }
 .themaSlider li div{
     display: none;
@@ -364,9 +355,6 @@ ul.context li p{
 }
 .archiveContainer ol:last-of-type li ul li h3{
     white-space: normal;
-}
-.archiveContainer ol:last-of-type li ul li img{
-    width: 100%;
 }
 .archiveContainer ol:last-of-type li ul li a{
     display: block; text-align: center; border-radius: 5px;

@@ -8,6 +8,9 @@ footer.modeWhite p{
 a{
     text-decoration: none;
 }
+img{
+    width: 100%;
+}
 
 ol.fiR30 li,
 .indexContainer ul li,
