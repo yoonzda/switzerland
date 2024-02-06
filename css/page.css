@@ -192,6 +192,10 @@ ul.context li p{
     position: absolute; height: 100%; width: 100%; box-sizing: border-box; 
 }
 
+.cityContainer div.titleBox{
+    text-align: center;
+}
+
 .fancyBox{
     position: relative;
 }
@@ -647,17 +651,47 @@ ul.context li p{
         width: 36px; height: 36px; left: 14px; bottom: 11px; border-radius: 18px;
     }
 
+    .videoDetailContainer article>div>div{
+        margin-bottom: var(--sp80);
+    }
     ul.context{
         margin-bottom: var(--sp60);
     }
-    ul.context li:not(:last-of-type){
+    ul.context li:not(:last-of-type),
+    .themaDetailContainer>ul li{
         margin-bottom: var(--sp50);
     }
     ul.context li h3{
-        margin-bottom: var(--sp20); line-height: 26px;
+        line-height: 26px;
     }
-    ul.context li p:not(:last-of-type){
+    .cityContainer div.titleBox,
+    .fancyBox,
+    .videoContainer h2,
+    .themaDetailContainer div:first-of-type p,
+    .themaDetailContainer div:first-of-type ol,
+    .themaDetailContainer div:last-of-type ul li:not(:last-of-type),
+    .themaContainer .titleBox p{
+        margin-bottom: var(--sp30);
+    }
+    ul.context li h3,
+    ul.context li p:not(:last-of-type),
+    .indexContainer ul li.clicky>div div p,
+    .videoContainer div.pop.active p,
+    .themaDetailContainer>ul li h3,
+    .themaDetailContainer>ul li figure img,
+    .themaContainer .titleBox h2,
+    .archiveContainer ol:last-of-type li ul li img{
         margin-bottom: var(--sp20);
+    }
+    .cityContainer div.titleBox small,
+    .themaDetailContainer div:first-of-type h2{
+        margin-bottom: var(--sp15);
+    }
+    .indexContainer ul li>div>input[type='button'],
+    .videoDetailContainer a.fiR24,
+    .videoContainer div.pop.active h3,
+    .archiveContainer ol:last-of-type li ul li h3{
+        margin-bottom: var(--sp10); 
     }
 
     .indexContainer ul li.clicky>div>input[type='button']{ 
@@ -671,7 +705,7 @@ ul.context li p{
     }
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
-        padding-right: var(--sp20); margin-bottom: var(--sp10);
+        padding-right: var(--sp20);
     }
 
     .pageControl a{
@@ -703,23 +737,16 @@ ul.context li p{
         border-width: 3px 0 0;
     }
     .indexContainer ul li.clicky>div div p{
-        margin-bottom: var(--sp20); padding-top: var(--sp20);
+        padding-top: var(--sp20);
     }
 
     .cityContainer{
         margin: 0 7%; 
     }
-    .cityContainer div.titleBox{
-        text-align: center; margin-bottom: var(--sp30);
-    }
     .cityContainer div.titleBox small{
-        display: inline-block; padding: 0 5px 5px;
-        border-bottom: 1px solid var(--GN); margin-bottom: var(--sp15);
+        display: inline-block; padding: 0 5px 5px; border-bottom: 1px solid var(--GN);
     }
 
-    .fancyBox{
-        margin-bottom: var(--sp30); 
-    }
     .fancyBox div input[type='button']{
         font-size: var(--sp30); padding: var(--sp10);
     }
@@ -731,9 +758,6 @@ ul.context li p{
         padding-top: var(--sp100);
     }
     
-    .videoContainer h2{
-        margin-bottom: var(--sp30);
-    }
     .videoContainer div:first-of-type input[type='button']{
         font-size: var(--sp30);
     }
@@ -745,12 +769,6 @@ ul.context li p{
     }
     .videoContainer div.pop.active input[type='button']{
         font-size: 24px; top: var(--sp15); right: var(--sp15); 
-    }
-    .videoContainer div.pop.active h3{
-        margin-bottom: var(--sp10);
-    }
-    .videoContainer div.pop.active p{
-        margin-bottom: var(--sp20);
     }
 
     .videoDetailContainer input[type='button']{
@@ -765,39 +783,18 @@ ul.context li p{
     .videoDetailContainer article.active{
         top: 90px !important;
     }
-    .videoDetailContainer article>div>div{
-        margin-bottom: var(--sp80);
-    }
 
     .themaDetailContainer{
         margin: 0 7%; 
     }
-    .themaDetailContainer div:first-of-type h2{
-        margin-bottom: var(--sp15);
-    }
-    .themaDetailContainer div:first-of-type p{
-        margin-bottom: var(--sp30);
-    }
     .themaDetailContainer div:first-of-type ol{
-        margin-bottom: var(--sp30); white-space: nowrap; overflow-y: auto; padding: 0 5.833%;
-    }
-    .themaDetailContainer>ul li{
-        margin-bottom: var(--sp50);
-    }
-    .themaDetailContainer>ul li h3{
-        margin-bottom: var(--sp20);
-    }
-    .themaDetailContainer>ul li figure img{
-        margin-bottom: var(--sp20);
+        white-space: nowrap; overflow-y: auto; padding: 0 5.833%;
     }
     .themaDetailContainer div:last-of-type{
         max-width: 150px; margin: 0 auto;
     }
     .themaDetailContainer div:last-of-type ul li{
         width: 100%; padding-top: 100%;
-    }
-    .themaDetailContainer div:last-of-type ul li:not(:last-of-type){
-        margin-bottom: var(--sp30);
     }
 
     .bx-wrapper .bx-pager{
@@ -816,20 +813,11 @@ ul.context li p{
         padding: var(--sp60) 0 0;
     }
     .themaContainer .titleBox h2{
-        margin-bottom: var(--sp20); line-height: var(--sp20);
-    }
-    .themaContainer .titleBox p{
-        margin-bottom: var(--sp30);
+        line-height: var(--sp20);
     }
 
     .archiveContainer ol:last-of-type li ul li b{
         margin-bottom: 5px; 
-    }
-    .archiveContainer ol:last-of-type li ul li h3{
-        margin-bottom: var(--sp10); 
-    }
-    .archiveContainer ol:last-of-type li ul li img{
-        margin-bottom: var(--sp20);
     }
     .archiveContainer ol:last-of-type li ul li a{
         min-width: var(--sp100); line-height: var(--sp30);
@@ -866,17 +854,47 @@ ul.context li p{
         width: var(--sp50); height: var(--sp50); left: 18px; bottom: 4px; border-radius: 25px;
     }
 
+    .videoDetailContainer article>div>div{
+        margin-bottom: var(--sp200);
+    }
     ul.context{
         margin-bottom: var(--sp80);
     }
-    ul.context li:not(:last-of-type){
+    ul.context li:not(:last-of-type),
+    .cityContainer div.titleBox,
+    .fancyBox,
+    .themaDetailContainer>ul li{
         margin-bottom: var(--sp60);
     }
-    ul.context li h3{
+    .videoContainer h2,
+    .themaDetailContainer div:first-of-type p,
+    .themaDetailContainer div:first-of-type ol{
+        margin-bottom: var(--sp50);
+    }
+    .videoContainer div.pop.active p{
+        margin-bottom: var(--sp40);
+    }
+    ul.context li h3,
+    ul.context li p:not(:last-of-type),
+    .indexContainer ul li.clicky>div div p,
+    .themaDetailContainer h3,
+    .themaDetailContainer>ul li figure img,
+    .themaContainer .titleBox h2,
+    .archiveContainer ol:last-of-type li ul li img{
         margin-bottom: var(--sp30);
     }
-    ul.context li p:not(:last-of-type){
-        margin-bottom: var(--sp30);
+    .cityContainer div.titleBox small,
+    .videoContainer div.pop.active input[type='button'],
+    .videoContainer div.pop.active h3,
+    .themaDetailContainer div:first-of-type h2,
+    .archiveContainer ol:last-of-type li ul li h3{
+        margin-bottom: var(--sp20);
+    }
+    .archiveContainer ol:last-of-type li ul li b{
+        margin-bottom: var(--sp15);
+    }
+    .cityContainer div.titleBox h2{
+        margin-bottom: var(--sp10);
     }
 
     .indexContainer ul li.clicky>div>input[type='button']{ 
@@ -902,33 +920,20 @@ ul.context li p{
         border-width: 5px 0 0;
     }
     .indexContainer ul li.clicky>div div p{
-        margin-bottom: var(--sp30); padding-top: var(--sp30);
+        padding-top: var(--sp30);
     }
 
     .cityContainer{
         margin: 0 10%;
     }
-    .cityContainer div.titleBox{
-        text-align: center; margin-bottom: var(--sp60);
-    }
-    .cityContainer div.titleBox h2{
-        margin-bottom: var(--sp10);
-    }
     .cityContainer div.titleBox small{
-        display: inline-block; padding: 0 5px 5px; 
-        border-bottom: 1px solid var(--GN); margin-bottom: var(--sp20);
+        display: inline-block; padding: 0 5px 5px; border-bottom: 1px solid var(--GN);
     }
 
-    .fancyBox{
-        margin-bottom: var(--sp60); 
-    }
     .fancybox__toolbar__column.is-middle{
         padding-top: var(--sp200);
     }
 
-    .videoContainer h2{
-        margin-bottom: var(--sp50);
-    }
     .videoContainer div:first-of-type input[type='button']{
         font-size: var(--sp50);
     }
@@ -936,13 +941,7 @@ ul.context li p{
         width: 60%; padding: var(--sp80) var(--sp50) var(--sp50);
     }
     .videoContainer div.pop.active input[type='button']{
-        font-size: var(--sp30); margin-bottom: var(--sp20); top: var(--sp30); right: var(--sp30);
-    }
-    .videoContainer div.pop.active h3{
-        margin-bottom: var(--sp20);
-    }
-    .videoContainer div.pop.active p{
-        margin-bottom: var(--sp40);
+        font-size: var(--sp30); top: var(--sp30); right: var(--sp30);
     }
 
     .videoDetailContainer input[type='button']{
@@ -957,33 +956,9 @@ ul.context li p{
     .videoDetailContainer article.active{
         top: 150px !important;
     }
-    .videoDetailContainer article>div>div{
-        margin-bottom: var(--sp200);
-    }
 
     .themaDetailContainer{
         margin: 0 10%;
-    }
-    .themaDetailContainer div:first-of-type h2{
-        margin-bottom: var(--sp20);
-    }
-    .themaDetailContainer div:first-of-type p{
-        margin-bottom: var(--sp50);
-    }
-    .themaDetailContainer div:first-of-type ol{
-        margin-bottom: var(--sp50);
-    }
-    .themaDetailContainer>ul li{
-        margin-bottom: var(--sp60);
-    }
-    .themaDetailContainer>ul li h3{
-        margin-bottom: var(--sp30);
-    }
-    .themaDetailContainer>ul li figure img{
-        margin-bottom: var(--sp30);
-    }
-    .themaDetailContainer div:last-of-type h3{
-        margin-bottom: var(--sp30);
     }
     .themaDetailContainer div:last-of-type ul{
         padding: 0 6%;
@@ -999,18 +974,9 @@ ul.context li p{
         padding: var(--sp80) 0 0;
     }
     .themaContainer .titleBox h2{
-        width: 70%; line-height: var(--sp40); margin-bottom: var(--sp30);
+        width: 70%; line-height: var(--sp40);
     }
 
-    .archiveContainer ol:last-of-type li ul li b{
-        margin-bottom: var(--sp15);
-    }
-    .archiveContainer ol:last-of-type li ul li h3{
-        margin-bottom: var(--sp20);
-    }
-    .archiveContainer ol:last-of-type li ul li img{
-        margin-bottom: var(--sp30);
-    }
     .archiveContainer ol:last-of-type li ul li a{
         max-width: 150px; line-height: var(--sp40); 
     }
@@ -1040,18 +1006,21 @@ ul.context li p{
     .cityContainer>div.active div.titleBox small{
         color: var(--BB03);
     }
-    .archiveContainer ol:last-of-type li ul li *{
-        color: var(--GS04);
-    }
     .archiveContainer ol:last-of-type li ul li:hover a{
         color: var(--BB04); background-color: var(--GS01);
     }
-    
-    ol.fiR30 li:not(.active){
-        color: var(--GS04);
-    }
     ol.fiR30 li:hover{
         color: var(--GS01);
+    }
+    .archiveContainer ol:last-of-type li ul li:hover h3{
+        color: var(--GS02);
+    }
+    ol.fiR30 li:not(.active),
+    .archiveContainer ol:last-of-type li ul li *{
+        color: var(--GS04);
+    }
+    .archiveContainer ol:last-of-type li ul li:hover b{
+        color: var(--YE);
     }
 
     section:not([class*='Detail'],[class^='archive']) a.fiR24{
@@ -1091,14 +1060,42 @@ ul.context li p{
         animation-name: circleMagneticBottom;
     }
 
-    ul.context li:not(:last-of-type){
+    .cityContainer div.contentBox ul.context{
+        margin-bottom: var(--sp200);
+    }
+    .videoDetailContainer article ul{
+        margin-bottom: var(--sp100);
+    }
+    ul.context li:not(:last-of-type),
+    .videoDetailContainer article div div{
         margin-bottom: var(--sp80);
     }
-    ul.context li h3{
+    .videoContainer div.pop.active p{
+        margin-bottom: var(--sp50);
+    }
+    ul.context li h3,
+    .themaDetailContainer div:last-of-type h3{
         margin-bottom: var(--sp40);
     }
-    ul.context li p:not(:last-of-type){
+    ul.context li p:not(:last-of-type),
+    .indexContainer ul li>div div p,
+    .indexContainer ul li:not(.type01)>div h3,
+    .cityContainer div.titleBox small,
+    .videoContainer div.pop.active h3,
+    .themaContainer .titleBox h2,
+    .archiveContainer ol:last-of-type li ul li img{
         margin-bottom: var(--sp30);
+    }
+    .indexContainer ul li.type01>div h3,
+    .themaDetailContainer div:first-of-type h2,
+    .themaDetailContainer>ul li h3,
+    .themaDetailContainer>ul li figure img,
+    .archiveContainer ol:last-of-type li ul li b{
+        margin-bottom: var(--sp20);
+    }
+    .cityContainer div.titleBox h2,
+    .themaDetailContainer div:first-of-type ol li{
+        margin-bottom: var(--sp10);
     }
 
     .videoDetailContainer article div>a.fiR24{
@@ -1135,7 +1132,7 @@ ul.context li p{
         display: block; padding-top: 28vh; padding-bottom: 28vh;
     }
     .indexContainer ul li:not(.type01)>div h3{
-        padding-bottom: var(--sp20); margin-bottom: var(--sp30);
+        padding-bottom: var(--sp20);
     }
     .indexContainer ul li:not(.type03)>div div{
         max-width: 500px;
@@ -1144,7 +1141,7 @@ ul.context li p{
         position: absolute; text-align: right;
     }
     .indexContainer ul li>div div p{
-        white-space: normal; margin-bottom: var(--sp30);
+        white-space: normal;
     }
 
     .indexContainer ul li>div *:not(p,div),
@@ -1159,7 +1156,6 @@ ul.context li p{
     }
 
     .indexContainer ul li.type01>div h3{
-        margin-bottom: var(--sp20);
         animation-delay: .5s; animation-name: type01Title; animation-duration: .8s;
     }
     .indexContainer ul li.type01>div div{
@@ -1224,16 +1220,13 @@ ul.context li p{
         background-color: var(--GS01); overflow-y: auto; justify-content: center; top: 0 !important; box-sizing: border-box;
     }
     .cityContainer div.titleBox{
-        text-align: center; padding: var(--sp100) 0 var(--sp80);
+        padding: var(--sp100) 0 var(--sp80);
     }
     .cityContainer>div:not(.active) div.titleBox{
         color: var(--GS01); text-shadow: 8px 0 13px rgba(0, 0, 0, 0.75);
     }
-    .cityContainer div.titleBox h2{
-        margin-bottom: var(--sp10);
-    }
     .cityContainer div.titleBox small{
-        display: inline-block; padding: 0 5px 5px; margin-bottom: var(--sp30);
+        display: inline-block; padding: 0 5px 5px;
     }
     .cityContainer>div:not(.active) div.titleBox small{
         border-bottom: 1px solid var(--GS01);
@@ -1257,9 +1250,6 @@ ul.context li p{
 
     .cityContainer div.contentBox{
         position: absolute; overflow-y: scroll; height: 100%; width: 68%; right: 0;
-    }
-    .cityContainer div.contentBox ul.context{
-        margin-bottom: var(--sp200);
     }
 
     .videoContainer{
@@ -1299,12 +1289,6 @@ ul.context li p{
     .videoContainer div.pop.active{
         width: 600px; padding: var(--sp100) var(--sp60); top: 50%;
     }
-    .videoContainer div.pop.active h3{
-        margin-bottom: var(--sp30);
-    }
-    .videoContainer div.pop.active p{
-        margin-bottom: var(--sp50);
-    }
 
     .videoDetailContainer{
         overflow: hidden; 
@@ -1324,14 +1308,11 @@ ul.context li p{
     .videoDetailContainer article.active{
         left: 0;
     }
-    .videoDetailContainer article ul{
-        margin-bottom: var(--sp100);
-    }
     .videoDetailContainer article>div{
         width: 90%; margin: 0 5%; max-height: 60vh; overflow-y: auto;
     }
     .videoDetailContainer article div div{
-        position: sticky; top: 0; margin-bottom: var(--sp80);
+        position: sticky; top: 0;
     }
     .videoDetailContainer article div h2{
         padding-bottom: var(--sp20);
@@ -1352,14 +1333,11 @@ ul.context li p{
     .themaDetailContainer div:first-of-type p{
         width: 80%; margin: 0 auto 6vh;
     }
-    .themaDetailContainer div:first-of-type h2{
-        margin-bottom: var(--sp20);
-    }
     .themaDetailContainer div:first-of-type ol{
         margin-bottom: 10vh;
     }
     .themaDetailContainer div:first-of-type ol li{
-        width: var(--sp50); line-height: var(--sp50); margin-bottom: var(--sp10);
+        width: var(--sp50); line-height: var(--sp50);
     }
     .themaDetailContainer div:first-of-type ol li:hover,
     .themaDetailContainer div:first-of-type ol li.active{
@@ -1372,18 +1350,11 @@ ul.context li p{
     .themaDetailContainer>ul li:not(:last-of-type){
         margin-bottom: 20vh;
     }
-    .themaDetailContainer>ul li h3,
-    .themaDetailContainer>ul li figure img{
-        margin-bottom: var(--sp20);
-    }
     .themaDetailContainer>ul li figure figcaption p{
         width: 80%; margin: 0 auto;
     }
     .themaDetailContainer div:last-of-type{
         width: 45%; padding: 0 3% 12vh; box-sizing: border-box;
-    }
-    .themaDetailContainer div:last-of-type h3{
-        margin-bottom: var(--sp40);
     }
     .themaDetailContainer div:last-of-type ul li a{
         line-height: var(--sp50); width: 100%; max-width: 180px;
@@ -1400,9 +1371,6 @@ ul.context li p{
     }
     .themaContainer .titleBox{
         float: left; margin-left: 3%; width: 39%; padding: var(--sp80) 0;
-    }
-    .themaContainer .titleBox h2{
-        margin-bottom: var(--sp30);
     }
 
     .archiveContainer ol.fiR30{
@@ -1474,19 +1442,13 @@ ul.context li p{
         transition-timing-function: ease-out; transition-duration: .3s;
     }
     .archiveContainer ol:last-of-type li ul li b{
-        transition-property: color; margin-bottom: var(--sp20);
-    }
-    .archiveContainer ol:last-of-type li ul li:hover b{
-        color: var(--YE);
+        transition-property: color;
     }
     .archiveContainer ol:last-of-type li ul li h3{
         transition-property: color; margin-bottom: auto;
     }
-    .archiveContainer ol:last-of-type li ul li:hover h3{
-        color: var(--GS02);
-    }
     .archiveContainer ol:last-of-type li ul li img{
-        margin-bottom: var(--sp30); opacity: 0; transition-property: opacity;
+        opacity: 0; transition-property: opacity;
     }
     .archiveContainer ol:last-of-type li ul li:hover img{
         opacity: 1;
