@@ -379,6 +379,7 @@ function archiveFunction(){
             }
         }else{
             $(tagM).css('background-image','none');
+            archiveBG();
         }
     }
 }
