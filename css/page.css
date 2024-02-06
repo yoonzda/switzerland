@@ -1094,7 +1094,7 @@ ul.context li p{
     .themaDetailContainer div:first-of-type h2,
     .themaDetailContainer>ul li h3,
     .themaDetailContainer img,
-    .archiveContainer ol:last-of-type li ul li b{
+    .archiveContainer b{
         margin-bottom: var(--sp20);
     }
 
