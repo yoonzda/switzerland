@@ -460,7 +460,7 @@ ul.context li p{
 
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
-        display: inline-block; 
+        display: block; 
     }
 
     .indexContainer ul li.clicky>div{
@@ -667,6 +667,12 @@ ul.context li p{
 
     .indexContainer ul li.clicky>div>input[type='button']{ 
         max-width: 90px;
+    }
+    .videoDetailContainer article div>a.fiR24{
+        max-width: 84px; line-height: 22px;
+    }
+    .videoDetailContainer article ol li a.fiR24{
+        max-width: 128px; line-height: 22px;
     }
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
@@ -880,6 +886,12 @@ ul.context li p{
 
     .indexContainer ul li.clicky>div>input[type='button']{ 
         max-width: 120px;
+    }
+    .videoDetailContainer article div>a.fiR24{
+        max-width: 104px; line-height: 26px;
+    }
+    .videoDetailContainer article ol li a.fiR24{
+        max-width: 160px; line-height: 26px;
     }
 
     .indexContainer ul li{
@@ -1098,7 +1110,13 @@ ul.context li p{
         display: block;
     }
     .videoDetailContainer a.fiR24{
-        display: inline-block;
+        display: block;
+    }
+    .videoDetailContainer article div>a.fiR24{
+        max-width: 124px;
+    }
+    .videoDetailContainer article ol li a.fiR24{
+        max-width: 191px;
     }
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
@@ -1108,7 +1126,7 @@ ul.context li p{
         padding-right: var(--sp40); 
     }
     .indexContainer ul li>div>input[type='button']:hover,
-    .videoDetailContainer article div a.fiR24:hover{
+    .videoDetailContainer article div>a.fiR24:hover{
         padding-right: var(--sp20);
     }
 
