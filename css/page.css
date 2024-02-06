@@ -374,6 +374,9 @@ ul.context li p{
         padding-right: var(--sp50);
     }
     
+    .cityContainer div.titleBox h2{
+        margin-bottom: var(--sp10);
+    }
     .indexContainer>div>small{
         margin-bottom: var(--sp20);
     }
@@ -691,7 +694,7 @@ ul.context li p{
     .videoDetailContainer a.fiR24,
     .videoContainer div.pop.active h3,
     .archiveContainer ol:last-of-type li ul li h3{
-        margin-bottom: var(--sp10); 
+        margin-bottom: var(--sp10);
     }
 
     .indexContainer ul li.clicky>div>input[type='button']{ 
@@ -893,9 +896,6 @@ ul.context li p{
     .archiveContainer ol:last-of-type li ul li b{
         margin-bottom: var(--sp15);
     }
-    .cityContainer div.titleBox h2{
-        margin-bottom: var(--sp10);
-    }
 
     .indexContainer ul li.clicky>div>input[type='button']{ 
         max-width: 120px;
@@ -1092,10 +1092,6 @@ ul.context li p{
     .themaDetailContainer>ul li figure img,
     .archiveContainer ol:last-of-type li ul li b{
         margin-bottom: var(--sp20);
-    }
-    .cityContainer div.titleBox h2,
-    .themaDetailContainer div:first-of-type ol li{
-        margin-bottom: var(--sp10);
     }
 
     .videoDetailContainer article div>a.fiR24{
@@ -1337,7 +1333,7 @@ ul.context li p{
         margin-bottom: 10vh;
     }
     .themaDetailContainer div:first-of-type ol li{
-        width: var(--sp50); line-height: var(--sp50);
+        width: var(--sp50); line-height: var(--sp50); margin-bottom: var(--sp10);
     }
     .themaDetailContainer div:first-of-type ol li:hover,
     .themaDetailContainer div:first-of-type ol li.active{
