@@ -1070,6 +1070,10 @@ ul.context li p{
     .videoDetailContainer article div div{
         margin-bottom: var(--sp80);
     }
+    .indexContainer ul li.type03>div div,
+    .themaDetailContainer div:first-of-type>*:not(h2){
+        margin-bottom: var(--sp60);
+    }
     .videoContainer div.pop.active p{
         margin-bottom: var(--sp50);
     }
@@ -1193,7 +1197,7 @@ ul.context li p{
         animation-name: type03TitleBottom;
     }
     .indexContainer ul li.type03>div div{
-        width: 590px; position: absolute; bottom: var(--sp60); margin-bottom: var(--sp60); right: 3.125%;
+        width: 590px; position: absolute; bottom: var(--sp60); right: 3.125%;
     }
     .indexContainer ul li.type03>div div p{
         animation-delay: 1.3s; animation-name: textDown; animation-duration: .8s;
@@ -1327,11 +1331,11 @@ ul.context li p{
     .themaDetailContainer div{
         width: 45%;
     }
-    .themaDetailContainer div:first-of-type p{
-        width: 80%; margin: 0 auto var(--sp60); max-width: 700px;
+    .themaDetailContainer div:first-of-type>*{
+        max-width: 900px; margin: 0 auto;
     }
-    .themaDetailContainer div:first-of-type ol{
-        margin-bottom: var(--sp60);
+    .themaDetailContainer div:first-of-type p{
+        width: 80%;
     }
     .themaDetailContainer div:first-of-type ol li{
         width: var(--sp50); line-height: var(--sp50); margin-bottom: var(--sp10);
@@ -1341,8 +1345,9 @@ ul.context li p{
         background-color: var(--BB01);
     }
     .themaDetailContainer>ul{
-        width: 45%; height: 76vh; overflow-y: scroll; box-sizing: border-box;
-        position: fixed; top: 12vh; right: 5%;
+        width: 45%; max-width: 1280px; height: 76vh; max-height: 1100px;
+        position: fixed; top: 50%; right: 5%; transform: translate(0, -50%);
+        overflow-y: scroll; box-sizing: border-box;
     }
     .themaDetailContainer>ul li:not(:last-of-type){
         margin-bottom: 20vh;
