@@ -267,6 +267,18 @@ ul.context li p{
     float: right;
 }
 
+.videoDetailContainer{
+    position: relative; width: 100vw; height: 100vh; 
+    background-size: cover; background-repeat: no-repeat; background-position: top center;
+}
+.videoDetailContainer input[type='button']{
+    position: absolute; z-index: 1000; border: none; border-radius: 50%; box-sizing: border-box;
+    transition-property: background-color, color, transform; transition-duration: .4s; transition-delay: .7s;
+}
+.videoDetailContainer article ol li{
+    display: block;   
+}
+
 @media screen and (min-width: 768px){
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
@@ -300,6 +312,10 @@ ul.context li p{
 
     .videoContainer>span::after{
         width: var(--sp100); height: var(--sp100); border-width: 6px;
+    }
+
+    .videoDetailContainer input[type='button']{
+        width: 120px; height: 120px; font-size: var(--sp40);
     }
 }
 
@@ -392,6 +408,31 @@ ul.context li p{
     }
     .videoContainer div.pop.active input[type='button']{
         position: absolute;
+    }
+
+    .videoDetailContainer:not(.active){
+        overflow: hidden;
+    }
+    .videoDetailContainer.active{
+        overflow: visible;
+    }
+    .videoDetailContainer input[type='button']{
+        clip-path: inset(0 0 50% 0);
+    }
+    .videoDetailContainer input[type='button'].clicky{
+        position: fixed;
+    }
+    .videoDetailContainer article{
+        width: 100%; position: absolute; transition: all ease-out 1s; box-sizing: border-box;
+    }
+    .videoDetailContainer article:not(.active)>div>*:not(div){
+        opacity: 0;
+    }
+    .videoDetailContainer article>div>*:not(div){
+        transition: opacity ease-out 1s;
+    }
+    .videoDetailContainer article ol li:not(:last-of-type){
+        margin-bottom: var(--sp40);
     }
 
 
@@ -567,60 +608,20 @@ ul.context li p{
         margin-bottom: var(--sp20);
     }
 
-    .videoDetailContainer{
-        position: relative; width: 100vw; height: 100vh;
-        background-size: cover; background-repeat: no-repeat; background-position: top center;
-    }
-    .videoDetailContainer:not(.active){
-        overflow: hidden;
-    }
-    .videoDetailContainer.active{
-        overflow: visible;
-    }
     .videoDetailContainer input[type='button']{
-        border: none;
-        border-radius: 50%; 
-        z-index: 1000;
-        box-sizing: border-box;
-        position: absolute; 
-        clip-path: inset(0 0 50% 0);
-        transition-property: background-color, color, transform; transition-duration: .4s; transition-delay: .7s;
-
-
-
-        width: 60px; height: 60px; font-size: var(--sp20); padding: 0 0 var(--sp30) 0;
-        right: 7%; transform: scaleY(1) translateY(-70px);
+        width: var(--sp60); height: var(--sp60); font-size: var(--sp20); padding: 0 0 var(--sp30) 0; right: 7%; transform: scaleY(1) translateY(-70px);
     }
     .videoDetailContainer input[type='button'].clicky{
-        position: fixed;
-
         transform: translateY(-70px) scaleY(-1);
     }
     .videoDetailContainer article{
-        width: 100%; position: absolute; transition: all ease-out 1s; box-sizing: border-box;
-        
         padding: var(--sp40) 7% 150px;
     }
     .videoDetailContainer article.active{
         top: 90px !important;
     }
-    .videoDetailContainer article:not(.active)>div>*:not(div){
-        opacity: 0;
-
-
-    }
-    .videoDetailContainer article>div>*:not(div){
-        transition: opacity ease-out 1s;
-        
-    }
     .videoDetailContainer article>div>div{
         margin-bottom: var(--sp80);
-    }
-    .videoDetailContainer article ol li{
-        display: block;
-    }
-    .videoDetailContainer article ol li:not(:last-of-type){
-        margin-bottom: var(--sp40);
     }
 
     .themaDetailContainer{
@@ -897,53 +898,20 @@ ul.context li p{
         margin-bottom: var(--sp40);
     }
 
-    .videoDetailContainer{
-        position: relative; width: 100vw; height: 100vh; background-size: cover;
-    }
-    .videoDetailContainer:not(.active){
-        overflow: hidden;
-    }
-    .videoDetailContainer.active{
-        overflow: visible;
-    }
     .videoDetailContainer input[type='button']{
-        border: none;
-        width: 120px; height: 120px; 
-        font-size: var(--sp40); z-index: 1000;
-        position: absolute; right: 10%;
-        padding: 0 0 60px 0; box-sizing: border-box;
-        transform: scaleY(1) translateY(-100%);
-        transition-property: background-color, color, transform;
-        transition-duration: .4s;
-        transition-delay: .7s;
-        clip-path: inset(0 0 50% 0);
-        border-radius: 50%;
+        padding: 0 0 var(--sp60) 0; transform: scaleY(1) translateY(-100%); right: 10%;
     }
     .videoDetailContainer input[type='button'].clicky{
-        position: fixed; transform: translateY(-100%) scaleY(-1);
+        transform: translateY(-100%) scaleY(-1);
     }
     .videoDetailContainer article{
-        position: absolute; transition: all ease-out 1s;
         padding: var(--sp60) 10% 150px;
-        min-height: calc(100vh - 150px); box-sizing: border-box; width: 100%;
     }
     .videoDetailContainer article.active{
         top: 150px !important;
     }
-    .videoDetailContainer article:not(.active)>div>*:not(div){
-        opacity: 0;
-    }
-    .videoDetailContainer article>div>*:not(div){
-        transition: opacity ease-out 1s;
-    }
     .videoDetailContainer article>div>div{
         margin-bottom: var(--sp200);
-    }
-    .videoDetailContainer article ol li{
-        display: block;   
-    }
-    .videoDetailContainer article ol li:not(:last-of-type){
-        margin-bottom: var(--sp40);
     }
 
     .themaDetailContainer{
@@ -1412,24 +1380,16 @@ ul.context li p{
     }
 
     .videoDetailContainer{
-        width: 100vw; height: 100vh; overflow: hidden; 
-        position: relative; background-size: cover; background-repeat: no-repeat;
+        overflow: hidden; 
     }
     .videoDetailContainer input[type='button']{
-        border: none;
-        position: absolute; top: 14vh; left: -60px; z-index: 1000;
-        width: 120px; height: 120px; font-size: var(--sp40); padding: 0 60px 0 0; border-radius: 50%;
-        transform: scaleX(1);
-        transition-property: background-color, color, transform; transition-duration: .4s; transition-delay: .7s;
-        clip-path: inset(0 50% 0 0);
+        top: 14vh; left: -60px; padding: 0 var(--sp60) 0 0; transform: scaleX(1); clip-path: inset(0 50% 0 0);
     }
     .videoDetailContainer input[type='button'].clicky{
         transform: scaleX(-1);
     }
     .videoDetailContainer article{
-        position: absolute; top: 0; width: 100vw; height: 100vh;
-        padding: 28vh 0 0; box-sizing: border-box;
-        transition: left ease 1s;
+        position: absolute; top: 0; width: 100vw; height: 100vh; padding: 28vh 0 0; box-sizing: border-box; transition: left ease 1s;
     }
     .videoDetailContainer article:not(.active){
         left: 57.291%;
@@ -1441,8 +1401,7 @@ ul.context li p{
         margin-bottom: var(--sp100);
     }
     .videoDetailContainer article>div{
-        width: 90%; margin: 0 5%;
-        max-height: 60vh; overflow-y: auto;
+        width: 90%; margin: 0 5%; max-height: 60vh; overflow-y: auto;
     }
     .videoDetailContainer article div div{
         position: sticky; top: 0; margin-bottom: var(--sp80);
@@ -1451,7 +1410,7 @@ ul.context li p{
         padding-bottom: var(--sp20);
     }
     .videoDetailContainer article ol li{
-        display: block; width: 30%; float: left;
+        width: 30%; float: left;
     }
     .videoDetailContainer article ol li:not(:first-of-type){
         margin-left: 5%;
