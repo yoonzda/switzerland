@@ -263,6 +263,12 @@ ul.context li p{
 .videoContainer div.pop.active a{
     float: right;
 }
+.themaContainer .titleBox a{
+    float: right;
+}
+.archiveContainer ol:last-of-type li ul li a{
+    float: right;
+}
 
 .videoDetailContainer{
     position: relative; width: 100vw; height: 100vh; 
@@ -336,9 +342,6 @@ ul.context li p{
 }
 .themaContainer>div.unR40 span:nth-of-type(2){
     right: 0;
-}
-.themaContainer .titleBox a{
-    float: right;
 }
 
 .archiveContainer h2{
@@ -577,7 +580,7 @@ ul.context li p{
         color: var(--YE);
     }
     .archiveContainer ol:last-of-type li ul li a{
-        width: 50%; float: right;
+        width: 50%;
     }
 
     @keyframes drift{0%{transform: rotate(0deg) scale(0,0); opacity: 0.8;}40%{transform: rotate(180deg) scale(0.5,0.5); opacity: 0.4;}100%{transform: rotate(360deg) scale(1,1); opacity: 0;}}
