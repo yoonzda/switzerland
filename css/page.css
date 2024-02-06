@@ -350,6 +350,28 @@ ul.context li p{
     float: right;
 }
 
+.archiveContainer h2{
+    display: none;
+}
+.archiveContainer ol:last-of-type{
+    white-space: nowrap; box-sizing: border-box; overflow: hidden; font-size: 0; scroll-behavior: smooth;
+}
+.archiveContainer ol:last-of-type>li{
+    display: inline-block; box-sizing: border-box;
+}
+.archiveContainer ol:last-of-type li ul li b{
+    display: block;
+}
+.archiveContainer ol:last-of-type li ul li h3{
+    white-space: normal;
+}
+.archiveContainer ol:last-of-type li ul li img{
+    width: 100%;
+}
+.archiveContainer ol:last-of-type li ul li a{
+    display: block; text-align: center; border-radius: 5px;
+}
+
 @media screen and (min-width: 768px){
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
@@ -538,6 +560,36 @@ ul.context li p{
     }
     .themaContainer .titleBox{
         width: 93%; margin: 0 3.5%;
+    }
+
+    .archiveContainer{
+        width: 100vw; height: 100vh; overflow: hidden; position: relative;
+        display: flex; flex-flow: column; justify-content: center;
+        background-repeat: no-repeat; background-size: 100vw 100vh; transition: background-position ease 1s;
+    }
+    .archiveContainer::after{
+        content: ''; display: block; width: 100%; height: 100%; position: absolute; top: 0; background-color: rgba(51, 51, 51, 0.5);
+    }
+    .archiveContainer>div{
+        position: relative; z-index: 1;
+    }
+    .archiveContainer ol:last-of-type{
+        padding: 0 15vw; 
+    }
+    .archiveContainer ol:last-of-type li ul{
+        white-space: nowrap; overflow: hidden; box-sizing: border-box;
+    }
+    .archiveContainer ol:last-of-type li ul li{
+        display: inline-block; width: 50vw; margin-left: 10vw;
+    }
+    .archiveContainer ol:last-of-type li:last-of-type ul li:last-of-type{
+        margin-right: 10vw;
+    }
+    .archiveContainer ol:last-of-type li ul li b{
+        color: var(--YE);
+    }
+    .archiveContainer ol:last-of-type li ul li a{
+        width: 50%; float: right;
     }
 
     @keyframes drift{0%{transform: rotate(0deg) scale(0,0); opacity: 0.8;}40%{transform: rotate(180deg) scale(0.5,0.5); opacity: 0.4;}100%{transform: rotate(360deg) scale(1,1); opacity: 0;}}
@@ -781,57 +833,17 @@ ul.context li p{
         margin-bottom: var(--sp30);
     }
 
-    .archiveContainer{
-        width: 100vw; height: 100vh; overflow: hidden;
-        display: flex; flex-flow: column; justify-content: center;
-        background-repeat: no-repeat; background-size: 100vw 100vh;
-        transition: background-position ease 1s;
-        position: relative;
-    }
-    .archiveContainer::after{
-        content: ''; display: block; width: 100%; height: 100%;
-        background-color: rgba(51, 51, 51, 0.5);
-        position: absolute; top: 0;
-    }
-    .archiveContainer>div{
-        position: relative; z-index: 1;
-    }
-    .archiveContainer h2{
-        display: none;
-    }
-    .archiveContainer ol:last-of-type{
-        white-space: nowrap; box-sizing: border-box;
-        overflow: hidden; font-size: 0; padding: 0 15vw;
-        scroll-behavior: smooth;
-    }
-    .archiveContainer ol:last-of-type>li{
-        display: inline-block; box-sizing: border-box;
-    }
-    .archiveContainer ol:last-of-type li ul{
-        white-space: nowrap; overflow: hidden; box-sizing: border-box;
-    }
-    .archiveContainer ol:last-of-type li ul li{
-        display: inline-block;
-        width: 50vw; margin-left: 10vw;
-        max-width: 450px;
-    }
-    .archiveContainer ol:last-of-type li:last-of-type ul li:last-of-type{
-        margin-right: 10vw;
-    }
-
     .archiveContainer ol:last-of-type li ul li b{
-        display: block; margin-bottom: 5px; color: var(--YE);
+        margin-bottom: 5px; 
     }
     .archiveContainer ol:last-of-type li ul li h3{
-        margin-bottom: var(--sp10); white-space: normal;
+        margin-bottom: var(--sp10); 
     }
     .archiveContainer ol:last-of-type li ul li img{
-        width: 100%; margin-bottom: var(--sp20);
+        margin-bottom: var(--sp20);
     }
     .archiveContainer ol:last-of-type li ul li a{
-        display: block;
-        width: 127px; line-height: 30px; text-align: center; border-radius: 5px;
-        width: 50%; min-width: 100px; float: right;
+        min-width: var(--sp100); line-height: var(--sp30);
     }
 }
 
@@ -992,59 +1004,17 @@ ul.context li p{
         width: 70%; line-height: var(--sp40); margin-bottom: var(--sp30);
     }
 
-    .archiveContainer{
-        width: 100vw; height: 100vh; overflow: hidden; position: relative;
-        display: flex; flex-flow: column; justify-content: center;
-        background-repeat: no-repeat; background-size: 100vw 100vh;
-        transition: background-position ease 1s;
-    }
-    .archiveContainer::after{
-        content: ''; display: block; width: 100vw; height: 100vh;
-        background-color: rgba(51, 51, 51, 0.5);
-        position: absolute; top: 0;
-    }
-    .archiveContainer>div{
-        position: relative; z-index: 1;
-    }
-
-    .archiveContainer h2{
-        display: none;
-    }
-    .archiveContainer ol:last-of-type{
-        white-space: nowrap; box-sizing: border-box;
-        overflow: hidden; font-size: 0; padding: 0 15vw;
-        scroll-behavior: smooth;
-    }
-    .archiveContainer ol:last-of-type>li{
-        display: inline-block; box-sizing: border-box;
-    }
-    .archiveContainer ol:last-of-type li ul{
-        white-space: nowrap; overflow: hidden; box-sizing: border-box;
-    }
-    .archiveContainer ol:last-of-type li ul li{
-        display: inline-block;
-        width: 50vw; margin-left: 10vw;
-        max-width: 450px;
-    }
-    .archiveContainer ol:last-of-type li:last-of-type ul li:last-of-type{
-        margin-right: 10vw;
-    }
-
     .archiveContainer ol:last-of-type li ul li b{
-        display: block; margin-bottom: var(--sp15); color: var(--YE);
+        margin-bottom: var(--sp15);
     }
     .archiveContainer ol:last-of-type li ul li h3{
-        margin-bottom: var(--sp20); white-space: normal;
+        margin-bottom: var(--sp20);
     }
     .archiveContainer ol:last-of-type li ul li img{
-        width: 100%; margin-bottom: var(--sp30);
+        margin-bottom: var(--sp30);
     }
     .archiveContainer ol:last-of-type li ul li a{
-        display: block;
-        width: 127px; line-height: 30px; text-align: center; border-radius: 5px;
-    }
-    .archiveContainer .pageControl{
-        position: fixed; width: 80%; left: 10%; bottom: 150px;
+        max-width: 150px; line-height: var(--sp40); 
     }
 }
 
@@ -1437,22 +1407,14 @@ ul.context li p{
         margin-bottom: var(--sp30);
     }
 
-    .archiveContainer h2{
-        display: none;
-    }
     .archiveContainer ol.fiR30{
-        position: fixed; top: 140px; right: 3.125%; z-index: 100;
-        width: 50%; min-width: 860px;
+        position: fixed; top: 140px; right: 3.125%; z-index: 100; width: 50%; min-width: 860px;
         height: var(--sp30); padding-right: var(--sp30); box-sizing: border-box;
-        background-position: right center; background-repeat: no-repeat;
-        
     }
     .archiveContainer ol.fiR30::after{
-        content: ''; background-image: url('../images/icon_leftDouble_white.svg');
-        width: 30px; height: 30px; display: block;
+        content: ''; background-image: url('../images/icon_leftDouble_white.svg'); background-position: center; background-repeat: no-repeat;
+        display: block; width: var(--sp30); height: var(--sp30); 
         position: absolute; right: 0; top: 0;
-        background-position: center;
-        background-repeat: no-repeat;
         transition: transform ease-out .5s;
         cursor: pointer;
     }
@@ -1460,8 +1422,7 @@ ul.context li p{
         transform: rotate(180deg);
     }
     .archiveContainer ol.fiR30 li{
-        display: inline; 
-        position: absolute;
+        display: inline; position: absolute;
         transition-property: right, opacity, color; transition-timing-function: ease-out; transition-duration: .5s;
     }
     .archiveContainer ol.fiR30 li:not(:first-of-type){
@@ -1489,72 +1450,51 @@ ul.context li p{
     .archiveContainer ol.fiR30.clicky li:nth-of-type(11){right: 14.688%;}
     .archiveContainer ol.fiR30.clicky li:nth-of-type(12){right: 6.580%;}
 
-    .archiveContainer ol:last-of-type{
-        white-space: nowrap;
-        overflow: hidden;
-        font-size: 0;
-        scroll-behavior: smooth;
-    }
     .archiveContainer ol:last-of-type>li{
-        display: inline-block;
-        position: relative;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
+        position: relative; background-size: cover; background-repeat: no-repeat;
     }
     .archiveContainer ol:last-of-type>li::after{
         content: ''; display: block; background-color: rgba(51, 51, 51, 0.5);
-        width: 2.083%; height: 100vh;
+        width: 2%; height: 100vh;
         position: absolute; top: 0; right: 0;
     }
     .archiveContainer ol:last-of-type>li ul li{
-        float: left;
+        float: left; height: 100vh; padding: 24vh 4% 18vh; box-sizing: border-box; border-right: 1px solid var(--GS04);
         display: flex; flex-flow: column; justify-content: end;
-        border-right: 1px solid var(--GS04);
-        box-sizing: border-box;
-        height: 100vh;
-        background-color: rgba(51, 51, 51, 0.5);
-        transition: background-color ease-out .3s;
+        background-color: rgba(51, 51, 51, 0.5); transition: background-color ease-out .3s;
     }
     .archiveContainer ol:last-of-type li ul li:hover{
         background-color: rgba(15, 4, 4, 0.25);
     }
     .archiveContainer ol:last-of-type>li ul li:not(:first-of-type){
-        width: 23.958%;
-        padding: 24vh 4.166% 18vh;
+        width: 24%;
     }
     .archiveContainer ol:last-of-type>li ul li:first-of-type{
-        width: 26.041%;
-        padding: 24vh 4.166% 18vh 6.25%;
+        width: 26%; padding-left: 6%;
+    }
+    .archiveContainer ol:last-of-type li ul li>*{
+        transition-timing-function: ease-out; transition-duration: .3s;
     }
     .archiveContainer ol:last-of-type li ul li b{
-        display: block;
-        transition: color ease-out .3s;
-        margin-bottom: var(--sp20);
+        transition-property: color; margin-bottom: var(--sp20);
     }
     .archiveContainer ol:last-of-type li ul li:hover b{
         color: var(--YE);
     }
     .archiveContainer ol:last-of-type li ul li h3{
-        white-space: normal;
-        transition: color ease-out .3s;
-        margin-bottom: auto;
+        transition-property: color; margin-bottom: auto;
     }
     .archiveContainer ol:last-of-type li ul li:hover h3{
         color: var(--GS02);
     }
     .archiveContainer ol:last-of-type li ul li img{
-        width: 100%; margin-bottom: var(--sp30);
-        opacity: 0;
-        transition: opacity ease-out.3s;
+        margin-bottom: var(--sp30); opacity: 0; transition-property: opacity;
     }
     .archiveContainer ol:last-of-type li ul li:hover img{
         opacity: 1;
     }
     .archiveContainer ol:last-of-type li ul li a{
-        width: 170px;
-        display: block; line-height: var(--sp40); border: 1px solid var(--GS04);
-        text-align: center; border-radius: 5px; background-color: transparent;
-        transition: color, background-color ease-out .3s;
+        max-width: 170px; line-height: var(--sp40); border: 1px solid var(--GS04);
+        background-color: transparent; transition-property: color, background-color;
     }
 }
