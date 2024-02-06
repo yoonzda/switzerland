@@ -231,6 +231,42 @@ ul.context li p{
     --fancybox-color: var(--GS01);
 }
 
+.videoContainer>span{
+    display: block; width: var(--sp100); height: var(--sp100); text-indent: -9999px;
+    position: absolute; left: 50%; transform: translate(-50%,-50%); z-index: 1000;
+}
+.videoContainer>span::after{
+    content: ''; display: block; box-sizing: border-box; border-radius: 50%; border-style: solid; border-color: var(--GS01);
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    animation: circleFocus 1.5s linear infinite;
+}
+.videoContainer>span.active::after,
+.videoContainer div.pop:not(.active){
+    display: none;
+}
+.videoContainer div.pop.active{
+    box-sizing: border-box;
+    position: absolute; z-index: 100; left: 50%; transform: translate(-50%,-50%); transition: clip-path ease-out .6s;
+}
+.videoContainer div.pop.active:not(.clicky){
+    clip-path: circle(0.0% at 50% 50%); 
+}
+.videoContainer div.pop.active.clicky{
+    clip-path: circle(72.0% at 50% 50%);
+}
+.videoContainer div.pop.active:not(.clicky)>*{
+    opacity: 0;
+}
+.videoContainer div.pop.active>*:not(a){
+    transition: opacity ease-out .3s;
+}
+.videoContainer div.pop.active.clicky>*{
+    opacity: 1;
+}
+.videoContainer div.pop.active a{
+    float: right;
+}
+
 @media screen and (min-width: 768px){
     .indexContainer ul li>div>input[type='button'],
     .videoDetailContainer a.fiR24{
@@ -260,6 +296,10 @@ ul.context li p{
     }
     .fancybox__toolbar__column.is-middle .f-button{
         align-items: end;
+    }
+
+    .videoContainer>span::after{
+        width: var(--sp100); height: var(--sp100); border-width: 6px;
     }
 }
 
@@ -335,6 +375,25 @@ ul.context li p{
     .indexContainer ul li.clicky>div div a{
         animation-delay: 2.2s; animation-name: lastAction; animation-duration: 1s;
     }
+
+    .videoContainer{
+        height: 100vh;
+        display: flex; flex-flow: column; justify-content: center; 
+    }
+    .videoContainer video{
+        width: 100%; 
+        order: 1; margin: var(--sp20) 0;
+    }
+    .videoContainer h2{
+        text-align: center;
+    }
+    .videoContainer div:first-of-type{
+        order: 1; z-index: 1; text-align: center;
+    }
+    .videoContainer div.pop.active input[type='button']{
+        position: absolute;
+    }
+
 
     @keyframes drift{0%{transform: rotate(0deg) scale(0,0); opacity: 0.8;}40%{transform: rotate(180deg) scale(0.5,0.5); opacity: 0.4;}100%{transform: rotate(360deg) scale(1,1); opacity: 0;}}
     @keyframes movehori{100%{left: 80%;}}
@@ -486,71 +545,19 @@ ul.context li p{
         padding-top: var(--sp100);
     }
     
-    .videoContainer{
-        display: flex; flex-flow: column; justify-content: center; height: 100vh;
-    }
-    .videoContainer video{
-        width: 100%; order: 1; margin: var(--sp20) 0;
-    }
     .videoContainer h2{
-        text-align: center; 
-        
-        
         margin-bottom: var(--sp30);
     }
-    .videoContainer div:first-of-type{
-        order: 1; z-index: 1; text-align: center;
-    }
     .videoContainer div:first-of-type input[type='button']{
-
-
         font-size: var(--sp30);
     }
-    .videoContainer>span{
-        display: block; width: var(--sp100); height: var(--sp100); text-indent: -9999px;
-        position: absolute; left: 50%; transform: translate(-50%,-50%); z-index: 1000;
-    }
     .videoContainer>span::after{
-        content: ''; display: block; box-sizing: border-box; border-radius: 50%; border-style: solid; border-color: var(--GS01);
-        position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-        animation: circleFocus 1.5s linear infinite;
-        
-        
-        
-        width: var(--sp60); height: var(--sp60);
-        border-width: 4px;
-    }
-    .videoContainer>span.active::after,
-    .videoContainer div.pop:not(.active){
-        display: none;
+        width: var(--sp60); height: var(--sp60); border-width: 4px;
     }
     .videoContainer div.pop.active{
-        box-sizing: border-box;
-        position: absolute; z-index: 10; left: 50%; transform: translate(-50%,-50%); transition: clip-path ease-out .6s;
-        
-        
         width: 85%; min-width: 240px; padding: var(--sp40) var(--sp20) var(--sp20); 
     }
-    .videoContainer div.pop.active:not(.clicky){
-        clip-path: circle(0.0% at 50% 50%); 
-    }
-    .videoContainer div.pop.active.clicky{
-        clip-path: circle(72.0% at 50% 50%);
-    }
-    .videoContainer div.pop.active:not(.clicky)>*{
-        opacity: 0;
-    }
-    .videoContainer div.pop.active>*:not(a){
-        transition: opacity ease-out .3s;
-    }
-    .videoContainer div.pop.active.clicky>*{
-        opacity: 1;
-    }
     .videoContainer div.pop.active input[type='button']{
-        position: absolute; cursor: pointer;
-        
-        
-        
         font-size: 24px; top: var(--sp15); right: var(--sp15); 
     }
     .videoContainer div.pop.active h3{
@@ -558,12 +565,6 @@ ul.context li p{
     }
     .videoContainer div.pop.active p{
         margin-bottom: var(--sp20);
-    }
-    .videoContainer div.pop.active a{
-        float: right;
-
-
-
     }
 
     .videoDetailContainer{
@@ -872,68 +873,23 @@ ul.context li p{
         padding-top: var(--sp200);
     }
 
-    .videoContainer{
-        display: flex; flex-flow: column; justify-content: center; height: 100vh; 
-    }
-    .videoContainer video{
-        width: 100%; order: 1; margin: var(--sp20) 0;
-    }
     .videoContainer h2{
-        text-align: center; margin-bottom: var(--sp50);
-    }
-    .videoContainer div:first-of-type{
-        order: 1; z-index: 1; text-align: center;
+        margin-bottom: var(--sp50);
     }
     .videoContainer div:first-of-type input[type='button']{
         font-size: var(--sp50);
     }
-    .videoContainer>span{
-        display: block; width: var(--sp100); height: var(--sp100); text-indent: -9999px;
-        position: absolute; left: 50%; transform: translate(-50%,-50%); z-index: 1000;
-    }
-    .videoContainer>span::after{
-        content: ''; display: block; width: var(--sp100); height: var(--sp100); 
-        border: 6px solid var(--GS01); box-sizing: border-box;
-        position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-        animation: circleFocus 1.5s linear infinite;
-        border-radius: 50%; 
-    }
-    .videoContainer>span.active::after,
-    .videoContainer div.pop:not(.active){
-        display: none;
-    }
     .videoContainer div.pop.active{
-        width: 60%; padding: var(--sp80) var(--sp50) var(--sp50); box-sizing: border-box;
-        position: absolute; z-index: 1; left: 50%; transform: translate(-50%,-50%); transition: clip-path ease-out .6s;
-    }
-    .videoContainer div.pop.active:not(.clicky){
-        clip-path: circle(0.0% at 50% 50%);
-    }
-    .videoContainer div.pop.active.clicky{
-        clip-path: circle(72.0% at 50% 50%);
-    }
-    .videoContainer div.pop.active:not(.clicky)>*{
-        opacity: 0;
-    }
-    .videoContainer div.pop.active>*:not(a){
-        transition: opacity ease-out .3s;
-    }
-    .videoContainer div.pop.active.clicky>*{
-        opacity: 1;
+        width: 60%; padding: var(--sp80) var(--sp50) var(--sp50);
     }
     .videoContainer div.pop.active input[type='button']{
-        font-size: var(--sp30); margin-bottom: var(--sp20);
-        position: absolute; top: var(--sp30); right: var(--sp30);
-        cursor: pointer;
+        font-size: var(--sp30); margin-bottom: var(--sp20); top: var(--sp30); right: var(--sp30);
     }
     .videoContainer div.pop.active h3{
         margin-bottom: var(--sp20);
     }
     .videoContainer div.pop.active p{
         margin-bottom: var(--sp40);
-    }
-    .videoContainer div.pop.active a{
-        float: right;
     }
 
     .videoDetailContainer{
@@ -1411,21 +1367,26 @@ ul.context li p{
     }
 
     .videoContainer{
-        position: relative; height: 100vh; overflow-y: hidden;
+        height: 100vh;
+        position: relative; overflow-y: hidden;
     }
     .videoContainer video{
-        position: absolute; width: 100%; top: 50%; left: 0; transform: translate(0,-50%);
+        width: 100%; 
+        position: absolute; top: 50%; left: 0; transform: translate(0,-50%);
+    }
+    .videoContainer h2,
+    .videoContainer ol li,
+    .videoContainer div:first-of-type input[type='button']{
+        text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.45);
     }
     .videoContainer h2{
         position: fixed; top: 140px; right: 3.125%; z-index: 100;
-        text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.45);
     }
     .videoContainer ol{
         position: absolute; bottom: 140px; right: 3.125%;
     }
     .videoContainer ol li{
         float: left; display: block; transition: color ease-in-out .28s;
-        text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.45);
     }
     .videoContainer ol li:not(:first-of-type){
         margin-left: var(--sp30);
@@ -1434,49 +1395,19 @@ ul.context li p{
         position: absolute; bottom: 200px; right: 3.125%;
     }
     .videoContainer div:first-of-type input[type='button']{
-        font-size: 80px;
-        text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.45);
+        font-size: var(--sp80);
     }
-
     .videoContainer>span{
-        display: block; width: 100px; height: 100px; text-indent: -9999px;
-        position: relative; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 1000;
-    }
-    .videoContainer>span::after{
-        content: ''; display: block; width: 100px; height: 100px;
-        border: 6px solid var(--GS01); border-radius: 50px; box-sizing: border-box;
-        position: absolute; top: 50%; left: 50%;
-        animation: circleFocus 1.5s linear infinite;
-    }
-    .videoContainer>span.active::after,
-    .videoContainer div.pop:not(.active){
-        display: none;
+        top: 50%; 
     }
     .videoContainer div.pop.active{
-        width: 600px; padding: var(--sp100) var(--sp60); box-sizing: border-box;
-        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100;
-        transition: clip-path ease-out .6s; clip-path: circle(0.0% at 50% 50%);
-    }
-    .videoContainer span.active~div.pop.active{
-        clip-path: circle(72.0% at 50% 50%);
-    }
-    .videoContainer div.pop.active>*{
-        opacity: 0;
-    }
-    .videoContainer div.pop.active>*:not(a){
-        transition: opacity ease-out .3s;
-    }
-    .videoContainer span.active~div.pop.active>*{
-        opacity: 1;
+        width: 600px; padding: var(--sp100) var(--sp60); top: 50%;
     }
     .videoContainer div.pop.active h3{
         margin-bottom: var(--sp30);
     }
     .videoContainer div.pop.active p{
         margin-bottom: var(--sp50);
-    }
-    .videoContainer div.pop.active a{
-        float: right;
     }
 
     .videoDetailContainer{
