@@ -160,7 +160,7 @@ ul.context li p{
     overflow: hidden;
 }
 .indexContainer>div{
-    display: flex; flex-direction: column; justify-content: center; width: 100vw; height: 100vh; position: absolute;
+    width: 100vw; height: 100vh; position: absolute;
 }
 .indexContainer>div *{
     display: block; text-align: center;
@@ -584,7 +584,6 @@ ul.context li p{
     @keyframes fullScreen{100%{opacity: 0; display: none;}}
     
     div.preinfo{
-        display: flex; flex-direction: column; justify-content: center;
         width: 100vw; height: 100vh;
         overflow: hidden; background-color: rgba(0, 0, 0, 0.7);
         position: absolute; z-index: 1001;
