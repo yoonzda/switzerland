@@ -589,8 +589,9 @@ ul.context li p{
         position: absolute; z-index: 1001;
         transition: all ease .5s;
         animation: fullScreen 0.5s ease 5s forwards;
+        display: flex; flex-direction: column; justify-content: center;
     }
-
+    
     div.preinfo strong{
         display: block; margin: 0 auto var(--sp20);
         text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
