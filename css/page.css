@@ -630,7 +630,9 @@ ul.context li p{
     }
 
     section[class*='Container']:not(.indexContainer){
-        padding: 130px 0; box-sizing: border-box;
+        /* padding: 130px 0;  */
+        padding-top: 130px;
+        /* box-sizing: border-box; */
     }
 
     .themaContainer .titleBox::after{
