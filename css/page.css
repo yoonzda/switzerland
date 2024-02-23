@@ -269,7 +269,7 @@ ul.context li p{
 }
 
 .videoDetailContainer{
-    position: relative; width: 100vw; height: 100vh; 
+    position: relative; width: 100vw; height: calc(var(--vh, 1vh) * 100);
     background-size: cover; background-repeat: no-repeat; background-position: top center;
 }
 .videoDetailContainer input[type='button']{
@@ -487,7 +487,7 @@ ul.context li p{
     }
 
     .videoContainer{
-        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
         display: flex; flex-flow: column; justify-content: center; 
     }
     .videoContainer video{
@@ -550,7 +550,7 @@ ul.context li p{
     }
 
     .archiveContainer{
-        width: 100vw; height: 100vh; overflow: hidden; position: relative;
+        width: 100vw; height: calc(var(--vh, 1vh) * 100); overflow: hidden; position: relative;
         display: flex; flex-flow: column; justify-content: center;
         background-repeat: no-repeat; background-size: 100vw 100vh; transition: background-position ease 1s;
     }
@@ -584,7 +584,7 @@ ul.context li p{
     @keyframes fullScreen{100%{opacity: 0; display: none;}}
     
     div.preinfo{
-        width: 100vw; height: 100vh;
+        width: 100vw; height: calc(var(--vh, 1vh) * 100);
         overflow: hidden; background-color: rgba(0, 0, 0, 0.7);
         position: absolute; z-index: 1001;
         transition: all ease .5s;
