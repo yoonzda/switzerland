@@ -11,7 +11,13 @@ $(document).ready(function(){
     archiveFunction();
 
     snsIconBG();
+    mobileVH();
 });
+
+function mobileVH(){
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
 
 $(window).on('resize orientationchange', function(){
     matchAction();
@@ -21,6 +27,8 @@ function matchAction(){
     if(window.matchMedia('(min-width:1280px)').matches){
         detailBG('.cityContainer div h2','cityBG','.cityContainer','.jpg');
         cityDetailFunction();
+    }else{
+        mobileVH();
     }
 }
 
